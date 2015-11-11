@@ -34,12 +34,11 @@ really a community effort. Contributions are always welcome!</p>
 <ul>
   <li>Testing on new platforms (operating systems, Python implementations and
   versions)</li>
-  <li>Extending the test suite (see the src/testsuite directory)</li>
+  <li>Extending the unit test cases</li>
   <li>Reporting bugs you encounter, on the
   <a href="https://github.com/pywbem/pywbem/issues">issue tracker</a></li>
   <li>Fixing bugs or implementing feature requests listed on the
   <a href="https://github.com/pywbem/pywbem/issues">issue tracker</a></li>
-  <li>Adding new functions (see the TODO list)</li>
 </ul>
 
 <h2>Development</h2>
@@ -86,18 +85,20 @@ arguments will print the possible targets:</p>
 <pre><code>make
 
 makefile for pywbem
-Package version will be: 0.8.0-dev
+Package version will be: 0.8.0-rc1
 Valid targets are:
-  build    - Build the distribution archive: ../dist/pywbem-0.8.0/pywbem-0.8.0-dev.zip
-  buildwin - (On 64-bit Windows) Build the Windows installable: ../dist/pywbem-0.8.0/pywbem-0.8.0-dev.win-amd64.exe
-  check    - Run PyLint on sources
-  install  - build + install the distribution archive using "python setup.py install"
-  develop  - prepare the development environment by installing prerequisites
-  test     - install + run unit tests
-  upload   - build + upload the distribution archive to PyPI
-  clean    - Remove any temporary files
-  clobber  - clean + remove any build products
-  all      - build + check + test + install + clean (that is, no upload!)
+  develop    - Prepare the development environment by installing prerequisites
+  build      - Build the distribution archive: ../dist/pywbem-0.8.0/pywbem-0.8.0-rc1.zip
+  buildwin   - Build the Windows installable: ../dist/pywbem-0.8.0/pywbem-0.8.0-rc1.win-amd64.exe (on Win 64-bit)
+  builddoc   - Build documentation in: build_doc
+  check      - Run PyLint on sources and save results in: pylint.log
+  install    - build + install the distribution archive using "python setup.py install"
+  test       - install + run unit tests on installed copy and save results in: test.log
+  clean      - Remove any temporary files
+  all        - build + check + install + test + builddoc + clean
+  upload     - build + upload the distribution archive to PyPI
+  publish    - builddoc + publish documentation to: ../../pywbem.github.io/pywbem/doc/0.8.0/doc
+  clobber    - clean + remove any build products
 </code></pre>
 
 <h2>Testing</h2>
@@ -139,6 +140,84 @@ Again, there should be an issue in the
 <a href="https://github.com/pywbem/pywbem/issues">PyWBEM Client issue tracker</a>
 that is resolved by the pull request, and a comment to the issue should
 mention the name of the pull request.</p>
+</li>
+
+</ul>
+
+<h2>Troubleshooting</h2>
+
+<p>As a PyWBEM developer, you may work on the development environment and not
+everything may work right all the time. Here is a list of things that have
+gone wrong in the past, and how to resolve them.</p>
+
+<p>These issues should not occur for users of PyWBEM, because the PyWBEM setup
+script (setup.py) takes care of them.</p>
+
+<ul>
+<li><p>Error when installing M2Crypto (e.g. as part of installing the PyWBEM
+Client):</p>
+
+<p>unable to execute swig: No such file or directory</p>
+
+<p>Root cause: This error occurs when M2Crypto is installed as part of the
+PyWBEM Client installation, and the <code>swig</code> command is not
+available.</p>
+
+<p>Solution: Install Swig (Linux: package <code>swig</code>). The M2Crypto
+installation requires at least Swig version 2.0. If your operating
+system does not provide for such a version, download and build Swig 2.0.
+Note that this is done automatically by the "develop" and "install" commands
+of the setup script of the PyWBEM Client.</p></li>
+<li><p>Error when installing M2Crypto (e.g. as part of installing PyWBEM):</p>
+
+<p>swig error : Unrecognized option -builtin</p>
+
+<p>Root cause: This error occurs when M2Crypto is installed as part of the
+PyWBEM Client installation, and the version of <code>swig</code> is not
+sufficient. The M2Crypto installation requires at least Swig version 2.0.</p>
+
+<p>Solution: Update your version of Swig to at least 2.0. If your operating
+system does not provide for such a version, download and build Swig 2.0.
+Note that this is done automatically by the "develop" and "install" commands
+of the setup script of the PyWBEM Client.</p></li>
+<li><p>Error when building Swig:</p>
+
+<p>configure: error: Cannot find pcre-config script from PCRE (Perl Compatible
+Regular Expressions) library package.</p>
+
+<p>Root cause: The PCRE development package is not installed.</p>
+
+<p>Solution: Install the PCRE development package:</p>
+
+<pre><code>sudo yum install pcre-devel         # if RedHat-based
+sudo apt-get install pcre-devel     # if Debian-based
+sudo zypper install pcre-devel      # if SUSE-based
+</code></pre></li>
+<li><p>Error when installing M2Crypto (e.g. as part of installing PyWBEM):</p>
+
+<p>SWIG/_m2crypto.i:31: Error: Unable to find 'openssl/opensslv.h'<br>
+SWIG/_m2crypto.i:45: Error: Unable to find 'openssl/safestack.h'<br>
+SWIG/_evp.i:12: Error: Unable to find 'openssl/opensslconf.h'<br>
+SWIG/_ec.i:7: Error: Unable to find 'openssl/opensslconf.h'</p>
+
+<p>Root cause: The OpenSSL development package is not installed.</p>
+
+<p>Solution: Install the OpenSSL development package:</p>
+
+<pre><code>sudo yum install openssl-devel      # if RedHat-based
+sudo apt-get install libssl-devel   # if Debian-based
+sudo zypper install openssl-devel   # if SUSE-based
+</code></pre></li>
+<li><p>Note that installing the PyWBEM Client to the system Python invokes the
+M2Crypto build also under root permissions, so the new Swig version needs to be
+available via the PATH of root, in this case.</p>
+
+<p>Verify that the new version is available both for your userid and for
+root:</p>
+
+<pre><code>swig -version
+sudo swig -version
+</code></pre>
 </li>
 
 </ul>

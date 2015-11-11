@@ -17,5 +17,5 @@ License
 -------
 
 PyWBEM is provided under the
-[LICENSE.txt](GNU Lesser General Public License \(LGPL\) version 2.1),
+[GNU Lesser General Public License (LGPL) version 2.1](LICENSE.txt),
 or (at your option) any later version.

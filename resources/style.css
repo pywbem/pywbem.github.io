@@ -1,0 +1,55 @@
+/*
+ * CSS stylesheet for CMPI pages project.
+ */
+
+body {
+	background: white;
+	color: black;
+	font-family: 'Lucida Grande',Verdana,sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 22px;
+	margin: 0;
+	padding: 1;
+}
+
+#sidebar {
+	float: left;
+	width: 12em;
+	padding: 1em;
+}
+#content {
+	margin-left: 14em;
+	margin-right: 2em;
+}
+#header {
+	float: right;
+	width: 100%;
+}
+#footer {
+	float: right;
+	width: 100%;
+}
+a:link {
+	background: transparent;
+	color: #006699;
+}
+a:visited {
+	background: transparent;
+	color: #886699;
+}
+img { 
+	border: none;
+}
+div.navitem {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+h4.navitem {
+	margin-top: 24px;
+	margin-bottom: 8px;
+}
+li {
+	margin-top: 6px;
+	margin-bottom: 6px;
+}

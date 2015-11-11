@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pywbem</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;pywbem
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pywbem-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PACKAGE DESCRIPTION ==================== -->
+<h1 class="epydoc">Package pywbem</h1><p class="nomargin-top"><span class="codelink"><a href="pywbem-pysrc.html">source&nbsp;code</a></span></p>
+<p>PyWBEM provides a WBEM client library and some related utilities, written in
+pure Python.</p>
+<p>The WBEM client library allows issuing operations to a WBEM server, using
+the CIM operations over HTTP (CIM-XML) protocol defined in the DMTF standards
+DSP0200 and DSP0201. See <a class="rst-reference external" href="http://www.dmtf.org/standards/wbem" target="_top">http://www.dmtf.org/standards/wbem</a> for information
+about WBEM.</p>
+<p>It is based on the idea that a good WBEM client should be easy to use and not
+necessarily require a large amount of programming knowledge. It is suitable for
+a large range of tasks from simply poking around to writing web and GUI
+applications.</p>
+<ul class="rst-simple">
+<li><a href="pywbem.cim_operations.WBEMConnection-class.html" class="link">WBEMConnection</a> :  Main class of the WBEM client library and a good starting
+point to read about it.</li>
+</ul>
+<p>The WBEM-related utilities included in this package are:</p>
+<ul class="rst-simple">
+<li><a href="pywbem.mof_compiler-module.html" class="link">mof_compiler</a> :   Script for compiling MOF files, can also be used as a
+module.</li>
+<li><a href="pywbem.cim_provider-module.html" class="link">cim_provider</a> :   Module for writing CIM providers in Python.</li>
+<li><a href="pywbem.cim_provider2-module.html" class="link">cim_provider2</a> :  Another module for writing CIM providers in Python.</li>
+<li><a href="pywbem.twisted_client-module.html" class="link">twisted_client</a> : An experimental alternative WBEM client library that uses
+the Python <code class="link">twisted</code> package.</li>
+<li><a href="pywbem.wbemcli-module.html" class="link">wbemcli</a> :  Script providing a WBEM client CLI as an interactive shell.</li>
+</ul>
+<p>Importing the <a href="pywbem-module.html" class="link">pywbem</a> package causes a subset of symbols from its sub-modules
+to be folded into the target namespace.</p>
+<p>The use of these folded symbols is shown for the example of class
+<a href="pywbem.cim_operations.WBEMConnection-class.html" class="link">WBEMConnection</a>:</p>
+<p>or:</p>
+<p>or (less preferred):</p>
+<p>The folded symbols' origin symbols in the sub-modules are also considered part
+of the public interface of the <a href="pywbem-module.html" class="link">pywbem</a> package.</p>
+<p>Programs using sub-modules that are not part of the WBEM client library, or
+specific symbols that are not folded into the target namespace of the <a href="pywbem-module.html" class="link">pywbem</a>
+package need to import the respective sub-modules explicitly.</p>
+<p>The use of such sub-modules is shown for the example of class
+<a href="pywbem.cim_provider.CIMProvider-class.html" class="link">cim_provider.CIMProvider</a>:</p>
+<p>or:</p>
+<p>or:</p>
+<div class="rst-section" id="rst-version">
+<h1 class="heading">Version</h1>
+<p>This version of PyWBEM is 0.8.0-dev.</p>
+<p>The version number follows the conventions of semantic versioning (see
+<a class="rst-reference external" href="http://semver.org/" target="_top">http://semver.org/</a>):</p>
+<blockquote>
+<ul class="rst-simple">
+<li>M.N.U-dev  : During development of future M.N.U release</li>
+<li>M.N.U-rc.1 : Release candidate 1 of future M.N.U release</li>
+<li>M.N.U      : The final M.N.U release</li>
+</ul>
+</blockquote>
+<p>When creating correspondingly versioned RPM packages, the hyphen (-) after
+the M.N.U version needs to be replaced by a tilde (~) to cause RPM to correctly
+treat the preliminary versions to be younger than the final version.</p>
+</div>
+<div class="rst-section" id="rst-changes">
+<h1 class="heading">Changes</h1>
+<p>The change log is in the <a class="rst-reference external" href="../NEWS" target="_top">NEWS</a> file.</p>
+</div>
+<div class="rst-section" id="rst-compatibility">
+<h1 class="heading">Compatibility</h1>
+<p>PyWBEM has been tested with Python 2.7 on Windows and Linux, and with Python
+2.6 on Linux (due to a restriction of the <code class="link">M2Crypto</code> package on Windows).</p>
+<p>Python 2.6 is the minimum version of Python that is supported.</p>
+<p>Python 3 is not yet supported.</p>
+</div>
+<div class="rst-section" id="rst-contributing">
+<h1 class="heading">Contributing</h1>
+<p>PyWBEM is on GitHub (<a class="rst-reference external" href="https://github.com/pywbem/pywbem" target="_top">https://github.com/pywbem/pywbem</a>). Bug
+reports and discussion on the mailing list are welcome.</p>
+</div>
+<div class="rst-section" id="rst-license">
+<h1 class="heading">License</h1>
+<p>PyWBEM is licensed with GNU LGPL v2.
+See the <a class="rst-reference external" href="../LICENSE.txt" target="_top">LICENSE.txt</a> file.</p>
+</div>
+
+<hr />
+<div class="fields">      <p><strong>Version:</strong>
+        0.8.0-dev
+      </p>
+</div><!-- ==================== SUBMODULES ==================== -->
+<a name="section-Submodules"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Submodules</span></td>
+</tr>
+  <tr><td class="summary">
+  <ul class="nomargin">
+    <li> <strong class="uidlink"><a href="pywbem.cim_constants-module.html">pywbem.cim_constants</a></strong>: <em class="summary">Useful CIM constants.</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_http-module.html">pywbem.cim_http</a></strong>: <em class="summary">Send HTTP/HTTPS requests to a WBEM server.</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj-module.html">pywbem.cim_obj</a></strong>: <em class="summary">Representations of CIM objects, and a case-insensitive dictionary.</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_operations-module.html">pywbem.cim_operations</a></strong>: <em class="summary">CIM operations over HTTP.</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_provider-module.html">pywbem.cim_provider</a></strong>: <em class="summary">Python CIM Providers (aka &quot;nirvana&quot;)</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_provider2-module.html">pywbem.cim_provider2</a></strong>: <em class="summary">Python CIM Providers (aka &quot;nirvana&quot;)</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types-module.html">pywbem.cim_types</a></strong>: <em class="summary">Types to represent CIM typed values, and related conversion functions.</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_xml-module.html">pywbem.cim_xml</a></strong>: <em class="summary">Functions to create XML documens and elements conforming to the DMTF
+standard DSP0201, Representation of CIM in XML, v2.2.</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cimxml_parse-module.html">pywbem.cimxml_parse</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.lex-module.html">pywbem.lex</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.mof_compiler-module.html">pywbem.mof_compiler</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.moflextab-module.html">pywbem.moflextab</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.mofparsetab-module.html">pywbem.mofparsetab</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.tupleparse-module.html">pywbem.tupleparse</a></strong>: <em class="summary">Tuple parser for the XML schema representing CIM messages.</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.tupletree-module.html">pywbem.tupletree</a></strong>: <em class="summary">tupletree - Convert XML DOM objects to and from tuple trees.</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.twisted_client-module.html">pywbem.twisted_client</a></strong>: <em class="summary">pywbem.twisted - WBEM client bindings for Twisted Python.</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.wbemcli-module.html">pywbem.wbemcli</a></strong>: <em class="summary">A small utility to wrap up a PyWBEM session in a Python interactive
+console.</em>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.yacc-module.html">pywbem.yacc</a></strong>    </li>
+  </ul></td></tr>
+</table>
+
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Nov 10 16:41:40 2015
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

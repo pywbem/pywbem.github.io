@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pywbem.cim_operations</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pywbem-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pywbem-module.html">Package&nbsp;pywbem</a> ::
+        Module&nbsp;cim_operations
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pywbem.cim_operations-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module cim_operations</h1><p class="nomargin-top"><span class="codelink"><a href="pywbem.cim_operations-pysrc.html">source&nbsp;code</a></span></p>
+<p>CIM operations over HTTP.</p>
+<p>The <a href="pywbem.cim_operations.WBEMConnection-class.html" class="link">WBEMConnection</a> class in this module opens a connection to a remote
+WBEM server. Across this connection you can run various CIM operations.
+Each method of this class corresponds fairly directly to a single CIM
+operation.</p>
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Classes</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pywbem.cim_operations.CIMError-class.html" class="summary-name">CIMError</a><br />
+      Exception indicating that the WBEM server has returned an error response
+with a CIM status code.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pywbem.cim_operations.WBEMConnection-class.html" class="summary-name">WBEMConnection</a><br />
+      A client's connection to a WBEM server.
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Functions</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.cim_operations-module.html#check_utf8_xml_chars" class="summary-sig-name">check_utf8_xml_chars</a>(<span class="summary-sig-arg">utf8_xml</span>,
+        <span class="summary-sig-arg">meaning</span>)</span><br />
+      Examine a UTF-8 encoded XML string and raise a <a href="pywbem.tupleparse.ParseError-class.html" class="link">pywbem.ParseError</a>
+exception if the response contains Bytes that are invalid UTF-8
+sequences (incorrectly encoded or ill-formed) or that are invalid XML
+characters.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#check_utf8_xml_chars">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.cim_operations-module.html#is_subclass" class="summary-sig-name">is_subclass</a>(<span class="summary-sig-arg">ch</span>,
+        <span class="summary-sig-arg">ns</span>,
+        <span class="summary-sig-arg">super</span>,
+        <span class="summary-sig-arg">sub</span>)</span><br />
+      Determine if one class is a subclass of another</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#is_subclass">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="PegasusUDSConnection"></a><span class="summary-sig-name">PegasusUDSConnection</span>(<span class="summary-sig-arg">creds</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#PegasusUDSConnection">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="SFCBUDSConnection"></a><span class="summary-sig-name">SFCBUDSConnection</span>(<span class="summary-sig-arg">creds</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#SFCBUDSConnection">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="OpenWBEMUDSConnection"></a><span class="summary-sig-name">OpenWBEMUDSConnection</span>(<span class="summary-sig-arg">creds</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#OpenWBEMUDSConnection">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DEFAULT_NAMESPACE"></a><span class="summary-name">DEFAULT_NAMESPACE</span> = <code title="'root/cimv2'"><code class="variable-quote">'</code><code class="variable-string">root/cimv2</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Function Details</span></td>
+</tr>
+</table>
+<a name="check_utf8_xml_chars"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">check_utf8_xml_chars</span>(<span class="sig-arg">utf8_xml</span>,
+        <span class="sig-arg">meaning</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_operations-pysrc.html#check_utf8_xml_chars">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Examine a UTF-8 encoded XML string and raise a <a href="pywbem.tupleparse.ParseError-class.html" class="link">pywbem.ParseError</a>
+exception if the response contains Bytes that are invalid UTF-8
+sequences (incorrectly encoded or ill-formed) or that are invalid XML
+characters.</p>
+<p>This function works in both &quot;wide&quot; and &quot;narrow&quot; Unicode builds of Python
+and supports the full range of Unicode characters from U+0000 to U+10FFFF.</p>
+<p>This function is just a workaround for the bad error handling of Python's
+<code class="link">xml.dom.minidom</code> package. It replaces the not very informative
+ExpatError &quot;not well-formed (invalid token): line: x, column: y&quot; with a
+<a href="pywbem.tupleparse.ParseError-class.html" class="link">pywbem.ParseError</a> providing more useful information.</p>
+<p>Notes on Unicode support in Python:</p>
+<ol class="rst-arabic simple">
+<li>For internally representing Unicode characters in the unicode type, a
+&quot;wide&quot; Unicode build of Python uses UTF-32, while a &quot;narrow&quot; Unicode
+build uses UTF-16. The difference is visible to Python programs for
+Unicode characters assigned to code points above U+FFFF: The &quot;narrow&quot;
+build uses 2 characters (a surrogate pair) for them, while the &quot;wide&quot;
+build uses just 1 character. This affects all position- and
+length-oriented functions, such as <code class="link">len()</code> or string slicing.</li>
+<li>In a &quot;wide&quot; Unicode build of Python, the Unicode characters assigned to
+code points U+10000 to U+10FFFF are represented directly (using code
+points U+10000 to U+10FFFF) and the surrogate code points
+U+D800...U+DFFF are never used; in a &quot;narrow&quot; Unicode build of Python,
+the Unicode characters assigned to code points U+10000 to U+10FFFF are
+represented using pairs of the surrogate code points U+D800...U+DFFF.</li>
+</ol>
+<p>Notes on the Unicode code points U+D800...U+DFFF (&quot;surrogate code points&quot;):</p>
+<ol class="rst-arabic">
+<li><p class="rst-first">These code points have no corresponding Unicode characters assigned,
+because they are reserved for surrogates in the UTF-16 encoding.</p>
+</li>
+<li><p class="rst-first">The UTF-8 encoding can technically represent the surrogate code points.
+ISO/IEC 10646 defines that a UTF-8 sequence containing the surrogate
+code points is ill-formed, but it is technically possible that such a
+sequence is in a UTF-8 encoded XML string.</p>
+</li>
+<li><p class="rst-first">The Python escapes <tt class="rst-docutils literal">\u</tt> and <tt class="rst-docutils literal">\U</tt> used in literal strings can
+represent the surrogate code points (as well as all other code points,
+regardless of whether they are assigned to Unicode characters).</p>
+</li>
+<li><p class="rst-first">The Python <code class="link">str.encode()</code> and <code class="link">str.decode()</code> functions successfully
+translate the surrogate code points back and forth for encoding UTF-8.</p>
+<p>For example, <tt class="rst-docutils literal"><span class="pre">'\xed\xb0\x80'.decode(&quot;utf-8&quot;)</span> = <span class="pre">u'\udc00'</span></tt>.</p>
+</li>
+<li><p class="rst-first">Because Python supports the encoding and decoding of UTF-8 sequences
+also for the surrogate code points, the &quot;narrow&quot; Unicode build of
+Python can be (mis-)used to transport each surrogate unit separately
+encoded in (ill-formed) UTF-8.</p>
+<p>For example, code point U+10122 can be (illegally) created from a
+sequence of code points U+D800,U+DD22 represented in UTF-8:</p>
+<blockquote>
+<p><tt class="rst-docutils literal"><span class="pre">'\xED\xA0\x80\xED\xB4\xA2'.decode(&quot;utf-8&quot;)</span> = <span class="pre">u'\U00010122'</span></tt></p>
+</blockquote>
+<p>while the correct UTF-8 sequence for this code point is:</p>
+<blockquote>
+<p><tt class="rst-docutils literal"><span class="pre">u'\U00010122'.encode(&quot;utf-8&quot;)</span> = '\xf0\x90\x84\xa2'</tt></p>
+</blockquote>
+</li>
+</ol>
+<p>Notes on XML characters:</p>
+<ol class="rst-arabic">
+<li><p class="rst-first">The legal XML characters are defined in W3C XML 1.0 (Fith Edition):</p>
+<pre class="rst-literal-block">
+Char ::= #x9 | #xA | #xD | [#x20-#xD7FF] | [#xE000-#xFFFD] |
+         [#x10000-#x10FFFF]
+</pre>
+<p>These are the code points of Unicode characters using a non-surrogate
+representation.</p>
+</li>
+</ol>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>utf8_xml</code></strong> (string) - The UTF-8 encoded XML string to be examined.</li>
+        <li><strong class="pname"><code>meaning</code></strong> (string) - Short text with meaning of the XML string, for messages in exceptions.</li>
+    </ul></dd>
+  </dl>
+<div class="fields">      <p><strong>Exceptions:</strong>
+        <p><code class="link">TypeError</code>, if invoked with incorrect Python object type for <code class="link">utf8_xml</code>.</p>
+<p><a href="pywbem.tupleparse.ParseError-class.html" class="link">pywbem.ParseError</a>, if <code class="link">utf8_xml</code> contains Bytes that are invalid UTF-8
+sequences (incorrectly encoded or ill-formed) or invalid XML characters.</p>
+      </p>
+</div></td></tr></table>
+</div>
+<a name="is_subclass"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_subclass</span>(<span class="sig-arg">ch</span>,
+        <span class="sig-arg">ns</span>,
+        <span class="sig-arg">super</span>,
+        <span class="sig-arg">sub</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_operations-pysrc.html#is_subclass">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Determine if one class is a subclass of another
+
+Keyword Arguments:
+ch -- A CIMOMHandle.  Either a pycimmb.CIMOMHandle or a
+    pywbem.WBEMConnection.
+ns -- Namespace.
+super -- A string containing the super class name.
+sub -- The subclass.  This can either be a string or a pywbem.CIMClass.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pywbem-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Nov 10 16:41:40 2015
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

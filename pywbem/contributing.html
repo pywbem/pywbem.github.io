@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="..">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="robots" content="index, follow">
+<meta name="description" content="This site provides documentation for the PyWBEM projects on GitHub.">
+<title>PyWBEM Client - Contributing</title>
+<link rel="stylesheet" href="resources/style.css" type="text/css">
+</head>
+<body>
+<script src="resources/jquery.js"></script>
+<script src="resources/script.js"></script>
+<h1 align="center">PyWBEM Client - Contributing</h1>
+<div id="header_html"></div>
+<script type="text/javascript">
+  load_url_into_id('header.html', 'header_html');
+</script> 
+<div id="navbar_html"></div>
+<script type="text/javascript">
+  load_url_into_id('navbar.html', 'navbar_html');
+</script> 
+
+<div id="content">
+
+<h2>Contributing</h2>
+
+<p>The PyWBEM Client maintainers all have day jobs, so its development is
+really a community effort. Contributions are always welcome!</p>
+
+<p>If you want to contribute, you can do that in a number of areas:</p>
+
+<ul>
+  <li>Testing on new platforms (operating systems, Python implementations and
+  versions)</li>
+  <li>Extending the test suite (see the src/testsuite directory)</li>
+  <li>Reporting bugs you encounter, on the
+  <a href="https://github.com/pywbem/pywbem/issues">issue tracker</a></li>
+  <li>Fixing bugs or implementing feature requests listed on the
+  <a href="https://github.com/pywbem/pywbem/issues">issue tracker</a></li>
+  <li>Adding new functions (see the TODO list)</li>
+</ul>
+
+<h2>Development</h2>
+
+<p>This section provides some hints when you want to participate in the
+development of the PyWBEM Client. You can ignore it when you just want to use
+the PyWBEM Client and program against it.</p>
+
+<p>First, create a local clone of the PyWBEM Git repository:</p>
+
+<pre><code>git clone git@github.com:pywbem/pywbem.git
+cd pywbem
+</code></pre>
+
+<p>It is strongly recommended to use a
+<a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtual
+Python environment</a>
+for each version of Python supported by PyWBEM:</p>
+
+<pre><code>mkvirtualenv -p python2.6 pywbem26
+mkvirtualenv -p python2.7 pywbem27
+</code></pre>
+
+<p>As of the PyWBEM Client v0.8.0, its setup script (setup.py) establishes any
+prerequisites for its own development when invoked with the "develop"
+command:</p>
+
+<pre><code>cd src
+python setup.py develop
+</code></pre>
+
+<p>This needs to be repeated in each of the remaining virtual Python
+environments that were set up for PyWBEM (these commands should be seen in
+conjunction with the commands shown above, which were running the "develop"
+command in the pywbem27 environment):</p>
+
+<pre><code>workon pywbem26
+python setup.py develop
+</code></pre>
+
+<p>The PyWBEM Client also provides a makefile. Invoking <tt>make</tt> without
+arguments will print the possible targets:</p>
+
+<pre><code>make
+
+makefile for pywbem
+Package version will be: 0.8.0-dev
+Valid targets are:
+  build    - Build the distribution archive: ../dist/pywbem-0.8.0/pywbem-0.8.0-dev.zip
+  buildwin - (On 64-bit Windows) Build the Windows installable: ../dist/pywbem-0.8.0/pywbem-0.8.0-dev.win-amd64.exe
+  check    - Run PyLint on sources
+  install  - build + install the distribution archive using "python setup.py install"
+  develop  - prepare the development environment by installing prerequisites
+  test     - install + run unit tests
+  upload   - build + upload the distribution archive to PyPI
+  clean    - Remove any temporary files
+  clobber  - clean + remove any build products
+  all      - build + check + test + install + clean (that is, no upload!)
+</code></pre>
+
+<h2>Testing</h2>
+
+<p>The PyWBEM Client has some amount of unit test cases. Invoke
+<code>make test</code> to build and install the PyWBEM Client and to run the
+unit test cases on the current operating system and the current Python
+environment.</p>
+
+<p>Any help in completing the unit test cases is very welcome. If you feel like
+helping, search for occurrences of <code>TODO</code> in the Python source files
+in directory <code>src/testsuite</code>.</p>
+
+<h2>How to submit code</h2>
+
+<p>The number of committers in the PyWBEM Client project is small and should
+stay small. If you are not a committer but want to submit code, you have two
+choices:</p>
+
+<ul>
+
+<li>
+<p>Patch file:</p>
+<p>Work in your local Git clone, and once you are done, create a patch file
+reflecting your changes. Attach the patch file to an issue in the
+<a href="https://github.com/pywbem/pywbem/issues">issue tracker</a>.
+The commit level (in the PyWBEM Client project on GitHub, not in your local Git
+clone) for which the patch file is intended should be indicated in a
+comment on the issue.</p>
+</li>
+
+<li>
+<p>Pull request:</p>
+<p>Create a fork of the PyWBEM Client project (anywhere you have a public Git
+server), develop and commit your changes there, and once you are done, create
+a pull request targeting the PyWBEM Client project on GitHub
+(<a href="https://github.com/pywbem/pywbem">https://github.com/pywbem/pywbem</a>).
+Again, there should be an issue in the
+<a href="https://github.com/pywbem/pywbem/issues">PyWBEM Client issue tracker</a>
+that is resolved by the pull request, and a comment to the issue should
+mention the name of the pull request.</p>
+</li>
+
+</ul>
+
+</div>
+
+<div id="footer_html"></div>
+<script type="text/javascript">
+  load_url_into_id('footer.html', 'footer_html');
+</script> 
+</body>
+</html>

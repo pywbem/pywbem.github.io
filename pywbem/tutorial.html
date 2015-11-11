@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="..">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="robots" content="index, follow">
+<meta name="description" content="This site provides documentation for the PyWBEM projects on GitHub.">
+<title>PyWBEM Client - Tutorial</title>
+<link rel="stylesheet" href="resources/style.css" type="text/css">
+</head>
+<body>
+<script src="resources/jquery.js"></script>
+<script src="resources/script.js"></script>
+<h1 align="center">PyWBEM Client - Tutorial</h1>
+<div id="header_html"></div>
+<script type="text/javascript">
+  load_url_into_id('header.html', 'header_html');
+</script>
+<div id="navbar_html"></div>
+<script type="text/javascript">
+  load_url_into_id('navbar.html', 'navbar_html');
+</script>
+
+<div id="content">
+
+<h2>Tutorial</h2>
+
+<p>This is a short tutorial about using the PyWBEM client library until a more
+comprehensive one can be written.  It is intended to be enough to get people
+who know a bit about WBEM and CIM up and going.</p>
+
+<h3>Making Connections</h3>
+
+<p>Once PyWBEM has been <a href="pywbem/installation.html">installed</a>,
+the next stage is to learn how to
+make connections to WBEM servers.  Client connection to WBEM servers
+are represented by instances of the <tt>WBEMConnection</tt> Python
+class.</p>
+
+<p>Creating a client connection is quite simple.  All that is required
+is a location URL, a set of credentials.  The following code fragment
+creates a SSL-encrypted connection to <tt>wbem.example.com</tt> using
+a dummy user and dummy password:</p>
+
+<blockquote><pre>import pywbem
+cliconn = pywbem.WBEMConnection('https://wbem.example.com',
+                                ('user', 'password'))
+</pre></blockquote>
+
+<p>Note that this does not open a persisted TCP connection or any other
+notion of session; the connectedness is only conceptual.  After creating a
+connection, various methods may be called on the <tt>WBEMConnection</tt> object,
+which causes a remote call to the WBEM server.  Each method call sets up and
+tears down a new TCP connection for every invocation.</p>
+
+<h3>Python Object and Data Model</h3>
+
+<p>One of the goals of PyWBEM is to have a understandable,
+well-integrated, and easy to use interface to WBEM objects and
+operations.  This is hopefully achieved by the thoughtful mapping of
+CIM objects such as instances, instance names, properties, classes etc
+to native Python objects.  Ideally there should be no need to worry
+about the representation of CIM objects in XML or the wide range of
+property types that are defined in the WBEM specifications.</p>
+
+<h4>CIM Instances and Instance Names</h4>
+
+<p>The two fundamental objects in PyWBEM are <tt>CIMInstance</tt> and
+<tt>CIMInstanceName</tt>.  A <tt>CIMInstance</tt> represents a
+physical or logcial object that is under management, for example a
+disk drive, a temperature sensor or a network card.  The most
+interesting part of a <tt>CIMInstance</tt> object is the properties
+and values those properties take.  The properties of a
+<tt>CIMInstance</tt> can be accessed by treating the object as a
+Python dictionary:</p>
+
+<blockquote><pre>>>> from pywbem import CIMInstance
+>>> i = CIMInstance('CIM_Person')
+>>> i['Firstname'] = 'Tim'
+>>> i['Lastname'] = 'Potter'
+>>> print i.items()
+[('Lastname', 'Potter'), ('Firstname', 'Tim')]
+</pre></blockquote>
+
+<p>The keybindings for a <tt>CIMInstanceName</tt> can be treated in a
+similar manner.</p>
+
+<h4>CIM Data Types</h4>
+
+<p>CIM has a number of data types that are mostly mapped to
+the appropriate built-in Python data types.</p>
+
+<h3>CIM Instance Commands</h3>
+
+<p>PyWBEM contains a number of methods to query CIM instance objects.
+These methods take Python CIM objects as parameters and return Python
+CIM objects as results.</p>
+
+<p>The following examples are meant to be run, in order, using the
+Python interactive interpreter.  The interpreter is started up like:</p>
+
+<blockquote><pre>$ python
+Python 2.3.5 (#2, Mar 26 2005, 17:32:32)
+[GCC 3.3.5 (Debian 1:3.3.5-12)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from pywbem import WBEMConnection
+>>> cliconn = pywbem.WBEMConnection('https://wbem.example.com',
+                                    ('user', 'password'))
+</pre></blockquote>
+
+<p>The output of running the various examples has been reformatted for
+readability.</p>
+
+<h4>EnumerateInstances</h4>
+
+<p>The <tt>EnumerateInstances()</tt> method returns a list of
+<tt>CIMNamedInstance</tt> objects which contain the instance name and
+instance of for each and every instance of a particular CIM class.  The
+instance name can be accessed using the <tt>name</tt> attribute, and the
+instance with the <tt>instance</tt> attribute.</p>
+
+<p>The following script fetches the name of every process running on the
+managed node and displays all the details for the first process
+returned:</p>
+
+<blockquote><pre>>>> process_names = cliconn.EnumerateInstances('CIM_Process')
+>>> print process_names[0].instance.items()
+[(u'Parameters', [u'init']),
+ (u'CSName', u'nautilus3.asiapacific.cpqcorp.net'),
+ (u'RealUserID', 0L),
+ (u'OSName', u'Red Hat Enterprise Linux AS'),
+ (u'Priority', 15L),
+ (u'OtherExecutionDescription', None),
+ (u'ProcessNiceValue', 0L),
+ (u'Handle', u'1'),
+ (u'Description', u'init'),
+ (u'OSCreationClassName', u'CIM_OperatingSystem'),
+ (u'WorkingSetSize', 0L),
+ (u'Name', u'init'),
+ (u'ProcessGroupID', 0L),
+ (u'ProcessTTY', u'?'),
+ (u'Caption', u'init'),
+ (u'ProcessSessionID', 0L),
+ (u'KernelModeTime', 7651000L),
+ (u'ParentProcessID', u'0'),
+ (u'ExecutionState', 6L),
+ (u'CSCreationClassName', u'CIM_UnitaryComputerSystem'),
+ (u'UserModeTime', 1000L),
+ (u'CreationClassName', u'PG_UnixProcess')]
+</pre></blockquote>
+
+<h4>EnumerateInstanceNames</h4>
+
+<p>The <tt>EnumerateInstanceNames()</tt> method returns a list of
+<tt>CIMInstanceName</tt> objects which are the instance names of every
+instance of a particular CIM class.  We can perform a similar
+operation on the list of processes on the managed node as for
+<tt>EnumerateInstanceNames()</tt> above:</p>
+
+<blockquote><pre>>>> processes = cliconn.EnumerateInstanceNames('CIM_Process')
+>>> print processes[0].items()
+[(u'CSName', u'nautilus3.asiapacific.cpqcorp.net'),
+ (u'Handle', u'1'),
+ (u'OSCreationClassName', u'CIM_OperatingSystem'),
+ (u'CreationClassName', u'PG_UnixProcess'),
+ (u'CSCreationClassName', u'CIM_UnitaryComputerSystem'),
+ (u'OSName', u'Red Hat Enterprise Linux AS')]
+</blockquote></pre>
+
+<p>Note that you cannot necessarily assume that the ordering of the
+returned results for the <tt>CIM_Process</tt> provider is the same for
+enumerating instance names as it is for enumerating instances.  We
+just happen to be lucky in this case. Also note that the list of
+keybindings is a subset of the list of properties displayed above.</p>
+
+<p>Instance names are required as parameters for most PyWBEM calls as
+they uniquely identify a CIM object on the managed node.</p>
+
+<h4>GetInstance</h4>
+
+<p>Calling <tt>GetInstance()</tt> returns a <tt>CIMInstance</tt>
+object given a <tt>CIMInstanceName</tt>.</p>
+
+<blockquote><pre>>>> instance = cliconn.GetInstance(process_names[0])
+>>> instance == processes[0]
+True
+</blockquote></pre>
+
+<p>(Again we are relying on the fact that the first element of the
+<tt>CIM_Process</tt> instance names is the same as the
+<tt>CIM_Process</tt> instances).</p>
+
+<h4>DeleteInstance</h4>
+
+<p>Some WBEM providers support deletion of managed objects.  For
+others it makes no sense to do so.  The <tt>DeleteInstance()</tt>
+method takes a <tt>CIMInstanceName</tt> object and attempts to delete
+that object from the repository.</p>
+
+<blockquote><pre>>>> cliconn.DeleteInstance(process_names[0])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in ?
+  File "/data/wbem/python-wbem/trunk/pywbem/cim_operations.py", line 352, in DeleteInstance
+    InstanceName = instancename,
+  File "/data/wbem/python-wbem/trunk/pywbem/cim_operations.py", line 198, in imethodcall
+    raise CIMError(code, tt[1]['DESCRIPTION'])
+pywbem.cim_operations.CIMError: (7, u'CIM_ERR_NOT_SUPPORTED: The requested operation is not supported')
+</pre></blockquote>
+
+<p>Unfortunately the particular <tt>CIM_Process</tt> provider being
+queried doesn't support deletion of objects so PyWBEM maps the CIM
+error to a Python exception.</p>
+
+<h4>CreateInstance</h4>
+
+<p>The creation of a CIM instance on a managed node is acheived by
+calling the <tt>CreateInstance()</tt> method.  Like
+<tt>DeleteInstance</tt> the particular provider being queried may not
+support the creation of new objects.</p>
+
+<p><i>(The <tt>CreateInstance()</tt> method has not been fully implemented
+and tested at this stage).</i></p>
+
+<h4>ModifyInstance</h4>
+
+<p>Existing CIM instance objects can be modified by having the value
+of properties changed.  This is achieved using the
+<tt>ModifyInstance()</tt> method.  It takes a <tt>CIMInstanceName</tt>
+parameter which specifies the name of the instance to be modified, and
+a <tt>CIMInstance</tt> object which contains only the properties that
+are to be changed.  Properties not present are not modified.</p>
+
+<blockquote><pre>>>> i = CIMInstanceName('CIM_Person', {'FirstName': 'Tim',
+                                       'LastName': 'Potter'})
+>>> n = CIMInstance('CIM_Person', {'FirstName': 'Timothy'})
+>>> cliconn.ModifyInstance(i, n)
+CIMInstanceName('CIM_Person', {'LastName': 'Potter', 'FirstName': 'Timothy'})
+</pre></blockquote>
+
+<p><tt>ModifyInstance()</tt> returns the instance name of the CIM
+instance that has been modified.</p>
+
+<h3>CIM Class Commands</h3>
+
+<p>PyWBEM contains methods to query CIM class objects, but support for
+this has not been fully implemented and tested.  For reference, the
+relevant method names are:</p>
+
+<ul>
+  <li><tt>EnumerateClassNames()</tt></li>
+  <li><tt>EnumerateClasses()</tt></li>
+  <li><tt>GetClass()</tt></li>
+</ul>
+
+<h3>CIM Method Commands</h3>
+
+<p>Method invocations are quite easily done.  The
+<tt>InvokeMethod()</tt> function is called with any parameters required
+as Python keyword arguments.</p>
+
+<h3>CIM Association Commands</h3>
+
+<p>The support for CIM association commands is basically working, but
+not extensively tested.  The relevant method names are:</p>
+
+<ul>
+  <li><tt>Associators()</tt></li>
+  <li><tt>AssociatorNames()</tt></li>
+  <li><tt>References()</tt></li>
+  <li><tt>ReferenceNames()</tt></li>
+</ul>
+
+<h2>Examples</h2>
+
+<p>To help get developers, testers and hackers started with the PyWBEM client
+library, there is some example code available to see how the basic functions
+operate:</p>
+
+<ul>
+  <li><a href="pywbem/examples/00-connect.py">Making WBEM connections</a>
+  <li><a href="pywbem/examples/01-enumerate-instances.py">Enumerate
+      instances and instance names</a>
+  <li><a href="pywbem/examples/02-getinstance.py">Get an instance by name</a>
+  <li><a href="pywbem/examples/03-deleteinstance.py">Delete an instance</a>
+  <li><a href="pywbem/examples/04-createinstance.py">Create an instance</a>
+  <li><a href="pywbem/examples/05-modifyinstance.py">Modify an instance</a>
+  <li><a href="pywbem/examples/06-invokemethod.py">Invoke a method</a>
+</ul>
+
+</div>
+
+<div id="footer_html"></div>
+<script type="text/javascript">
+  load_url_into_id('footer.html', 'footer_html');
+</script>
+</body>
+</html>

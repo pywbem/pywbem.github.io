@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="..">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="robots" content="index, follow">
+<meta name="description" content="This site provides documentation for the PyWBEM projects on GitHub.">
+<title>PyWBEM Client - Installation</title>
+<link rel="stylesheet" href="resources/style.css" type="text/css">
+</head>
+<body>
+<script src="resources/jquery.js"></script>
+<script src="resources/script.js"></script>
+<h1 align="center">PyWBEM Client - Installation</h1>
+<div id="header_html"></div>
+<script type="text/javascript">
+  load_url_into_id('header.html', 'header_html');
+</script>
+<div id="navbar_html"></div>
+<script type="text/javascript">
+  load_url_into_id('navbar.html', 'navbar_html');
+</script>
+
+<div id="content">
+
+<h2>Installation</h2>
+
+<p>PyWBEM can be installed quite easily by running its standard Python setup
+script (setup.py) with the "install" command, or by using
+<code>pip install</code> (which also invokes the setup script).</p>
+
+<p>As of PyWBEM v0.8.0, the setup script automatically installs its dependencies.
+This includes installing the M2Crypto package, installing OS-level packages
+that are prerequisites for installing M2Crypto, or building and installing
+Swig if needed.</p>
+
+<p>The installation of Swig and of OS-level packages is performed using the
+<code>sudo</code> command, so your userid needs to be authorized
+accordingly.</p>
+
+<p>Installation of PyWBEM is supported into the default system Python, and
+(preferrable) into
+<a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtual
+Python environments</a>.</p>
+
+<h2>Examples</h2>
+
+<ul>
+<li>
+<p>Install latest version from PyPI into default system Python:</p>
+<pre><code>sudo pip install pywbem
+</code></pre>
+</li>
+<li>
+<p>Install latest version from PyPI into new Python 2.7 virtual environment:</p>
+<pre><code>mkvirtualenv -p python2.7 pywbem27
+pip install pywbem
+</code></pre>
+</li>
+<li>
+<p>Install from master branch on GitHub into default system Python:</p>
+<pre><code>git clone git@github.com:pywbem/pywbem.git pywbem
+cd pywbem/src
+sudo python setup.py install
+</code></pre>
+</li>
+<li>
+<p>Install from master branch on GitHub into new Python 2.7 virtual environment:</p>
+<pre><code>git clone git@github.com:pywbem/pywbem.git pywbem
+cd pywbem/src
+mkvirtualenv -p python2.7 pywbem27
+python setup.py install
+</code></pre>
+</li>
+<li>
+<p>Install from a particular distribution archive on GitHub into new Python 2.7
+virtual environment:</p>
+<pre><code>wget https://github.com/pywbem/pywbem/blob/master/dist/pywbem-0.8.0/pywbem-0.8.0-dev.zip
+unzip pywbem-0.8.0-dev.zip
+cd pywbem-0.8.0.dev0/src
+mkvirtualenv -p python2.7 pywbem27
+python setup.py install
+</code></pre>
+</li>
+</ul>
+
+<p>The command syntax above is shown for Linux, but this works the same way on
+Windows and on other operating systems supported by Python.</p>
+
+<h2>Test of the installation</h2>
+
+<p>To test that PyWBEM is sucessfully installed, start up a Python interpreter
+and try to import the pywbem module:</p>
+
+<pre><code>python -c "import pywbem"
+</code></pre>
+
+<p>If you do not see any error messages after the import command, PyWBEM has
+been sucessfully installed and its dependencies are available.</p>
+
+</div>
+
+<div id="footer_html"></div>
+<script type="text/javascript">
+  load_url_into_id('footer.html', 'footer_html');
+</script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pywbem.cim_http</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pywbem-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pywbem-module.html">Package&nbsp;pywbem</a> ::
+        Module&nbsp;cim_http
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pywbem.cim_http-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module cim_http</h1><p class="nomargin-top"><span class="codelink"><a href="pywbem.cim_http-pysrc.html">source&nbsp;code</a></span></p>
+<p>Send HTTP/HTTPS requests to a WBEM server.</p>
+<p>This module does not know anything about the fact that the data being
+transferred in the HTTP request and response is CIM-XML.  It is up to the
+caller to provide CIM-XML formatted input data and interpret the result data
+as CIM-XML.</p>
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Classes</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pywbem.cim_http.Error-class.html" class="summary-name">Error</a><br />
+      Exception base class for catching any HTTP transport related errors.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pywbem.cim_http.ConnectionError-class.html" class="summary-name">ConnectionError</a><br />
+      This exception is raised when there is a problem with the connection
+to the server.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pywbem.cim_http.AuthError-class.html" class="summary-name">AuthError</a><br />
+      This exception is raised when an authentication error (401) occurs.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pywbem.cim_http.TimeoutError-class.html" class="summary-name">TimeoutError</a><br />
+      This exception is raised when the client times out.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pywbem.cim_http.HTTPTimeout-class.html" class="summary-name">HTTPTimeout</a><br />
+      HTTP timeout class that is a context manager (for use by 'with'
+statement).
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Functions</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.cim_http-module.html#wbem_request" class="summary-sig-name">wbem_request</a>(<span class="summary-sig-arg">url</span>,
+        <span class="summary-sig-arg">data</span>,
+        <span class="summary-sig-arg">creds</span>,
+        <span class="summary-sig-arg">headers</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">debug</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">x509</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">verify_callback</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ca_certs</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">no_verification</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">timeout</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Send an HTTP or HTTPS request to a WBEM server and return the response.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.cim_http-pysrc.html#wbem_request">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.cim_http-module.html#get_object_header" class="summary-sig-name">get_object_header</a>(<span class="summary-sig-arg">obj</span>)</span><br />
+      Return the HTTP header required to make a CIM operation request
+using the given object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.cim_http-pysrc.html#get_object_header">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Function Details</span></td>
+</tr>
+</table>
+<a name="wbem_request"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">wbem_request</span>(<span class="sig-arg">url</span>,
+        <span class="sig-arg">data</span>,
+        <span class="sig-arg">creds</span>,
+        <span class="sig-arg">headers</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">debug</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">x509</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">verify_callback</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ca_certs</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">no_verification</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">timeout</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_http-pysrc.html#wbem_request">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Send an HTTP or HTTPS request to a WBEM server and return the response.</p>
+<p>This function uses Python's built-in httplib module.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>url</code></strong> (<code class="link">unicode</code> or UTF-8 encoded <code class="link">str</code>) - URL of the WBEM server (e.g. <tt class="rst-docutils literal"><span class="pre">&quot;https://10.11.12.13:6988&quot;</span></tt>).
+For details, see the <tt class="rst-docutils literal">url</tt> parameter of
+<a href="pywbem.cim_operations.WBEMConnection-class.html#__init__" class="link">WBEMConnection.__init__</a>.</li>
+        <li><strong class="pname"><code>data</code></strong> (<code class="link">unicode</code> or UTF-8 encoded <code class="link">str</code>) - The CIM-XML formatted data to be sent as a request to the WBEM server.</li>
+        <li><strong class="pname"><code>creds</code></strong> - Credentials for authenticating with the WBEM server.
+For details, see the <tt class="rst-docutils literal">creds</tt> parameter of
+<a href="pywbem.cim_operations.WBEMConnection-class.html#__init__" class="link">WBEMConnection.__init__</a>.</li>
+        <li><strong class="pname"><code>headers</code></strong> (list of <code class="link">unicode</code> or UTF-8 encoded <code class="link">str</code>) - List of HTTP header fields to be added to the request, in addition to
+the standard header fields such as <tt class="rst-docutils literal"><span class="pre">Content-type</span></tt>,
+<tt class="rst-docutils literal"><span class="pre">Content-length</span></tt>, and <tt class="rst-docutils literal">Authorization</tt>.</li>
+        <li><strong class="pname"><code>debug</code></strong> (<tt class="rst-docutils literal">bool</tt>) - Boolean indicating whether to create debug information.
+Not currently used.</li>
+        <li><strong class="pname"><code>x509</code></strong> - Used for HTTPS with certificates.
+For details, see the <tt class="rst-docutils literal">x509</tt> parameter of
+<a href="pywbem.cim_operations.WBEMConnection-class.html#__init__" class="link">WBEMConnection.__init__</a>.</li>
+        <li><strong class="pname"><code>verify_callback</code></strong> - Used for HTTPS with certificates.
+For details, see the <tt class="rst-docutils literal">verify_callback</tt> parameter of
+<a href="pywbem.cim_operations.WBEMConnection-class.html#__init__" class="link">WBEMConnection.__init__</a>.</li>
+        <li><strong class="pname"><code>ca_certs</code></strong> - Used for HTTPS with certificates.
+For details, see the <tt class="rst-docutils literal">ca_certs</tt> parameter of
+<a href="pywbem.cim_operations.WBEMConnection-class.html#__init__" class="link">WBEMConnection.__init__</a>.</li>
+        <li><strong class="pname"><code>no_verification</code></strong> - Used for HTTPS with certificates.
+For details, see the <tt class="rst-docutils literal">no_verification</tt> parameter of
+<a href="pywbem.cim_operations.WBEMConnection-class.html#__init__" class="link">WBEMConnection.__init__</a>.</li>
+        <li><strong class="pname"><code>timeout</code></strong> (number) - Timeout in seconds, for requests sent to the server. If the server did
+not respond within the timeout duration, the socket for the connection
+will be closed, causing a <a href="pywbem.cim_http.TimeoutError-class.html" class="link">TimeoutError</a> to be raised.
+A value of <tt class="rst-docutils literal">None</tt> means there is no timeout.
+A value of <tt class="rst-docutils literal">0</tt> means the timeout is very short, and does not really
+make any sense.
+Note that not all situations can be handled within this timeout, so
+for some issues, this method may take longer to raise an exception.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>The CIM-XML formatted response data from the WBEM server, as a <code class="link">unicode</code>
+object.</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'><a href="pywbem.cim_http.AuthError-class.html">AuthError</a></strong></code></li>
+        <li><code><strong class='fraise'><a href="pywbem.cim_http.ConnectionError-class.html">ConnectionError</a></strong></code></li>
+        <li><code><strong class='fraise'><a href="pywbem.cim_http.TimeoutError-class.html">TimeoutError</a></strong></code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_object_header"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_object_header</span>(<span class="sig-arg">obj</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_http-pysrc.html#get_object_header">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  Return the HTTP header required to make a CIM operation request
+using the given object.  Return None if the object does not need
+to have a header.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pywbem-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Nov 10 16:41:40 2015
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="..">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="robots" content="index, follow">
+<meta name="description" content="This site provides documentation for the PyWBEM projects on GitHub.">
+<title>PyWBEM Client - Overview</title>
+<link rel="stylesheet" href="resources/style.css" type="text/css">
+</head>
+<body>
+<script src="resources/jquery.js"></script>
+<script src="resources/script.js"></script>
+<h1 align="center">PyWBEM Client - Overview</h1>
+<div id="header_html"></div>
+<script type="text/javascript">
+  load_url_into_id('header.html', 'header_html');
+</script> 
+<div id="navbar_html"></div>
+<script type="text/javascript">
+  load_url_into_id('navbar.html', 'navbar_html');
+</script> 
+
+<div id="content">
+
+<h2>Overview</h2>
+
+<p>The PyWBEM Client project contains a WBEM client library and some related
+utilities, written in pure Python.</p>
+
+<p>A WBEM client allows issuing operations to a WBEM server, using the CIM
+operations over HTTP (CIM-XML) protocol defined in the DMTF standards DSP0200
+and DSP0201. See
+<a href="http://www.dmtf.org/standards/wbem">http://www.dmtf.org/standards/wbem</a>
+for information about WBEM. This is used for all kinds of systems management
+tasks that are supported by the system running the WBEM server.</p>
+
+<p>The PyWBEM Client project consists of the following components:</p>
+<dl>
+  <dt><b>WBEM client library</b></dt>
+  <dd>
+    <p>A WBEM client that supports talking the CIM-XML protocol with a WBEM
+    server.</p>
+  </dd>
+  <dt><b>WBEM CLI</b></dt>
+  <dd>
+    <p>A Python script named "wbemcli.py" that can be used as a command line
+    tool and as an interactive shell.</p>
+  </dd>
+  <dt><b>MOF compiler</b></dt>
+  <dd>
+    <p>A Python script named "mof_compiler.py" for compiling MOF files. It can
+       also be used as a module.</p>
+  </dd>
+  <dt><b>Some experimental stuff</b></dt>
+  <dd>
+    <p><dl>
+      <dt>cim_provider</dt>
+      <dd>A module for writing CIM providers in Python.</dd>
+      <dt>cim_provider2</dt>
+      <dd>Another module for writing CIM providers in Python.</dd>
+      <dt>twisted_client</dt>
+      <dd>An experimental alternative WBEM client library that uses the Python
+      <tt>twisted</tt> package.</dd>
+    </dl></p>
+  </dd>
+</dl>
+
+<h2>Community, Issues, Feature Requests</h2>
+
+<p>For discussing the PyWBEM Client project, when asking for help, or just for any
+kinds of questions related to it, use the
+<a href="http://sourceforge.net/p/pywbem/mailman/pywbem-devel/">pywbem-devel
+mailing list</a>.</p>
+
+<p>For reporting issues and for raising feature requests, use the
+<a href="https://github.com/pywbem/pywbem/issues">PyWBEM Client issue tracker</a>.</p>
+
+</div>
+
+<div id="footer_html"></div>
+<script type="text/javascript">
+  load_url_into_id('footer.html', 'footer_html');
+</script> 
+</body>
+</html>

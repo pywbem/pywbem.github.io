@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<!-- This file is maintained manually, but has some automatically generated
+     entries from https://www.xml-sitemaps.com -->
+
+  <url>
+    <loc>http://pywbem.github.io/</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>http://pywbem.github.io/index.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://pywbem.github.io/navbar.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://pywbem.github.io/header.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://pywbem.github.io/footer.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://pywbem.github.io/license.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://pywbem.github.io/pywbem/index.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://pywbem.github.io/pywbem/installation.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://pywbem.github.io/pywbem/documentation.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://pywbem.github.io/pywbem/contributing.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://pywbem.github.io/pywbem/tutorial.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://pywbem.github.io/pywbem/doc/0.8.0/index.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://pywbem.github.io/pywbem/doc/0.8.0/doc/index.html</loc>
+    <lastmod>2015-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+</urlset>

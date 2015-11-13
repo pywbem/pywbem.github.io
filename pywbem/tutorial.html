@@ -363,7 +363,32 @@ no new values specified in the input instance get their default values.</p>
  ...]
 </pre></blockquote>
 
-<h3>CIM Method Operation</h3>
+<h4>ExecQuery</h3>
+
+<p>The
+<script>doc_link('method',
+                 'pywbem.cim_operations.WBEMConnection.ExecQuery',
+                 'ExecQuery()')</script>
+method is used to execute a query in a particular query language in a namespace
+of the WBEM server.</p>
+
+<p>There is a standard query language, the <i>CIM Query Language</i> (CQL,
+DMTF standard DSP0202), which is identified using the value <tt>"DMTF:CQL"</tt>
+for the <tt>QueryLanguage</tt> parameter. Another query language is the
+<i>WBEM Query Language</i> (WQL), identified using the value <tt>"WQL"</tt>
+for the <tt>QueryLanguage</tt> parameter. WQL has never been standardized, but
+is frequently implemented.</p>
+
+<p>The query string in the chosen query language is then specified via the
+<tt>Query</tt> parameter of <tt>ExecQuery()</tt>.</p>
+
+<p><tt>ExecQuery()</tt> returns a list of
+<script>doc_link('class',
+                 'pywbem.cim_obj.CIMInstance',
+                 'CIMInstance')</script>
+objects that form the query result.</p>
+
+<h3>CIM Method Invocation</h3>
 
 <p>CIM method invocations are quite easily done. The
 <script>doc_link('method',
@@ -376,12 +401,12 @@ for static CIM methods).</p>
 <script>doc_link('class',
                  'pywbem.cim_obj.CIMInstanceName',
                  'CIMInstanceName')</script>
-object referencing the CIM instance.
+object referencing the CIM instance, as input.
 The input parameters for the CIM method are specified as keyword
 parameters to <tt>InvokeMethod()</tt>.</p>
 
-<p><tt>InvokeMethod()</tt> returns a tuple of return value, and a dictionary of
-the output parameters of the CIM method.</p>
+<p><tt>InvokeMethod()</tt> returns a tuple consisting of the return value of the
+CIM method, and a dictionary with the output parameters of the CIM method.</p>
 
 <h3>CIM Association Operations</h3>
 

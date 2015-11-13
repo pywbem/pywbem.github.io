@@ -31,8 +31,8 @@ intended to be enough to get people who know a bit about WBEM and CIM up and
 going.</p>
 
 <p>Python code in this tutorial is shown using the interactive Python
-interpreter. The examples are meant to be run in order. The interpreter is
-started up like this:</p>
+interpreter. The examples are meant to be run in order.
+The interpreter is started up like this:</p>
 
 <blockquote><pre>$ python
 Python 2.6.6 (r266:84292, May 22 2015, 08:34:51)
@@ -44,6 +44,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 <p>The output of running the various examples has been reformatted for
 readability.</p>
 
+<p>If you want to actually type the examples in, you need a WBEM server that
+implements the "CIM_Process" class. But you can also just read the tutorial
+instead, and get something out of it.</p>
+
 <h3>Making Connections</h3>
 
 <p>Once PyWBEM has been <a href="pywbem/installation.html">installed</a>,
@@ -54,7 +58,7 @@ connection to a WBEM server is represented by an instance of the
 Python class.</p>
 
 <p>Creating a connection is quite simple. All that is required is a URL for the
-WBEM server, and a set of credentials.  The following code fragment creates an
+WBEM server, and a set of credentials.  The following code creates an
 SSL-encrypted connection to <tt>wbem.example.com</tt> using a dummy user and
 dummy password:</p>
 
@@ -104,16 +108,15 @@ supported by PyWBEM.</p>
 A <tt>CIMInstance</tt> object is a representation of
 a CIM instance in a WBEM server, which in turn represents a physical or logical
 resource that is under management, or an aspect thereof. Examples for such
-resources are disk drives, temperature sensors, or network cards. The most
-interesting part of a CIM instance is the properties and values those
+managed resources are disk drives, temperature sensors, or network cards. The
+most interesting part of a CIM instance is the properties and values those
 properties take. The properties of a <tt>CIMInstance</tt> object can be
 accessed by treating the object as a Python dictionary:</p>
 
-<blockquote><pre>>>> from pywbem import CIMInstance
->>> i = CIMInstance('CIM_Person')
->>> i['Firstname'] = 'Tim'
->>> i['Lastname'] = 'Potter'
->>> print i.items()
+<blockquote><pre>>>> inst = pywbem.CIMInstance('CIM_Person')
+>>> inst['Firstname'] = 'Tim'
+>>> inst['Lastname'] = 'Potter'
+>>> print inst.items()
 [('Lastname', 'Potter'), ('Firstname', 'Tim')]
 </pre></blockquote>
 
@@ -123,8 +126,9 @@ within the server, the CIM class within the namespace, and identifies the CIM
 instance within the class by means of its key property values. These key
 property values are called <i>key bindings</i> in CIM.</p>
 
-<p>The key bindings of a <tt>CIMInstanceName</tt> object can also be
-accessed by treating the object as a Python dictionary.</p>
+<p>Similar to <tt>CIMInstance</tt>, the key bindings of a
+<tt>CIMInstanceName</tt> object can also be accessed by treating the object as
+a Python dictionary.</p>
 
 <h4>CIM Data Types</h4>
 
@@ -153,9 +157,9 @@ method returns a list of
 <script>doc_link('class',
                  'pywbem.cim_obj.CIMInstance',
                  'CIMInstance')</script>
-objects for each instance of a particular CIM class (and its subclasses). The
-instance path is part of the return objects and can be accessed via the
-<tt>path</tt> attribute.</p>
+objects for each CIM instance of a particular CIM class (and its subclasses).
+The CIM instance name is part of the returned objects and can be accessed via
+their <tt>path</tt> attribute.</p>
 
 <p>The following script fetches the CIM instances for every process running on
 the managed node and displays all the details for the first process
@@ -197,9 +201,8 @@ method returns a list of
 <script>doc_link('class',
                  'pywbem.cim_obj.CIMInstanceName',
                  'CIMInstanceName')</script>
-objects which are the instance paths of each instance of a particular CIM class
-(and its subclasses).  We can perform a similar operation on the list of
-processes on the managed node as for <tt>EnumerateInstances()</tt> above:</p>
+objects which reference each instance of a particular CIM class
+(and its subclasses):
 
 <blockquote><pre>>>> process_names = conn.EnumerateInstanceNames('CIM_Process')
 >>> print process_names[0].items()
@@ -212,13 +215,17 @@ processes on the managed node as for <tt>EnumerateInstances()</tt> above:</p>
 </blockquote></pre>
 
 <p>Note that you cannot necessarily assume that the ordering of the returned
-results for the <tt>CIM_Process</tt> provider is the same for enumerating
+results for the "CIM_Process" provider is the same for enumerating
 instance names as it is for enumerating instances. We just happen to be lucky in
-this case. Also note that the list of key bindings displayed for the instance
-name is a subset of the list of properties displayed for the instance.</p>
+this case (which can be seen by the fact that all key bindings in the returned
+instance name have the same values as the same-named properties of the instance
+returned in the previous example).</p>
 
-<p>Instance names are required as parameters for most PyWBEM calls as
-they uniquely identify a CIM instance on the managed node.</p>
+<p>Also note that the list of key bindings displayed for the instance name is
+a subset of the list of properties displayed for the instance.</p>
+
+<p><tt>CIMInstanceName</tt> objects are required as parameters for most PyWBEM
+calls as they uniquely identify a CIM instance on the managed node.</p>
 
 <h4>GetInstance</h4>
 
@@ -241,19 +248,23 @@ object that references the desired CIM instance:</p>
 True
 </blockquote></pre>
 
-<p>Again, we are relying on the assumption that the first element of the
-<tt>CIM_Process</tt> instance names is the same as the
-<tt>CIM_Process</tt> instances, which may or may not actually be the case.</p>
+<p>Again, for the comparison, we are relying on the fact that the first
+instance in the result set of <tt>EnumerateInstances()</tt> is for the same
+process as the first instance name in the result set of
+<tt>EnumerateInstanceNames()</tt>.</p>
 
 <h4>DeleteInstance</h4>
 
-<p>For some CIM classes, deletion of the corresponding managed resources is
-defined. This is typically not defined in the CIM Schema, but in WBEM Management
-Profiles (see DMTF standard DSP1001). For some others, it makes no sense to do
-so. Often, management profiles that define a semantics for the deletion of
-managed resources, leave that optional for an implementation. The implementation
-for a CIM class in the WBEM server (aka <i>CIM provider</i>) thus may or may not
-support deletion of its instances.</p>
+<p>For some CIM classes, it makes no sense to support deletion of their CIM
+instances. For some others, deletion of its CIM instances and consequently
+deletion of the represented managed resources is defined. Such a deletion
+semantics is typically not defined in the class definitions in the CIM Schema,
+but in their usage definitions in WBEM Management Profiles (see DMTF standard
+DSP1001). Often, management profiles that define a semantics for the deletion of
+managed resources, leave that optional for an implementation to support.
+The implementation for a CIM class in the WBEM server (aka <i>CIM provider</i>)
+thus may or may not support deletion of its instances and the represented
+managed resources.</p>
 
 <p>The
 <script>doc_link('method',
@@ -263,9 +274,8 @@ method takes a
 <script>doc_link('class',
                  'pywbem.cim_obj.CIMInstanceName',
                  'CIMInstanceName')</script>
-object and deletes the referenced CIM instance, which in turn (dependent on the
-CIM provider) deletes the CIM instance and the managed resource, or rejects the
-operation.</p>
+object and deletes the referenced CIM instance and the represented managed
+resource, or rejects the operation if deletion is not supported.</p>
 
 <blockquote><pre>>>> conn.DeleteInstance(process_names[0])
 Traceback (most recent call last):
@@ -274,29 +284,30 @@ Traceback (most recent call last):
     self.imethodcall(
   File ".../pywbem/cim_operations.py", line 673, in imethodcall
     raise CIMError(code, tt[1]['DESCRIPTION'])
-pywbem.cim_operations.CIMError: (7, u'CIM_ERR_NOT_SUPPORTED: The requested operation is not supported')
+pywbem.cim_operations.CIMError: (7, u'CIM_ERR_NOT_SUPPORTED: The requested
+operation is not supported')
 </pre></blockquote>
 
-<p>As it turns out, the CIM provider of <tt>CIM_Process</tt> in our WBEM server
+<p>As it turns out, the CIM provider for class "CIM_Process" in our WBEM server
 does not support the deletion of processes, so the WBEM server returns a failure
 with CIM status <tt>CIM_ERR_NOT_SUPPORTED</tt>.</p>
 
 <p>PyWBEM maps CIM operation failures to the Python exception
 <script>doc_link('class',
                  'pywbem.cim_operations.CIMError',
-                 'CIMError')</script>, and
-raises an according exception in this case. The CIM status code is available as
-a numeric value in the <tt>error_code</tt> attribute of the exception object,
-and the
+                 'CIMError')</script>,
+and raises that in this case. The CIM status code is available as a numeric
+value in the <tt>error_code</tt> attribute of the exception object.
+See the
 <script>doc_link('module',
                  'pywbem.cim_constants',
                  'cim_constants')</script>
-module defines the CIM status code values.</p>
+module for a definition of the CIM status code values.</p>
 
 <h4>CreateInstance</h4>
 
-<p>The creation of a CIM instance on a managed node and in turn the creation of
-the underlying managed resource is achieved by calling the
+<p>The creation of a CIM instance and in turn the creation of the underlying
+managed resource is achieved by calling the
 <script>doc_link('method',
                  'pywbem.cim_operations.WBEMConnection.CreateInstance',
                  'CreateInstance()')</script>
@@ -314,10 +325,17 @@ object that references the new CIM instance.</p>
 <p>Like for <tt>DeleteInstance()</tt>, the CIM provider on the
 WBEM server may or may not support the creation of new CIM instances.</p>
 
+<p>Note that the <tt>CIMInstance</tt> object provided as input does not specfify
+an instance name. The determination of an instance name for the new CIM instance
+is completely left to the CIM provider in the WBEM server. For CIM classes
+with natural keys (key properties other than "InstanceID"), some CIM providers
+do honor initial values for some or all of the key properties provided in the
+input instance.</p>
+
 <h4>ModifyInstance</h4>
 
 <p>Existing CIM instances can be modified by having the values of properties
-changed.  This is achieved using the
+changed. This is achieved using the
 <script>doc_link('method',
                  'pywbem.cim_operations.WBEMConnection.ModifyInstance',
                  'ModifyInstance()')</script>
@@ -336,7 +354,7 @@ no new values specified in the input instance get their default values.</p>
 
 <p>The values of key properties cannot be modified.</p>
 
-<blockquote><pre>>>> process0['Priority'] = Uint32(10);
+<blockquote><pre>>>> process0['Priority'] = Uint32(10)
 >>> conn.ModifyInstance(process0, PropertyList=['Priority'])
 >>> process0m = conn.GetInstance(process0.path)
 >>> print process0m.items()
@@ -351,19 +369,19 @@ no new values specified in the input instance get their default values.</p>
 <script>doc_link('method',
                  'pywbem.cim_operations.WBEMConnection.InvokeMethod',
                  'InvokeMethod()')</script>
-method can be invoked on a CIM object that can be a CIM instance (referenced
-via a
+method is used to invoke a CIM method on a CIM instance, or on a CIM class (only
+for static CIM methods).</p>
+
+<p>For invoking a CIM method on a CIM instance, <tt>InvokeMethod()</tt> takes a
 <script>doc_link('class',
                  'pywbem.cim_obj.CIMInstanceName',
-                 'CIMInstanceName')</script> object),
-or a CIM class (for static methods only, referenced via its class name that
-can be specified as a Python string, or as a
-<script>doc_link('class',
-                 'pywbem.cim_obj.CIMClassName',
-                 'CIMClassName')</script> object).
-The input parameters for the CIM method are simply specified as keyword
-parameters to the Python method. The Python method returns a tuple of return
-value, and a dictionary of the output parameters of the CIM method.</p>
+                 'CIMInstanceName')</script>
+object referencing the CIM instance.
+The input parameters for the CIM method are specified as keyword
+parameters to <tt>InvokeMethod()</tt>.</p>
+
+<p><tt>InvokeMethod()</tt> returns a tuple of return value, and a dictionary of
+the output parameters of the CIM method.</p>
 
 <h3>CIM Association Operations</h3>
 
@@ -425,7 +443,7 @@ classes and qualifiers:</p>
 <h2>Further Examples</h2>
 
 <p>To help get developers, testers and hackers started with the PyWBEM client
-library, there is some further example code available to see how the basic
+library, there is some more complete example code available to see how the basic
 functions operate:</p>
 
 <ul>

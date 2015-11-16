@@ -36,12 +36,15 @@ really a community effort. Contributions are always welcome!</p>
 
 <ul>
   <li>Testing on new platforms (operating systems, Python implementations and
-  versions)</li>
+    versions)</li>
   <li>Extending the unit test cases</li>
   <li>Reporting bugs you encounter, on the
-  <a href="https://github.com/pywbem/pywbem/issues">issue tracker</a></li>
+    <a href="https://github.com/pywbem/pywbem/issues">issue tracker</a></li>
   <li>Fixing bugs or implementing feature requests listed on the
-  <a href="https://github.com/pywbem/pywbem/issues">issue tracker</a></li>
+    <a href="https://github.com/pywbem/pywbem/issues">issue tracker</a></li>
+  <li>Doing things listed on the
+    <a href="https://github.com/pywbem/pywbem/blob/master/src/TODO.md">ToDo
+    list</a></li>
 </ul>
 
 <h2>Development</h2>
@@ -114,6 +117,87 @@ environment.</p>
 <p>Any help in completing the unit test cases is very welcome. If you feel like
 helping, search for occurrences of <code>TODO</code> in the Python source files
 in directory <code>src/testsuite</code>.</p>
+
+<h3>Test Matrix</h3>
+
+<p>The following table lists the environments in which the installation and the
+unit test cases are tested. The responsible person for a row should open issues
+if any tests are failing.</p>
+
+<table border="1" style="width:100%">
+  <tr>
+    <th>OS Type</th>
+    <th>OS Name</th>
+    <th>OS Version</th>
+    <th>HW platform</th>
+    <th>Python Version</th>
+    <th>Responsible</th>
+    <th>Remarks</th>
+  </tr>
+  <tr>
+    <td>Linux</td>
+    <td>Ubuntu</td>
+    <td>12.04</td>
+    <td>x86_64</td>
+    <td>2.6, 2.7</td>
+    <td>Andreas Maier</td>
+    <td>Results on <a href="https://travis-ci.org/pywbem/pywbem">Travis CI</a></td>
+  </tr>
+  <tr>
+    <td>Linux</td>
+    <td>Ubuntu</td>
+    <td>14.04</td>
+    <td>i386, x86_64</td>
+    <td>2.6, 2.7</td>
+    <td>Andreas Maier</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Linux</td>
+    <td>Fedora</td>
+    <td>22</td>
+    <td>i386, x86_64</td>
+    <td>2.6, 2.7</td>
+    <td>Andreas Maier</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Linux</td>
+    <td>CentOS</td>
+    <td>7</td>
+    <td>x86_64</td>
+    <td>2.6, 2.7</td>
+    <td>Andreas Maier</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Linux</td>
+    <td>CentOS</td>
+    <td>6.7</td>
+    <td>i386, x86_64</td>
+    <td>2.6, 2.7</td>
+    <td>Andreas Maier</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Linux</td>
+    <td>openSUSE</td>
+    <td>13</td>
+    <td>i386, x86_64</td>
+    <td>2.6, 2.7</td>
+    <td>Andreas Maier</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Linux</td>
+    <td>Debian</td>
+    <td>8</td>
+    <td>i386, x86_64</td>
+    <td>2.6, 2.7</td>
+    <td>Andreas Maier</td>
+    <td></td>
+  </tr>
+</table> 
 
 <h2>How to submit code</h2>
 

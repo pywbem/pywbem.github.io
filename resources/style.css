@@ -15,12 +15,23 @@ body {
 
 #sidebar {
 	float: left;
-	width: 12em;
+	width: 11em;
 	padding: 1em;
+	position: fixed;
+	top: 70px;
+  height: 100%;
 }
+@media all and (max-height: 600px) {
+  /* Things inside here will only have an effect if the browser window has less
+     than max-height. */
+  #sidebar {
+    position: absolute;
+  }
+}
+
 #content {
-	margin-left: 14em;
-	margin-right: 2em;
+	margin-left: 13em;
+	margin-right: 1em;
 }
 #header {
 	float: right;
@@ -52,4 +63,8 @@ h4.navitem {
 li {
 	margin-top: 6px;
 	margin-bottom: 6px;
+}
+hr {
+	margin-top: 12px;
+	margin-bottom: 12px;
 }

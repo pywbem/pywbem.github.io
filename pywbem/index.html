@@ -12,17 +12,19 @@
 <body>
 <script src="resources/jquery.js"></script>
 <script src="resources/script.js"></script>
+<div id="navgrid">
+<div id="navbar_html"></div>
+<script type="text/javascript">
+  load_url_into_id('navbar.html', 'navbar_html');
+</script>
+<section id="navcontent">
+<div id="content">
 <h1 align="center">PyWBEM Client</h1>
 <div id="header_html"></div>
 <script type="text/javascript">
   load_url_into_id('header.html', 'header_html');
-</script> 
-<div id="navbar_html"></div>
-<script type="text/javascript">
-  load_url_into_id('navbar.html', 'navbar_html');
-</script> 
-
-<div id="content">
+</script>
+<!-- end of page header -->
 
 <h2>Overview</h2>
 
@@ -89,11 +91,13 @@ mailing list</a>.</p>
 <li><a href="pywbem/contributing.html">Contributing</a></li>
 </ul>
 
-</div>
-
+<!-- common page remainder across all pages -->
 <div id="footer_html"></div>
 <script type="text/javascript">
   load_url_into_id('footer.html', 'footer_html');
-</script> 
+</script>
+</div>
+</section>
+</div>
 </body>
 </html>

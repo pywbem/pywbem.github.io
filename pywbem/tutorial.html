@@ -12,17 +12,19 @@
 <body>
 <script src="resources/jquery.js"></script>
 <script src="resources/script.js"></script>
+<div id="navgrid">
+<div id="navbar_html"></div>
+<script type="text/javascript">
+  load_url_into_id('navbar.html', 'navbar_html');
+</script>
+<section id="navcontent">
+<div id="content">
 <h1 align="center">PyWBEM Client - Tutorial</h1>
 <div id="header_html"></div>
 <script type="text/javascript">
   load_url_into_id('header.html', 'header_html');
 </script>
-<div id="navbar_html"></div>
-<script type="text/javascript">
-  load_url_into_id('navbar.html', 'navbar_html');
-</script>
-
-<div id="content">
+<!-- end of page header -->
 
 <h2>Tutorial</h2>
 
@@ -485,11 +487,13 @@ functions operate:</p>
   <li><a href="pywbem/examples/06-invokemethod.py">Invoke a method</a>
 </ul>
 
-</div>
-
+<!-- common page remainder across all pages -->
 <div id="footer_html"></div>
 <script type="text/javascript">
   load_url_into_id('footer.html', 'footer_html');
 </script>
+</div>
+</section>
+</div>
 </body>
 </html>

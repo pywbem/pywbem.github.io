@@ -215,7 +215,7 @@ objects which reference each instance of a particular CIM class
  (u'CreationClassName', u'PG_UnixProcess'),
  (u'CSCreationClassName', u'CIM_UnitaryComputerSystem'),
  (u'OSName', u'Red Hat Enterprise Linux AS')]
-</blockquote></pre>
+</pre></blockquote>
 
 <p>Note that you cannot necessarily assume that the ordering of the returned
 results for the "CIM_Process" provider is the same for enumerating
@@ -249,7 +249,7 @@ object that references the desired CIM instance:</p>
 <blockquote><pre>>>> process0 = conn.GetInstance(process_names[0])
 >>> process0 == processes[0]
 True
-</blockquote></pre>
+</pre></blockquote>
 
 <p>Again, for the comparison, we are relying on the fact that the first
 instance in the result set of <tt>EnumerateInstances()</tt> is for the same

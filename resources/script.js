@@ -71,5 +71,11 @@ function doc_link(kind, name, label)
   var tt = document.createElement("tt");
   a.appendChild(tt)
   tt.innerHTML = label;
-  script.parentNode.insertBefore(a, script);
+
+  var currentScript = document.currentScript || (function() {
+    var scripts = document.getElementsByTagName('script');
+    return scripts[scripts.length - 1];
+  })();
+  currentScript.parentNode.insertBefore(a, currentScript);
 }
+

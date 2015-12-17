@@ -41,11 +41,11 @@
     <th>Documentation</th>
   </tr>
   <tr>
-    <td>0.8.0-rc1</td>
-    <td>2015-11-11</td>
+    <td>0.8.0-rc3</td>
+    <td>2015-12-17</td>
     <td>Latest development release</td>
     <td>Not Yet</td>
-    <td><a href="https://github.com/pywbem/pywbem/blob/master/dist/pywbem-0.8.0/pywbem-0.8.0-rc1.zip?raw=true" target="_blank">pywbem-0.8.0-rc1.zip</a></td>
+    <td><a href="https://github.com/pywbem/pywbem/blob/master/dist/pywbem-0.8.0/pywbem-0.8.0-rc3.zip?raw=true" target="_blank">pywbem-0.8.0-rc3.zip</a></td>
     <td><a href="pywbem/doc/0.8.0/changelog.html">change log</a></td>
     <td><a href="pywbem/doc/0.8.0/index.html">documentation</a></td>
   </tr>
@@ -71,57 +71,66 @@ and
 script (setup.py) with the "install" command, or by using
 <code>pip install</code> (which also invokes the setup script).</p>
 
-<p>As of PyWBEM v0.8.0, the setup script automatically installs its dependencies.
-This includes installing the M2Crypto package, installing OS-level packages
-that are prerequisites for installing M2Crypto, or building and installing
-Swig if needed.</p>
+<p>As of PyWBEM v0.8.0, the setup script has support for installing its
+prerequisites. This includes installing the M2Crypto Python package, installing
+any prerequisite OS-level packages, and installing or building Swig, if needed.
+For details, see the examples, below.</p>
 
-<p>The installation of Swig and of OS-level packages is performed using the
-<code>sudo</code> command, so your userid needs to be authorized
-accordingly.</p>
+<p>OS-level prerequisites are installed using new setup.py commands 'install_os'
+and 'develop_os'. They are supported for a number of well-known Linux
+distributions. For other Linux distributions, these commands display the
+OS-level packages that are needed. On Linux, these commands use 'sudo', so 
+your userid needs to be authorized accordingly.</p>
 
 <p>Installation of PyWBEM is supported into the default system Python, and
 (preferrable) into
 <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/" target="_blank">virtual
-Python environments</a>.</p>
+Python environments</a>. For details, see the examples, below.</p>
 
 <h2>Examples</h2>
 
 <ul>
 <li>
-<p>Install latest version from PyPI into default system Python:</p>
+<p>Install latest version from PyPI into default system Python (assuming OS-level
+  prerequisites are already satisfied):</p>
 <pre><code>sudo pip install pywbem
 </code></pre>
 </li>
 <li>
-<p>Install latest version from PyPI into new Python 2.7 virtual environment:</p>
+<p>Install latest version from PyPI into new Python 2.7 virtual environment
+(assuming OS-level prerequisites are already satisfied):</p>
 <pre><code>mkvirtualenv -p python2.7 pywbem27
 pip install pywbem
 </code></pre>
 </li>
 <li>
-<p>Install from master branch on GitHub into default system Python:</p>
-<pre><code>git clone git@github.com:pywbem/pywbem.git pywbem
-cd pywbem/src
-sudo python setup.py install
-</code></pre>
-</li>
-<li>
-<p>Install from master branch on GitHub into new Python 2.7 virtual environment:</p>
+<p>Install from master branch on GitHub into new Python 2.7 virtual environment,
+  installing OS-level prerequisites as needed:</p>
 <pre><code>git clone git@github.com:pywbem/pywbem.git pywbem
 cd pywbem/src
 mkvirtualenv -p python2.7 pywbem27
-python setup.py install
+python setup.py install_os install
 </code></pre>
 </li>
 <li>
 <p>Install from a particular distribution archive on GitHub into new Python 2.7
-virtual environment:</p>
+virtual environment, installing OS-level prerequisites as needed:</p>
 <pre><code>wget https://github.com/pywbem/pywbem/blob/master/dist/pywbem-0.8.0/pywbem-0.8.0-rc1.zip
 unzip pywbem-0.8.0-rc1.zip
 cd pywbem-0.8.0rc1
 mkvirtualenv -p python2.7 pywbem27
-python setup.py install
+python setup.py install_os install
+</code></pre>
+</li>
+</ul>
+
+<p>The installation of PyWBEM in development mode is supported as well:</p>
+
+<ul>
+<li>
+<p>Install latest version from PyPI into default system Python (assuming
+OS-level prerequisites are already satisfied):</p>
+<pre><code>python setup.py develop_os develop
 </code></pre>
 </li>
 </ul>

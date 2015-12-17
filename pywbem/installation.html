@@ -30,6 +30,7 @@
 
 <p>The following distribution archives are available for download:</p>
 
+<a name="table1"></a>
 <table border="1" style="width:100%">
   <tr>
     <th>Version</th>
@@ -38,7 +39,7 @@
     <th>On PyPI</th>
     <th>Download</th>
     <th>Change Log</th>
-    <th>Documentation</th>
+    <th>API Documentation</th>
   </tr>
   <tr>
     <td>0.8.0-rc3</td>
@@ -47,7 +48,7 @@
     <td>Not Yet</td>
     <td><a href="https://github.com/pywbem/pywbem/blob/master/dist/pywbem-0.8.0/pywbem-0.8.0-rc3.zip?raw=true" target="_blank">pywbem-0.8.0-rc3.zip</a></td>
     <td><a href="pywbem/doc/0.8.0/changelog.html">change log</a></td>
-    <td><a href="pywbem/doc/0.8.0/index.html">documentation</a></td>
+    <td><a href="pywbem/doc/0.8.0/index.html">API documentation</a></td>
   </tr>
   <tr>
     <td>0.7.0</td>
@@ -58,7 +59,7 @@
     <td><a href="pywbem/doc/0.7.0/changelog.html">change log</a></td>
     <td>N/A</td>
   </tr>
-</table> 
+</table>
 
 <p>Older releases of the PyWBEM Client are available on
 <a href="https://pypi.python.org/pypi/pywbem" target="_blank">PyPI</a>
@@ -67,11 +68,11 @@ and
 
 <h2>Installation</h2>
 
-<p>PyWBEM can be installed quite easily by running its standard Python setup
+<p>The PyWBEM Client can be installed quite easily by running its standard Python setup
 script (setup.py) with the "install" command, or by using
 <code>pip install</code> (which also invokes the setup script).</p>
 
-<p>As of PyWBEM v0.8.0, the setup script has support for installing its
+<p>As of PyWBEM Client v0.8.0, the setup script has support for installing its
 prerequisites. This includes installing the M2Crypto Python package, installing
 any prerequisite OS-level packages, and installing or building Swig, if needed.
 For details, see the examples, below.</p>
@@ -79,20 +80,20 @@ For details, see the examples, below.</p>
 <p>OS-level prerequisites are installed using new setup.py commands 'install_os'
 and 'develop_os'. They are supported for a number of well-known Linux
 distributions. For other Linux distributions, these commands display the
-OS-level packages that are needed. On Linux, these commands use 'sudo', so 
+OS-level packages that are needed. On Linux, these commands use 'sudo', so
 your userid needs to be authorized accordingly.</p>
 
-<p>Installation of PyWBEM is supported into the default system Python, and
-(preferrable) into
+<p>Installation of the PyWBEM Client is supported into the default system
+Python, and (preferrable) into
 <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/" target="_blank">virtual
 Python environments</a>. For details, see the examples, below.</p>
 
-<h2>Examples</h2>
+<h3>Examples</h3>
 
 <ul>
 <li>
-<p>Install latest version from PyPI into default system Python (assuming OS-level
-  prerequisites are already satisfied):</p>
+<p>Install latest version from PyPI into default system Python (assuming
+OS-level prerequisites are already satisfied):</p>
 <pre><code>sudo pip install pywbem
 </code></pre>
 </li>
@@ -104,39 +105,63 @@ pip install pywbem
 </code></pre>
 </li>
 <li>
-<p>Install from master branch on GitHub into new Python 2.7 virtual environment,
-  installing OS-level prerequisites as needed:</p>
+<p>Install from master branch on GitHub into new Python 2.7 virtual environment
+(assuming OS-level prerequisites are already satisfied):</p>
 <pre><code>git clone git@github.com:pywbem/pywbem.git pywbem
 cd pywbem/src
 mkvirtualenv -p python2.7 pywbem27
-python setup.py install_os install
+python setup.py install
 </code></pre>
 </li>
 <li>
-<p>Install from a particular distribution archive on GitHub into new Python 2.7
-virtual environment, installing OS-level prerequisites as needed:</p>
-<pre><code>wget https://github.com/pywbem/pywbem/blob/master/dist/pywbem-0.8.0/pywbem-0.8.0-rc1.zip
-unzip pywbem-0.8.0-rc1.zip
-cd pywbem-0.8.0rc1
+<p>Install from a downloaded distribution archive
+(links are in the <a href="pywbem/installation.html#table1">table above</a>),
+into new Python 2.7 virtual environment, installing OS-level prerequisites as
+needed (requires sudo rights):</p>
+<pre><code># Have pywbem-{version}.zip downloaded
+unzip pywbem-{version}.zip
+cd pywbem-{version}
 mkvirtualenv -p python2.7 pywbem27
 python setup.py install_os install
-</code></pre>
-</li>
-</ul>
-
-<p>The installation of PyWBEM in development mode is supported as well:</p>
-
-<ul>
-<li>
-<p>Install latest version from PyPI into default system Python (assuming
-OS-level prerequisites are already satisfied):</p>
-<pre><code>python setup.py develop_os develop
 </code></pre>
 </li>
 </ul>
 
 <p>The command syntax above is shown for Linux, but this works the same way on
 Windows and on other operating systems supported by Python.</p>
+
+<h2>Installation in development mode</h2>
+
+<p>The installation of PyWBEM in development mode is supported as well.
+Development mode means that any OS-level packages and Python packages needed for
+development of the PyWBEM Client are being made available. These packages
+are a superset of the packages needed for just using the PyWBEM client.</p>
+
+<h3>Examples</h3>
+
+<ul>
+<li>
+<p>Install from master branch on GitHub into new Python 2.7 virtual environment,
+installing OS-level prerequisites as needed (requires sudo rights):</p>
+<pre><code>git clone git@github.com:pywbem/pywbem.git pywbem
+cd pywbem/src
+mkvirtualenv -p python2.7 pywbem27
+python setup.py develop_os develop
+</code></pre>
+</li>
+<li>
+<p>Install from a downloaded distribution archive
+(links are in the <a href="pywbem/installation.html#table1">table above</a>),
+into new Python 2.7 virtual environment (assuming OS-level prerequisites are
+already satisfied):</p>
+<pre><code># Have pywbem-{version}.zip downloaded
+unzip pywbem-{version}.zip
+cd pywbem-{version}
+mkvirtualenv -p python2.7 pywbem27
+python setup.py develop
+</code></pre>
+</li>
+</ul>
 
 <h2>Test of the installation</h2>
 

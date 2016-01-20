@@ -137,6 +137,7 @@ pywbem.mof_compiler.p_qualifierList	pywbem.mof_compiler-module.html#p_qualifierL
 pywbem.mof_compiler.p_stringValueList	pywbem.mof_compiler-module.html#p_stringValueList
 pywbem.mof_compiler.p_mofSpecification	pywbem.mof_compiler-module.html#p_mofSpecification
 pywbem.mof_compiler.p_valueInitializer	pywbem.mof_compiler-module.html#p_valueInitializer
+pywbem.mof_compiler.main	pywbem.mof_compiler-module.html#main
 pywbem.mof_compiler._optimize	pywbem.mof_compiler-module.html#_optimize
 pywbem.mof_compiler.p_constantValue	pywbem.mof_compiler-module.html#p_constantValue
 pywbem.mof_compiler.reserved	pywbem.mof_compiler-module.html#reserved

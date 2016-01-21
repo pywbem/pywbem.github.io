@@ -70,21 +70,23 @@ for each version of Python supported by PyWBEM:</p>
 mkvirtualenv -p python2.7 pywbem27
 </code></pre>
 
-<p>As of the PyWBEM Client v0.8.0, its setup script (setup.py) establishes any
-prerequisites for its own development when invoked with the "develop"
-command:</p>
+<p>As of the PyWBEM Client v0.8.0, its setup script (<tt>setup.py</tt>)
+establishes any Python prerequisites for its own development when invoked with
+the "develop" command. This needs to be done in each of the virtual Python
+environments that were set up for PyWBEM (do not use <tt>sudo</tt>,
+otherwise it will install into the system Python):</p>
 
 <pre><code>cd src
+workon pywbem26
+python setup.py develop
+workon pywbem27
 python setup.py develop
 </code></pre>
 
-<p>This needs to be repeated in each of the remaining virtual Python
-environments that were set up for PyWBEM (these commands should be seen in
-conjunction with the commands shown above, which were running the "develop"
-command in the pywbem27 environment):</p>
+<p>In addition, the setup script establishes any OS-level prerequisites for its
+own development when invoked with the "develop_os" command:</p>
 
-<pre><code>workon pywbem26
-python setup.py develop
+<pre><code>sudo python setup.py develop_os
 </code></pre>
 
 <p>The PyWBEM Client also provides a makefile. Invoking <tt>make</tt> without
@@ -93,32 +95,32 @@ arguments will print the possible targets:</p>
 <pre><code>make
 
 makefile for pywbem
-Package version will be: 0.8.0-rc1
+Package version will be: 0.8.0rc4
 Valid targets are:
   develop    - Prepare the development environment by installing prerequisites
-  build      - Build the distribution archive: ../dist/pywbem-0.8.0/pywbem-0.8.0-rc1.zip
-  buildwin   - Build the Windows installable: ../dist/pywbem-0.8.0/pywbem-0.8.0-rc1.win-amd64.exe (on Win 64-bit)
+  build      - Build the distribution archive: ../dist/pywbem-0.8.0/pywbem-0.8.0rc4.zip
+  buildwin   - Build the Windows installable: ../dist/pywbem-0.8.0/pywbem-0.8.0rc4.win-amd64.exe (on Win 64-bit)
   builddoc   - Build documentation in: build_doc
   check      - Run PyLint on sources and save results in: pylint.log
-  install    - build + install the distribution archive using "python setup.py install"
-  test       - install + run unit tests on installed copy and save results in: test.log
+  install    - Install distribution archive to active Python environment
+  test       - Run unit tests and save results in: test.log
   clean      - Remove any temporary files
-  all        - build + check + install + test + builddoc + clean
-  upload     - build + upload the distribution archive to PyPI
-  publish    - builddoc + publish documentation to: ../../pywbem.github.io/pywbem/doc/0.8.0/doc
-  clobber    - clean + remove any build products
+  all        - Do everything locally (except publish/upload)
+  upload     - Upload the distribution archive to PyPI
+  publish    - Publish documentation to: ../../pywbem.github.io/pywbem/doc/0.8.0/doc
+  clobber    - Remove any build products
 </code></pre>
 
 <h2>Testing</h2>
 
 <p>The PyWBEM Client has some amount of unit test cases. Invoke
-<code>make test</code> to build and install the PyWBEM Client and to run the
+<tt>make test</tt> to build and install the PyWBEM Client and to run the
 unit test cases on the current operating system and the current Python
 environment.</p>
 
 <p>Any help in completing the unit test cases is very welcome. If you feel like
-helping, search for occurrences of <code>TODO</code> in the Python source files
-in directory <code>src/testsuite</code>.</p>
+helping, search for occurrences of <tt>TODO</tt> in the Python source files
+in directory <tt>src/testsuite</tt>.</p>
 
 <h3>Test Matrix</h3>
 
@@ -201,7 +203,7 @@ if any tests are failing.</p>
   </tr>
 </table> 
 
-<h2>How to submit code</h2>
+<h2>Submitting code</h2>
 
 <p>The number of committers in the PyWBEM Client project is small and should
 stay small. If you are not a committer but want to submit code, you have two
@@ -210,25 +212,25 @@ choices:</p>
 <ul>
 
 <li>
+<p>Pull request (preferred):</p>
+<p>Create a fork of the PyWBEM Client project (anywhere you have a public Git
+server, but there are some advantages doing that on GitHub), develop and
+commit your changes there, and once you are done, create a pull request
+targeting the PyWBEM Client project on GitHub
+(<a href="https://github.com/pywbem/pywbem" target="_blank">https://github.com/pywbem/pywbem</a>).</p>
+<p>It is helpful if the pull request is related to an issue in the
+<a href="https://github.com/pywbem/pywbem/issues" target="_blank">PyWBEM Client issue tracker</a>.</p>
+<p>A good description on how to use git on GitHub forks, can be found in the
+<a href="https://guides.github.com/activities/forking/" target="_blank">GitHub Guide: Forking Projects</a>.</p>
+</li>
+
+<li>
 <p>Patch file:</p>
 <p>Work in your local Git clone, and once you are done, create a patch file
 reflecting your changes. Attach the patch file to an issue in the
 <a href="https://github.com/pywbem/pywbem/issues" target="_blank">issue tracker</a>.
-The commit level (in the PyWBEM Client project on GitHub, not in your local Git
-clone) for which the patch file is intended should be indicated in a
-comment on the issue.</p>
-</li>
-
-<li>
-<p>Pull request:</p>
-<p>Create a fork of the PyWBEM Client project (anywhere you have a public Git
-server), develop and commit your changes there, and once you are done, create
-a pull request targeting the PyWBEM Client project on GitHub
-(<a href="https://github.com/pywbem/pywbem" target="_blank">https://github.com/pywbem/pywbem</a>).
-Again, there should be an issue in the
-<a href="https://github.com/pywbem/pywbem/issues" target="_blank">PyWBEM Client issue tracker</a>
-that is resolved by the pull request, and a comment to the issue should
-mention the name of the pull request.</p>
+The commit level in the PyWBEM Client project on GitHub for which the patch
+file is intended should be indicated somehow.</p>
 </li>
 
 </ul>
@@ -240,7 +242,7 @@ everything may work right all the time. Here is a list of things that have
 gone wrong in the past, and how to resolve them.</p>
 
 <p>These issues should not occur for users of PyWBEM, because the PyWBEM setup
-script (setup.py) takes care of them.</p>
+script (<tt>setup.py</tt>) takes care of them.</p>
 
 <ul>
 <li><p>Error when installing M2Crypto (e.g. as part of installing the PyWBEM
@@ -249,10 +251,10 @@ Client):</p>
 <p>unable to execute swig: No such file or directory</p>
 
 <p>Root cause: This error occurs when M2Crypto is installed as part of the
-PyWBEM Client installation, and the <code>swig</code> command is not
+PyWBEM Client installation, and the <tt>swig</tt> command is not
 available.</p>
 
-<p>Solution: Install Swig (Linux: package <code>swig</code>). The M2Crypto
+<p>Solution: Install Swig (Linux: package <tt>swig</tt>). The M2Crypto
 installation requires at least Swig version 2.0. If your operating
 system does not provide for such a version, download and build Swig 2.0.
 Note that this is done automatically by the "develop" and "install" commands
@@ -262,13 +264,13 @@ of the setup script of the PyWBEM Client.</p></li>
 <p>swig error : Unrecognized option -builtin</p>
 
 <p>Root cause: This error occurs when M2Crypto is installed as part of the
-PyWBEM Client installation, and the version of <code>swig</code> is not
+PyWBEM Client installation, and the version of <tt>swig</tt> is not
 sufficient. The M2Crypto installation requires at least Swig version 2.0.</p>
 
 <p>Solution: Update your version of Swig to at least 2.0. If your operating
 system does not provide for such a version, download and build Swig 2.0.
-Note that this is done automatically by the "develop" and "install" commands
-of the setup script of the PyWBEM Client.</p></li>
+Note that this is done automatically by the "develop_os" and "install_os"
+commands of the setup script of the PyWBEM Client.</p></li>
 <li><p>Error when building Swig:</p>
 
 <p>configure: error: Cannot find pcre-config script from PCRE (Perl Compatible

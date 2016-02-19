@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="..">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="robots" content="index, follow">
+<meta name="description" content="This site provides documentation for the PyWBEM projects on GitHub.">
+<title>PyWBEM Client - Tutorial</title>
+<link rel="stylesheet" href="resources/style.css" type="text/css">
+</head>
+<body>
+<script src="resources/jquery.js"></script>
+<script src="resources/script.js"></script>
+<div id="navgrid">
+<div id="navbar_html"></div>
+<script type="text/javascript">
+  load_url_into_id('navbar.html', 'navbar_html');
+</script>
+<section id="navcontent">
+<div id="content">
+<h1 align="center">PyWBEM Client - User Interface API</h1>
+<div id="header_html"></div>
+<script type="text/javascript">
+  load_url_into_id('header.html', 'header_html');
+</script>
+<!-- end of page header -->
+
+<h2>Overview</h2>
+
+<p>This page links to the key documentation pages in the PyWBEM client
+documentation for those components that provide for CIM object handling
+and the APIs to communicate between the PyWBEM client and a WBEM server.</p>
+
+<h3>CIM Objects</h3>
+
+<ul>
+  <li>
+    <script>doc_link('class', 'pywbem.cim_obj.CIMInstance',
+                 'CIMInstance');</script> CIMInstance </li>
+  <li>
+    <script>doc_link('class', 'pywbem.cim_obj.CIMInstanceName',
+                 'CIMInstanceName');</script> CIMInstanceName </li>
+  <li>
+    <script>doc_link('class', 'pywbem.cim_obj.CIMClass',
+        'CIMClass');</script> CIMClass </li>
+  <li> CIMQualifier Declaration<br>
+  </li>
+  <li> Primitive types </li>
+</ul>
+
+<h3>Communicating with a WBEM Server</h3>
+
+<h4>WBEM Connection</h4>
+
+<ul>
+  <li>
+    <script>doc_link('class', 'pywbem.cim_operations.WBEMConnection',
+                 'WBEMConnection')</script>
+  </li>
+</ul>
+
+<h4>WBEM Operations</h4>
+
+<ul>
+  <li>
+    <script>doc_link('method',
+                 'pywbem.cim_operations.WBEMConnection.EnumerateInstances',
+                 'EnumerateInstances()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                 'pywbem.cim_operations.WBEMConnection.EnumerateInstanceNames',
+                 'EnumerateInstanceNames()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                 'pywbem.cim_operations.WBEMConnection.GetInstance',
+                 'GetInstance()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                 'pywbem.cim_operations.WBEMConnection.DeleteInstance',
+                 'DeleteInstance()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                 'pywbem.cim_operations.WBEMConnection.CreateInstance',
+                 'CreateInstance()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                 'pywbem.cim_operations.WBEMConnection.ModifyInstance',
+                 'ModifyInstance()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                 'pywbem.cim_operations.WBEMConnection.ExecQuery',
+                 'ExecQuery()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                       'pywbem.cim_operations.WBEMConnection.EnumerateClassNames',
+                       'EnumerateClassNames()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                       'pywbem.cim_operations.WBEMConnection.EnumerateClasses',
+                       'EnumerateClasses()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                       'pywbem.cim_operations.WBEMConnection.GetClass',
+                       'GetClass()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                       'pywbem.cim_operations.WBEMConnection.DeleteClass',
+                       'DeleteClass()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                       'pywbem.cim_operations.WBEMConnection.ModifyClass',
+                       'ModifyClass()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                       'pywbem.cim_operations.WBEMConnection.CreateClass',
+                       'CreateClass()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                       'pywbem.cim_operations.WBEMConnection.EnumerateQualifiers',
+                       'EnumerateQualifiers()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                       'pywbem.cim_operations.WBEMConnection.GetQualifier',
+                       'GetQualifier()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                       'pywbem.cim_operations.WBEMConnection.SetQualifier',
+                       'SetQualifier()');</script>
+  </li>
+  <li>
+    <script>doc_link('method',
+                       'pywbem.cim_operations.WBEMConnection.DeleteQualifier',
+                       'DeleteQualifier()');</script>
+  </li>
+</ul>
+
+<h3>CIMError</h3>
+
+<ul>
+  <li>CIMError TODO<br>
+  </li>
+</ul>
+
+<h3>CIMStatusCodes</h3>
+
+<ul>
+  <li>CIMStatusCodes TODO<br>
+  </li>
+</ul>
+
+<!-- common page remainder across all pages -->
+<div id="footer_html"></div>
+<script type="text/javascript">
+  load_url_into_id('footer.html', 'footer_html');
+</script>
+</div>
+</section>
+</div>
+</body>
+</html>

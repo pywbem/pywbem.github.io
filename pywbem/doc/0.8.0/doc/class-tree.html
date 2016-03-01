@@ -417,38 +417,11 @@ interpreter exiting.</em>
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMClass-class.html">pywbem.cim_obj.CIMClass</a></strong>:
-      <em class="summary">A CIM class.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMClassName-class.html">pywbem.cim_obj.CIMClassName</a></strong>:
-      <em class="summary">A CIM class path.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMInstance-class.html">pywbem.cim_obj.CIMInstance</a></strong>:
-      <em class="summary">A CIM instance, optionally including its instance path.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMInstanceName-class.html">pywbem.cim_obj.CIMInstanceName</a></strong>:
-      <em class="summary">A CIM instance path (aka <em>instance name</em>).</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMMethod-class.html">pywbem.cim_obj.CIMMethod</a></strong>:
-      <em class="summary">A CIM method.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMParameter-class.html">pywbem.cim_obj.CIMParameter</a></strong>:
-      <em class="summary">A CIM parameter.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMProperty-class.html">pywbem.cim_obj.CIMProperty</a></strong>:
-      <em class="summary">A CIM property.</em>
-    </li>
     <li> <strong class="uidlink"><a href="pywbem.cim_provider.CIMProvider-class.html">pywbem.cim_provider.CIMProvider</a></strong>:
       <em class="summary">Base class for CIM Providers.</em>
     </li>
     <li> <strong class="uidlink"><a href="pywbem.cim_provider2.CIMProvider2-class.html">pywbem.cim_provider2.CIMProvider2</a></strong>:
       <em class="summary">Base class for CIM Providers.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMQualifier-class.html">pywbem.cim_obj.CIMQualifier</a></strong>:
-      <em class="summary">A CIM qualifier value.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMQualifierDeclaration-class.html">pywbem.cim_obj.CIMQualifierDeclaration</a></strong>:
-      <em class="summary">A CIM qualifier type.</em>
     </li>
     <li> <strong class="uidlink"><a href="pywbem.cim_types.CIMType-class.html">pywbem.cim_types.CIMType</a></strong>:
       <em class="summary">Base type for numeric and datetime CIM types.</em>
@@ -516,18 +489,20 @@ statement).</em>
     </li>
     <li> <strong class="uidlink"><a href="pywbem.lex.LexerReflect-class.html">pywbem.lex.LexerReflect</a></strong>
     </li>
-    <li> <strong class="uidlink"><a href="pywbem.mof_compiler.MOFCompiler-class.html">pywbem.mof_compiler.MOFCompiler</a></strong>
+    <li> <strong class="uidlink"><a href="pywbem.mof_compiler.MOFCompiler-class.html">pywbem.mof_compiler.MOFCompiler</a></strong>:
+      <em class="summary">MOF compiler class.</em>
     </li>
-    <li> <strong class="uidlink"><a href="pywbem.mof_compiler.MOFWBEMConnection-class.html">pywbem.mof_compiler.MOFWBEMConnection</a></strong>
+    <li> <strong class="uidlink"><a href="pywbem.mof_compiler.MOFWBEMConnection-class.html">pywbem.mof_compiler.MOFWBEMConnection</a></strong>:
+      <em class="summary">Access to repository used by the compiler.</em>
     </li>
     <li> <strong class="uidlink"><a href="pywbem.yacc.MiniProduction-class.html">pywbem.yacc.MiniProduction</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="pywbem.cim_obj.NocaseDict-class.html">pywbem.cim_obj.NocaseDict</a></strong>:
       <em class="summary">Yet another implementation of a case-insensitive dictionary.</em>
     </li>
-    <li> <strong class="uidlink"><a href="pywbem.lex.NullLogger-class.html">pywbem.lex.NullLogger</a></strong>
-    </li>
     <li> <strong class="uidlink"><a href="pywbem.yacc.NullLogger-class.html">pywbem.yacc.NullLogger</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.lex.NullLogger-class.html">pywbem.lex.NullLogger</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="pywbem.yacc.ParserReflect-class.html">pywbem.yacc.ParserReflect</a></strong>
     </li>
@@ -539,6 +514,44 @@ statement).</em>
     </li>
     <li> <strong class="uidlink"><a href="pywbem.cim_operations.WBEMConnection-class.html">pywbem.cim_operations.WBEMConnection</a></strong>:
       <em class="summary">A client's connection to a WBEM server.</em>
+    </li>
+    <li> <strong class="uidlink">pywbem.cim_types._CIMComparisonMixin</strong>:
+      <em class="summary">Mixin class providing default implementations for rich comparison
+operators.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMClass-class.html">pywbem.cim_obj.CIMClass</a></strong>:
+      <em class="summary">Create an instance of CIMClass, a CIM class with classname,
+properties, methods, qualifiers, and superclass name.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMClassName-class.html">pywbem.cim_obj.CIMClassName</a></strong>:
+      <em class="summary">A CIM class path.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.CIMDateTime-class.html">pywbem.cim_types.CIMDateTime</a></strong>:
+      <em class="summary">A value of CIM type datetime.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMInstance-class.html">pywbem.cim_obj.CIMInstance</a></strong>:
+      <em class="summary">A CIM instance, optionally including its instance path.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMInstanceName-class.html">pywbem.cim_obj.CIMInstanceName</a></strong>:
+      <em class="summary">A CIM instance path (aka <em>instance name</em>).</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMMethod-class.html">pywbem.cim_obj.CIMMethod</a></strong>:
+      <em class="summary">A CIM method.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMParameter-class.html">pywbem.cim_obj.CIMParameter</a></strong>:
+      <em class="summary">A CIM parameter.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMProperty-class.html">pywbem.cim_obj.CIMProperty</a></strong>:
+      <em class="summary">Defines a CIM property including cim type, value, and possibly
+qualifiers.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMQualifier-class.html">pywbem.cim_obj.CIMQualifier</a></strong>:
+      <em class="summary">A CIM qualifier value.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMQualifierDeclaration-class.html">pywbem.cim_obj.CIMQualifierDeclaration</a></strong>:
+      <em class="summary">A CIM qualifier type.</em>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink">float</strong>:
       <em class="summary">float(x) -&gt; floating point number</em>
@@ -634,7 +647,7 @@ minutes from UTC.</em>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 22:02:20 2016
+    Generated by Epydoc 3.0.1 on Tue Mar  1 19:28:58 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

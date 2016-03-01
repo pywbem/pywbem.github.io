@@ -61,9 +61,11 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class CIMInstanceName</h1><p class="nomargin-top"><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMInstanceName">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-object --+
-         |
-        <strong class="uidshort">CIMInstanceName</strong>
+                   object --+    
+                            |    
+cim_types._CIMComparisonMixin --+
+                                |
+                               <strong class="uidshort">CIMInstanceName</strong>
 </pre>
 
 <hr />
@@ -108,7 +110,8 @@ Namespace and WBEM server may be unknown.</p>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="copy"></a><span class="summary-sig-name">copy</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="copy"></a><span class="summary-sig-name">copy</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return a copy of the CIMInstanceName object</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMInstanceName.copy">source&nbsp;code</a></span>
             
@@ -124,25 +127,9 @@ Namespace and WBEM server may be unknown.</p>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="__cmp__"></a><span class="summary-sig-name">__cmp__</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">other</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMInstanceName.__cmp__">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
           <td><span class="summary-sig"><a href="pywbem.cim_obj.CIMInstanceName-class.html#__str__" class="summary-sig-name">__str__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      str(x)</td>
+      Return string representation of CIMClassname in
+readable format</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMInstanceName.__str__">source&nbsp;code</a></span>
             
@@ -159,7 +146,7 @@ Namespace and WBEM server may be unknown.</p>
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="pywbem.cim_obj.CIMInstanceName-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      repr(x)</td>
+      return string of CIMClassName in name=value form</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMInstanceName.__repr__">source&nbsp;code</a></span>
             
@@ -244,7 +231,8 @@ Namespace and WBEM server may be unknown.</p>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="__len__"></a><span class="summary-sig-name">__len__</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="__len__"></a><span class="summary-sig-name">__len__</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return number of keybindings</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMInstanceName.__len__">source&nbsp;code</a></span>
             
@@ -260,8 +248,9 @@ Namespace and WBEM server may be unknown.</p>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="has_key"></a><span class="summary-sig-name">has_key</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">key</span>)</span></td>
+          <td><span class="summary-sig"><a href="pywbem.cim_obj.CIMInstanceName-class.html#has_key" class="summary-sig-name">has_key</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">key</span>)</span><br />
+      Return boolean.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMInstanceName.has_key">source&nbsp;code</a></span>
             
@@ -277,7 +266,8 @@ Namespace and WBEM server may be unknown.</p>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="keys"></a><span class="summary-sig-name">keys</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="keys"></a><span class="summary-sig-name">keys</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return list of keys in keybindings</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMInstanceName.keys">source&nbsp;code</a></span>
             
@@ -394,8 +384,8 @@ Namespace and WBEM server may be unknown.</p>
           <td><span class="summary-sig"><a name="get"></a><span class="summary-sig-name">get</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">key</span>,
         <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Get the value of a specific key property, or the specified default
-value if a key binding with that name does not exist.</td>
+      Get the value of a specific key property, or the specified
+default value if a key binding with that name does not exist.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMInstanceName.get">source&nbsp;code</a></span>
             
@@ -425,6 +415,14 @@ and key bindings).</td>
   </tr>
   <tr>
     <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cim_types._CIMComparisonMixin</code></b>:
+      <code>__eq__</code>,
+      <code>__ge__</code>,
+      <code>__gt__</code>,
+      <code>__le__</code>,
+      <code>__lt__</code>,
+      <code>__ne__</code>
+      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -505,7 +503,7 @@ and key bindings).</td>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>classname</code></strong> (<code class="link">unicode</code> or UTF-8 encoded <code class="link">str</code>) - Name of the creation class of the referenced instance.</li>
+        <li><strong class="pname"><code>classname</code></strong> (Unicode string or UTF-8 encoded byte string) - Name of the creation class of the referenced instance.</li>
         <li><p><strong class="pname"><code>keybindings</code></strong> (<code class="link">dict</code> or <a href="pywbem.cim_obj.NocaseDict-class.html" class="link">NocaseDict</a>) - Optional: Dictionary of key bindings, specifying key properties
 that identify the referenced instance.
 The dictionary must contain one item for each key property, where:</p>
@@ -516,11 +514,11 @@ described in <a href="pywbem.cim_types-module.html" class="link">cim_types</a>.<
 </ul>
 <p>If <code class="link">None</code>, an empty dictionary of key bindings will be created.</p>
 <p>Default: <code class="link">None</code>.</p></li>
-        <li><p><strong class="pname"><code>host</code></strong> (<code class="link">unicode</code> or UTF-8 encoded <code class="link">str</code>) - Optional: URL of the WBEM server that contains the CIM namespace
+        <li><p><strong class="pname"><code>host</code></strong> (Unicode string or UTF-8 encoded byte string) - Optional: URL of the WBEM server that contains the CIM namespace
 of this instance path.</p>
 <p>If <code class="link">None</code>, the instance path will not specify a WBEM server.</p>
 <p>Default: <code class="link">None</code>.</p></li>
-        <li><p><strong class="pname"><code>namespace</code></strong> (<code class="link">unicode</code> or UTF-8 encoded <code class="link">str</code>) - Optional: Name of the CIM namespace that contains the referenced
+        <li><p><strong class="pname"><code>namespace</code></strong> (Unicode string or UTF-8 encoded byte string) - Optional: Name of the CIM namespace that contains the referenced
 instance.</p>
 <p>If <code class="link">None</code>, the instance path will not specify a CIM namespace.</p>
 <p>Default: <code class="link">None</code>.</p></li>
@@ -551,11 +549,11 @@ instance.</p>
     </td>
   </tr></table>
   
-  str(x)
+  Return string representation of CIMClassname in
+readable format
   <dl class="fields">
     <dt>Overrides:
         object.__str__
-        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
 </td></tr></table>
@@ -575,12 +573,31 @@ instance.</p>
     </td>
   </tr></table>
   
-  repr(x)
+  return string of CIMClassName in name=value form
   <dl class="fields">
     <dt>Overrides:
         object.__repr__
-        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="has_key"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">has_key</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">key</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMInstanceName.has_key">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  Return boolean. True if <code class="link">key</code> is in keybindings
+  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
@@ -616,7 +633,7 @@ instance.</p>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 22:02:21 2016
+    Generated by Epydoc 3.0.1 on Tue Mar  1 19:28:59 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -131,10 +131,11 @@ provider = pywbem.cim_provider.CIMProvider(...)
 </div>
 <div class="rst-section" id="rst-compatibility">
 <h1 class="heading">Compatibility</h1>
-<p>PyWBEM has been tested with Python 2.7 on Windows and Linux, and with Python
-2.6 on Linux (due to a restriction of the <code class="link">M2Crypto</code> package on Windows).</p>
-<p>Python 2.6 is the minimum version of Python that is supported.</p>
-<p>Python 3 is not yet supported.</p>
+<p>PyWBEM is supported in these environments:
+* on Windows, with Python 2.6, 2.7, 3.4, 3.5, and higher 3.x
+* on Linux, with Python 2.6, 2.7, 3.4, 3.5, and higher 3.x</p>
+<p>OS X has simply not been tested and is therefore not listed, above.
+You are welcome to try it out and report any issues.</p>
 </div>
 
 <hr />
@@ -160,14 +161,11 @@ provider = pywbem.cim_provider.CIMProvider(...)
     <li> <strong class="uidlink"><a href="pywbem.cim_types-module.html">pywbem.cim_types</a></strong>: <em class="summary">Types to represent CIM typed values, and related conversion functions.</em>    </li>
     <li> <strong class="uidlink"><a href="pywbem.cim_xml-module.html">pywbem.cim_xml</a></strong>: <em class="summary">Functions to create XML documens and elements conforming to the DMTF
 standard DSP0201, Representation of CIM in XML, v2.2.</em>    </li>
-    <li> <strong class="uidlink"><a href="pywbem.cimxml_parse-module.html">pywbem.cimxml_parse</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cimxml_parse-module.html">pywbem.cimxml_parse</a></strong>: <em class="summary">CIM/XML Parser.</em>    </li>
     <li> <strong class="uidlink"><a href="pywbem.lex-module.html">pywbem.lex</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pywbem.mof_compiler-module.html">pywbem.mof_compiler</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pywbem.moflextab-module.html">pywbem.moflextab</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pywbem.mofparsetab-module.html">pywbem.mofparsetab</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pywbem.mof_compiler-module.html">pywbem.mof_compiler</a></strong>: <em class="summary">pywbem MOF Compiler Rules and implementation definition for lex and yacc.</em>    </li>
     <li> <strong class="uidlink"><a href="pywbem.tupleparse-module.html">pywbem.tupleparse</a></strong>: <em class="summary">Tuple parser for the XML schema representing CIM messages.</em>    </li>
     <li> <strong class="uidlink"><a href="pywbem.tupletree-module.html">pywbem.tupletree</a></strong>: <em class="summary">tupletree - Convert XML DOM objects to and from tuple trees.</em>    </li>
-    <li> <strong class="uidlink"><a href="pywbem.twisted_client-module.html">pywbem.twisted_client</a></strong>: <em class="summary">pywbem.twisted - WBEM client bindings for Twisted Python.</em>    </li>
     <li> <strong class="uidlink"><a href="pywbem.wbemcli-module.html">pywbem.wbemcli</a></strong>: <em class="summary">A small utility to wrap up a PyWBEM session in a Python interactive
 console.</em>    </li>
     <li> <strong class="uidlink"><a href="pywbem.yacc-module.html">pywbem.yacc</a></strong>    </li>
@@ -175,6 +173,190 @@ console.</em>    </li>
 </table>
 
 <br />
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_ACCESS_DENIED"></a><span class="summary-name">CIM_ERR_ACCESS_DENIED</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_ALREADY_EXISTS"></a><span class="summary-name">CIM_ERR_ALREADY_EXISTS</span> = <code title="11">11</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_CLASS_HAS_CHILDREN"></a><span class="summary-name">CIM_ERR_CLASS_HAS_CHILDREN</span> = <code title="8">8</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_CLASS_HAS_INSTANCES"></a><span class="summary-name">CIM_ERR_CLASS_HAS_INSTANCES</span> = <code title="9">9</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_FAILED"></a><span class="summary-name">CIM_ERR_FAILED</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_INVALID_CLASS"></a><span class="summary-name">CIM_ERR_INVALID_CLASS</span> = <code title="5">5</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_INVALID_NAMESPACE"></a><span class="summary-name">CIM_ERR_INVALID_NAMESPACE</span> = <code title="3">3</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_INVALID_PARAMETER"></a><span class="summary-name">CIM_ERR_INVALID_PARAMETER</span> = <code title="4">4</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_INVALID_QUERY"></a><span class="summary-name">CIM_ERR_INVALID_QUERY</span> = <code title="15">15</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_INVALID_SUPERCLASS"></a><span class="summary-name">CIM_ERR_INVALID_SUPERCLASS</span> = <code title="10">10</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_METHOD_NOT_AVAILABLE"></a><span class="summary-name">CIM_ERR_METHOD_NOT_AVAILABLE</span> = <code title="16">16</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_METHOD_NOT_FOUND"></a><span class="summary-name">CIM_ERR_METHOD_NOT_FOUND</span> = <code title="17">17</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_NOT_FOUND"></a><span class="summary-name">CIM_ERR_NOT_FOUND</span> = <code title="6">6</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_NOT_SUPPORTED"></a><span class="summary-name">CIM_ERR_NOT_SUPPORTED</span> = <code title="7">7</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_NO_SUCH_PROPERTY"></a><span class="summary-name">CIM_ERR_NO_SUCH_PROPERTY</span> = <code title="12">12</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED"></a><span class="summary-name">CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED</span> = <code title="14">14</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CIM_ERR_TYPE_MISMATCH"></a><span class="summary-name">CIM_ERR_TYPE_MISMATCH</span> = <code title="13">13</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DEFAULT_NAMESPACE"></a><span class="summary-name">DEFAULT_NAMESPACE</span> = <code title="'root/cimv2'"><code class="variable-quote">'</code><code class="variable-string">root/cimv2</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PROVIDERTYPE_ASSOCIATION"></a><span class="summary-name">PROVIDERTYPE_ASSOCIATION</span> = <code title="3">3</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PROVIDERTYPE_CLASS"></a><span class="summary-name">PROVIDERTYPE_CLASS</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PROVIDERTYPE_CONSUMER"></a><span class="summary-name">PROVIDERTYPE_CONSUMER</span> = <code title="6">6</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PROVIDERTYPE_INDICATION"></a><span class="summary-name">PROVIDERTYPE_INDICATION</span> = <code title="4">4</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PROVIDERTYPE_INSTANCE"></a><span class="summary-name">PROVIDERTYPE_INSTANCE</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PROVIDERTYPE_METHOD"></a><span class="summary-name">PROVIDERTYPE_METHOD</span> = <code title="5">5</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PROVIDERTYPE_QUERY"></a><span class="summary-name">PROVIDERTYPE_QUERY</span> = <code title="7">7</code>
+    </td>
+  </tr>
+</table>
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
@@ -206,7 +388,7 @@ console.</em>    </li>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 22:02:21 2016
+    Generated by Epydoc 3.0.1 on Tue Mar  1 19:28:58 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

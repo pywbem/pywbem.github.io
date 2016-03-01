@@ -67,6 +67,10 @@ object --+
 </pre>
 
 <hr />
+Access to repository used by the compiler. Does not
+implement all of the WBEM Operations, just the subset
+required by the compiler
+
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -81,78 +85,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="pywbem.mof_compiler.MOFWBEMConnection-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">conn</span>=<span class="summary-sig-default">None</span>)</span><br />
-      x.__init__(...) initializes x; see help(type(x)) for signature</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.__init__">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="setns"></a><span class="summary-sig-name">setns</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">value</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.setns">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="getns"></a><span class="summary-sig-name">getns</span>(<span class="summary-sig-arg">self</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.getns">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="GetClass"></a><span class="summary-sig-name">GetClass</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.GetClass">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
           <td><span class="summary-sig"><a name="CreateClass"></a><span class="summary-sig-name">CreateClass</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Insert a single CIMClass defined by kwargs into the
+target connection.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.CreateClass">source&nbsp;code</a></span>
             
@@ -168,9 +105,87 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a name="CreateInstance"></a><span class="summary-sig-name">CreateInstance</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Append a new instance defined by kwargs to the target
+connection instances</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.CreateInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="EnumerateQualifiers"></a><span class="summary-sig-name">EnumerateQualifiers</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Get all qualifier declarations in the connection namespace</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.EnumerateQualifiers">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="GetClass"></a><span class="summary-sig-name">GetClass</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Get a class from the MOFWBEMConnection</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.GetClass">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="GetQualifier"></a><span class="summary-sig-name">GetQualifier</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Get the qualifier declaration defined by name</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.GetQualifier">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a name="ModifyClass"></a><span class="summary-sig-name">ModifyClass</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Not Implemented because not used</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.ModifyClass">source&nbsp;code</a></span>
             
@@ -188,7 +203,8 @@ object --+
         <tr>
           <td><span class="summary-sig"><a name="ModifyInstance"></a><span class="summary-sig-name">ModifyInstance</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      This function should never happen so generates error</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.ModifyInstance">source&nbsp;code</a></span>
             
@@ -204,27 +220,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="GetQualifier"></a><span class="summary-sig-name">GetQualifier</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.GetQualifier">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
           <td><span class="summary-sig"><a name="SetQualifier"></a><span class="summary-sig-name">SetQualifier</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Put the qualifier declaration defined in kwargs into
+the target repository</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.SetQualifier">source&nbsp;code</a></span>
             
@@ -240,11 +240,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="EnumerateQualifiers"></a><span class="summary-sig-name">EnumerateQualifiers</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td><span class="summary-sig"><a href="pywbem.mof_compiler.MOFWBEMConnection-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">conn</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Define the connection for the connection</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.EnumerateQualifiers">source&nbsp;code</a></span>
+            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -258,11 +258,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="CreateInstance"></a><span class="summary-sig-name">CreateInstance</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td><span class="summary-sig"><a name="getns"></a><span class="summary-sig-name">getns</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the namespace from the MOFWBEMConnection object</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.CreateInstance">source&nbsp;code</a></span>
+            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.getns">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -277,9 +276,29 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="rollback"></a><span class="summary-sig-name">rollback</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">verbose</span>=<span class="summary-sig-default">False</span>)</span></td>
+        <span class="summary-sig-arg">verbose</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Rollback created instances and classes created within
+the context of this connection</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.rollback">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setns"></a><span class="summary-sig-name">setns</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Set the namespace into the MOFWBEMConnection object</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFWBEMConnection.setns">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -355,11 +374,10 @@ object --+
     </td>
   </tr></table>
   
-  x.__init__(...) initializes x; see help(type(x)) for signature
+  Define the connection for the connection
   <dl class="fields">
     <dt>Overrides:
         object.__init__
-        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
 </td></tr></table>
@@ -384,10 +402,12 @@ object --+
   <dl class="fields">
     <dt>Get Method:</dt>
     <dd class="value"><span class="summary-sig"><a href="pywbem.mof_compiler.MOFWBEMConnection-class.html#getns" class="summary-sig-name">getns</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Get the namespace from the MOFWBEMConnection object
     </dd>
     <dt>Set Method:</dt>
     <dd class="value"><span class="summary-sig"><a href="pywbem.mof_compiler.MOFWBEMConnection-class.html#setns" class="summary-sig-name">setns</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">value</span>)</span>
+        - Set the namespace into the MOFWBEMConnection object
     </dd>
   </dl>
 </td></tr></table>
@@ -424,7 +444,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 22:02:24 2016
+    Generated by Epydoc 3.0.1 on Tue Mar  1 19:29:00 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

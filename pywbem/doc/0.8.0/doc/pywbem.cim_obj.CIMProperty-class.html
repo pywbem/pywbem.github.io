@@ -61,15 +61,19 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class CIMProperty</h1><p class="nomargin-top"><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMProperty">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-object --+
-         |
-        <strong class="uidshort">CIMProperty</strong>
+                   object --+    
+                            |    
+cim_types._CIMComparisonMixin --+
+                                |
+                               <strong class="uidshort">CIMProperty</strong>
 </pre>
 
 <hr />
-<p>A CIM property.</p>
-<p>The property can be used in a CIM instance (as part of a <a href="pywbem.cim_obj.CIMInstance-class.html" class="link">CIMInstance</a>
-object) or in a CIM class (as part of a <a href="pywbem.cim_obj.CIMClass-class.html" class="link">CIMClass</a> object).</p>
+<p>Defines a CIM property including cim type, value, and possibly
+qualifiers.</p>
+<p>The property can be used in a CIM instance (as part of a
+<a href="pywbem.cim_obj.CIMInstance-class.html" class="link">CIMInstance</a> object) or in a CIM class (as part of a
+<a href="pywbem.cim_obj.CIMClass-class.html" class="link">CIMClass</a> object).</p>
 <p>For properties in CIM instances:</p>
 <blockquote>
 <ul class="rst-simple">
@@ -133,7 +137,8 @@ DMTF DSP0004.</p>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="copy"></a><span class="summary-sig-name">copy</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="copy"></a><span class="summary-sig-name">copy</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return a copy of the CIMProperty object</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMProperty.copy">source&nbsp;code</a></span>
             
@@ -150,7 +155,8 @@ DMTF DSP0004.</p>
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="pywbem.cim_obj.CIMProperty-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      repr(x)</td>
+      Return a string repesenting the CIMProperty in
+name=value form for each attribute of the CIMProperty</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMProperty.__repr__">source&nbsp;code</a></span>
             
@@ -166,7 +172,9 @@ DMTF DSP0004.</p>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="tocimxml"></a><span class="summary-sig-name">tocimxml</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="tocimxml"></a><span class="summary-sig-name">tocimxml</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the string with CIM/XML form of the CIMProperty object using
+the representation defined in DSP0200</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMProperty.tocimxml">source&nbsp;code</a></span>
             
@@ -176,25 +184,16 @@ DMTF DSP0004.</p>
       
     </td>
   </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="__cmp__"></a><span class="summary-sig-name">__cmp__</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">other</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMProperty.__cmp__">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
   <tr>
     <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cim_types._CIMComparisonMixin</code></b>:
+      <code>__eq__</code>,
+      <code>__ge__</code>,
+      <code>__gt__</code>,
+      <code>__le__</code>,
+      <code>__lt__</code>,
+      <code>__ne__</code>
+      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -319,22 +318,22 @@ embedded_object='object')</code>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (<code class="link">unicode</code> or UTF-8 encoded <code class="link">str</code>) - Name of the property. Must not be <code class="link">None</code>.</li>
+        <li><strong class="pname"><code>name</code></strong> (Unicode string or UTF-8 encoded byte string) - Name of the property. Must not be <code class="link">None</code>.</li>
         <li><strong class="pname"><code>value</code></strong> - Value of the property (interpreted as actual value when the
 property object is used in an instance, and as default value when
 it is used in a class).
 For valid types for CIM values, see <a href="pywbem.cim_types-module.html" class="link">cim_types</a>.</li>
-        <li><strong class="pname"><code>type</code></strong> (string) - Name of the CIM type of the property (e.g. <code class="link">'uint8'</code>).
+        <li><strong class="pname"><code>type</code></strong> (Unicode string or UTF-8 encoded byte string) - Name of the CIM type of the property (e.g. <code class="link">'uint8'</code>).
 <code class="link">None</code> means that the argument is unspecified, causing the
 corresponding instance variable to be inferred. An exception is
 raised if it cannot be inferred.</li>
-        <li><strong class="pname"><code>class_origin</code></strong> (<code class="link">unicode</code> or UTF-8 encoded <code class="link">str</code>) - The CIM class origin of the property (the name
+        <li><strong class="pname"><code>class_origin</code></strong> (Unicode string or UTF-8 encoded byte string) - The CIM class origin of the property (the name
 of the most derived class that defines or overrides the property in
 the class hierarchy of the class owning the property).
 <code class="link">None</code> means that class origin information is not available.</li>
         <li><strong class="pname"><code>array_size</code></strong> (<code class="link">int</code>) - The size of the array property, for fixed-size arrays.
 <code class="link">None</code> means that the array property has variable size.</li>
-        <li><strong class="pname"><code>propagated</code></strong> (<code class="link">unicode</code> or UTF-8 encoded <code class="link">str</code>) - The CIM <em>propagated</em> attribute of the property (the effective value
+        <li><strong class="pname"><code>propagated</code></strong> (Unicode string or UTF-8 encoded byte string) - The CIM <em>propagated</em> attribute of the property (the effective value
 of the <code class="link">Propagated</code> qualifier of the property, which is a string
 that specifies the name of the source property from which the
 property value should be propagated).
@@ -344,7 +343,7 @@ scalar (<code class="link">False</code>).
 <code class="link">None</code> means that the argument is unspecified, causing the
 corresponding instance variable to be inferred from the <code class="link">value</code>
 parameter, and if that is <code class="link">None</code> it defaults to <code class="link">False</code> (scalar).</li>
-        <li><strong class="pname"><code>reference_class</code></strong> (<code class="link">unicode</code> or UTF-8 encoded <code class="link">str</code>) - The name of the referenced class, for reference properties.
+        <li><strong class="pname"><code>reference_class</code></strong> (Unicode string or UTF-8 encoded byte string) - The name of the referenced class, for reference properties.
 <code class="link">None</code> means that the argument is unspecified, causing the
 corresponding instance variable  to be inferred. An exception is
 raised if it cannot be inferred.</li>
@@ -354,7 +353,7 @@ values must be <a href="pywbem.cim_obj.CIMQualifier-class.html" class="link">CIM
 values.
 <code class="link">None</code> means that there are no qualifier values. In all cases,
 the <code class="link">qualifiers</code> instance variable will be a <a href="pywbem.cim_obj.NocaseDict-class.html" class="link">NocaseDict</a> object.</li>
-        <li><strong class="pname"><code>embedded_object</code></strong> (string) - A string value indicating the kind of
+        <li><strong class="pname"><code>embedded_object</code></strong> (Unicode string or UTF-8 encoded byte string) - A string value indicating the kind of
 embedded object represented by the property value. The following
 values are defined for this argument:
 <code class="link">'instance'</code>: The property is declared with the
@@ -394,11 +393,11 @@ raised if it cannot be inferred.</li>
     </td>
   </tr></table>
   
-  repr(x)
+  Return a string repesenting the CIMProperty in
+name=value form for each attribute of the CIMProperty
   <dl class="fields">
     <dt>Overrides:
         object.__repr__
-        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
 </td></tr></table>
@@ -435,7 +434,7 @@ raised if it cannot be inferred.</li>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 22:02:21 2016
+    Generated by Epydoc 3.0.1 on Tue Mar  1 19:28:59 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

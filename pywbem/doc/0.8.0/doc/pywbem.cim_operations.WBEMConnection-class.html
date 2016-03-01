@@ -587,7 +587,7 @@ paths of the association classes) that reference a source instance
           <td><span class="summary-sig"><a href="pywbem.cim_operations.WBEMConnection-class.html#EnumerateQualifiers" class="summary-sig-name">EnumerateQualifiers</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">namespace</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**params</span>)</span><br />
-      Enumerate qualifier types.</td>
+      Enumerate qualifier declarations for a namespace.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#WBEMConnection.EnumerateQualifiers">source&nbsp;code</a></span>
             
@@ -607,7 +607,7 @@ paths of the association classes) that reference a source instance
         <span class="summary-sig-arg">QualifierName</span>,
         <span class="summary-sig-arg">namespace</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**params</span>)</span><br />
-      Retrieve a qualifier type.</td>
+      Retrieve a qualifier declaration.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#WBEMConnection.GetQualifier">source&nbsp;code</a></span>
             
@@ -627,7 +627,7 @@ paths of the association classes) that reference a source instance
         <span class="summary-sig-arg">QualifierDeclaration</span>,
         <span class="summary-sig-arg">namespace</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**params</span>)</span><br />
-      Create or modify a qualifier type.</td>
+      Create or modify a qualifier declaration.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#WBEMConnection.SetQualifier">source&nbsp;code</a></span>
             
@@ -647,7 +647,7 @@ paths of the association classes) that reference a source instance
         <span class="summary-sig-arg">QualifierName</span>,
         <span class="summary-sig-arg">namespace</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**params</span>)</span><br />
-      Delete a qualifier type.</td>
+      Delete a qualifier declaration.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#WBEMConnection.DeleteQualifier">source&nbsp;code</a></span>
             
@@ -1943,12 +1943,28 @@ in the PyWBEM client.</p>
     </td>
   </tr></table>
   
-  <p>Enumerate qualifier types.</p>
-<p>Returns a list of <a href="pywbem.cim_obj.CIMQualifier-class.html" class="link">CIMQualifier</a> objects.</p>
-<p>TODO Complete this description.</p>
+  <p>Enumerate qualifier declarations for a namespace.</p>
+<p>This method performs the GetQualifier CIM-XML operation.
+If the operation succeeds, this method returns.
+Otherwise, this method raises an exception.
+Returns a <a href="pywbem.cim_obj.CIMQualifier-class.html" class="link">CIMQualifier</a> object.</p>
+<p>TODO This method is UNSUPPORTED right now. Test and verify description.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>Qualifier</code></strong> (string) - Name of the qualifier to be invoked deleted.</li>
+        <li><strong class="pname"><code>namespace</code></strong> (string) - Optional: Name of the namespace in which the class is to be
+created. The value <code class="link">None</code> causes the default namespace of the
+connection to be used.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>A list of`CIMQualifierDeclaration` object that is a
+representation of the retrieved qualifier declarations.</dd>
   </dl>
-</td></tr></table>
+<div class="fields">      <p><strong>Exceptions:</strong>
+        See the list of exceptions described in <a href="pywbem.cim_operations.WBEMConnection-class.html" class="link">WBEMConnection</a>.
+      </p>
+</div></td></tr></table>
 </div>
 <a name="GetQualifier"></a>
 <div>
@@ -1967,12 +1983,28 @@ in the PyWBEM client.</p>
     </td>
   </tr></table>
   
-  <p>Retrieve a qualifier type.</p>
-<p>Returns a <a href="pywbem.cim_obj.CIMQualifier-class.html" class="link">CIMQualifier</a> object.</p>
-<p>TODO Complete this description.</p>
+  <p>Retrieve a qualifier declaration.</p>
+<p>This method performs the GetQualifier CIM-XML operation.
+If the operation succeeds, this method returns.
+Otherwise, this method raises an exception.
+Returns a <a href="pywbem.cim_obj.CIMQualifier-class.html" class="link">CIMQualifier</a> object.</p>
+<p>TODO This method is UNSUPPORTED right now. Test and verify description.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>Qualifier</code></strong> (string) - Name of the qualifier to be invoked deleted.</li>
+        <li><strong class="pname"><code>namespace</code></strong> (string) - Optional: Name of the namespace in which the class is to be
+created. The value <code class="link">None</code> causes the default namespace of the
+connection to be used.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>A <a href="pywbem.cim_obj.CIMQualifierDeclaration-class.html" class="link">CIMQualifierDeclaration</a> object that is a representation
+of the retrieved qualifier declaration.</dd>
   </dl>
-</td></tr></table>
+<div class="fields">      <p><strong>Exceptions:</strong>
+        See the list of exceptions described in <a href="pywbem.cim_operations.WBEMConnection-class.html" class="link">WBEMConnection</a>.
+      </p>
+</div></td></tr></table>
 </div>
 <a name="SetQualifier"></a>
 <div>
@@ -1991,11 +2023,24 @@ in the PyWBEM client.</p>
     </td>
   </tr></table>
   
-  <p>Create or modify a qualifier type.</p>
-<p>TODO Complete this description.</p>
+  <p>Create or modify a qualifier declaration.</p>
+<p>This method performs the SetQualifier CIM-XML operation.
+If the operation succeeds, this method returns.
+Otherwise, this method raises an exception.</p>
+<p>TODO This method is UNSUPPORTED right now. Test and verify description.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>QualifierDeclaration</code></strong> (CIMQualifierDeclaration object) - Definition of the qualifier to be created or modified.</li>
+        <li><strong class="pname"><code>namespace</code></strong> (string) - Optional: Name of the namespace in which the class is to be
+created. The value <code class="link">None</code> causes the default namespace of the
+connection to be used.</li>
+    </ul></dd>
   </dl>
-</td></tr></table>
+<div class="fields">      <p><strong>Exceptions:</strong>
+        See the list of exceptions described in <a href="pywbem.cim_operations.WBEMConnection-class.html" class="link">WBEMConnection</a>.
+      </p>
+</div></td></tr></table>
 </div>
 <a name="DeleteQualifier"></a>
 <div>
@@ -2014,11 +2059,24 @@ in the PyWBEM client.</p>
     </td>
   </tr></table>
   
-  <p>Delete a qualifier type.</p>
-<p>TODO Complete this description.</p>
+  <p>Delete a qualifier declaration.</p>
+<p>This method performs the DeleteQualifier CIM-XML operation.
+If the operation succeeds, this method returns.
+Otherwise, this method raises an exception.</p>
+<p>TODO This method is UNSUPPORTED right now. Test and verify description.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>Qualifier</code></strong> (string) - Name of the qualifier to be deleted.</li>
+        <li><strong class="pname"><code>namespace</code></strong> (string) - Optional: Name of the namespace in which the class is to be
+created. The value <code class="link">None</code> causes the default namespace of the
+connection to be used.</li>
+    </ul></dd>
   </dl>
-</td></tr></table>
+<div class="fields">      <p><strong>Exceptions:</strong>
+        See the list of exceptions described in <a href="pywbem.cim_operations.WBEMConnection-class.html" class="link">WBEMConnection</a>.
+      </p>
+</div></td></tr></table>
 </div>
 <br />
 <!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
@@ -2141,7 +2199,7 @@ very first request on this connection object, it is <code class="link">None</cod
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 22:02:22 2016
+    Generated by Epydoc 3.0.1 on Tue Mar  1 19:28:59 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

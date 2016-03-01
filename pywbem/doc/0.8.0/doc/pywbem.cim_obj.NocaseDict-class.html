@@ -192,25 +192,6 @@ dictionary using <code class="link">len(d)</code>.</td>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="pywbem.cim_obj.NocaseDict-class.html#has_key" class="summary-sig-name">has_key</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">key</span>)</span><br />
-      Return a boolean indicating whether a specific key is in the
-dictionary.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.has_key">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
           <td><span class="summary-sig"><a href="pywbem.cim_obj.NocaseDict-class.html#__contains__" class="summary-sig-name">__contains__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">key</span>)</span><br />
       Invoked when determining whether a specific key is in the dictionary
@@ -483,7 +464,7 @@ arguments.</td>
         <tr>
           <td><span class="summary-sig"><a href="pywbem.cim_obj.NocaseDict-class.html#__eq__" class="summary-sig-name">__eq__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">other</span>)</span><br />
-      Invoked when two dictionaries are compared for equality or inequality.</td>
+      Invoked when two dictionaries are compared with the <code class="link">==</code> operator.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__eq__">source&nbsp;code</a></span>
             
@@ -499,12 +480,83 @@ arguments.</td>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="pywbem.cim_obj.NocaseDict-class.html#__cmp__" class="summary-sig-name">__cmp__</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="pywbem.cim_obj.NocaseDict-class.html#__ne__" class="summary-sig-name">__ne__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">other</span>)</span><br />
-      Invoked when two dictionaries are compared for equality, inequality,
-and greater-than/less-than comparisons.</td>
+      Invoked when two dictionaries are compared with the <code class="link">!=</code> operator.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__cmp__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__ne__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.cim_obj.NocaseDict-class.html#__lt__" class="summary-sig-name">__lt__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">other</span>)</span><br />
+      Invoked when two dictionaries are compared with the <code class="link">&lt;</code> operator.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__lt__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.cim_obj.NocaseDict-class.html#__gt__" class="summary-sig-name">__gt__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">other</span>)</span><br />
+      Invoked when two dictionaries are compared with the <code class="link">&gt;</code> operator.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__gt__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.cim_obj.NocaseDict-class.html#__ge__" class="summary-sig-name">__ge__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">other</span>)</span><br />
+      Invoked when two dictionaries are compared with the <code class="link">&gt;=</code> operator.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__ge__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.cim_obj.NocaseDict-class.html#__le__" class="summary-sig-name">__le__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">other</span>)</span><br />
+      Invoked when two dictionaries are compared with the <code class="link">&lt;=</code> operator.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__le__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -672,29 +724,6 @@ with the new value.</p>
 specified key does not exist. Note that __setitem__() ensures that
 only string typed keys will exist, so the key type is not tested here
 and specifying non-string typed keys will simply lead to a KeyError.</p>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
-<a name="has_key"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">has_key</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">key</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.has_key">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Return a boolean indicating whether a specific key is in the
-dictionary.</p>
-<p>The key is looked up case-insensitively.</p>
-<p>This method is deprecated in favor of using <code class="link">key in d</code>.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -904,42 +933,128 @@ not copied).
     </td>
   </tr></table>
   
-  <p>Invoked when two dictionaries are compared for equality or inequality.</p>
-<p>The keys are looked up case-insensitively.</p>
-<p>The comparison is delegated to equality comparison of matching
-key/value pairs.</p>
+  <p>Invoked when two dictionaries are compared with the <code class="link">==</code> operator.</p>
+<p>The comparison is based on matching key/value pairs.
+The keys are looked up case-insensitively.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
-<a name="__cmp__"></a>
+<a name="__ne__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__cmp__</span>(<span class="sig-arg">self</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__ne__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">other</span>)</span>
-    <br /><em class="fname">(Comparison operator)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__cmp__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__ne__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Invoked when two dictionaries are compared for equality, inequality,
-and greater-than/less-than comparisons.</p>
-<p>The keys are looked up case-insensitively.</p>
-<p><code class="link">Self</code> is less than <code class="link">other</code>, if:</p>
-<blockquote>
-<ul class="rst-simple">
+  <p>Invoked when two dictionaries are compared with the <code class="link">!=</code> operator.</p>
+<p>Implemented by delegating to the <code class="link">==</code> operator.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__lt__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__lt__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">other</span>)</span>
+    <br /><em class="fname">(Less-than operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__lt__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Invoked when two dictionaries are compared with the <code class="link">&lt;</code> operator.</p>
+<dl class="rst-docutils">
+<dt><code class="link">self</code> is less than <code class="link">other</code>, if:</dt>
+<dd><ul class="rst-first rst-last rst-simple">
 <li>a key in <code class="link">self</code> is not in <code class="link">other</code>, or</li>
 <li>the value for a key in <code class="link">self</code> is less than the value for that key
 in <code class="link">other</code>, or</li>
 <li><code class="link">self</code> has less key/value pairs than <code class="link">other</code>.</li>
 </ul>
-</blockquote>
+</dd>
+</dl>
+<p>The keys are looked up case-insensitively.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__gt__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__gt__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">other</span>)</span>
+    <br /><em class="fname">(Greater-than operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__gt__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Invoked when two dictionaries are compared with the <code class="link">&gt;</code> operator.</p>
+<p>Implemented by delegating to the <code class="link">&lt;</code> operator.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__ge__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__ge__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">other</span>)</span>
+    <br /><em class="fname">(Greater-than-or-equals operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__ge__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Invoked when two dictionaries are compared with the <code class="link">&gt;=</code> operator.</p>
+<p>Implemented by delegating to the <code class="link">&gt;</code> and <code class="link">==</code> operators.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__le__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__le__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">other</span>)</span>
+    <br /><em class="fname">(Less-than-or-equals operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#NocaseDict.__le__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Invoked when two dictionaries are compared with the <code class="link">&lt;=</code> operator.</p>
+<p>Implemented by delegating to the <code class="link">&lt;</code> and <code class="link">==</code> operators.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -976,7 +1091,7 @@ in <code class="link">other</code>, or</li>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 22:02:22 2016
+    Generated by Epydoc 3.0.1 on Tue Mar  1 19:28:59 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

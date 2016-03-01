@@ -67,6 +67,9 @@ object --+
 </pre>
 
 <hr />
+MOF compiler class. Initializes the compiler and includes functions to
+compile input files
+
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -85,10 +88,29 @@ object --+
         <span class="summary-sig-arg">handle</span>,
         <span class="summary-sig-arg">search_paths</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">verbose</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">log_func</span>=<span class="summary-sig-default">&lt;function _print_logger at 0x7f3d25199758&gt;</span>)</span><br />
+        <span class="summary-sig-arg">log_func</span>=<span class="summary-sig-default">&lt;function _print_logger at 0x2b96cdd35848&gt;</span>)</span><br />
       Initialize the compiler.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFCompiler.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.mof_compiler.MOFCompiler-class.html#compile_file" class="summary-sig-name">compile_file</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">filename</span>,
+        <span class="summary-sig-arg">ns</span>)</span><br />
+      Compile MOF from a file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFCompiler.compile_file">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -122,28 +144,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="pywbem.mof_compiler.MOFCompiler-class.html#compile_file" class="summary-sig-name">compile_file</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">filename</span>,
-        <span class="summary-sig-arg">ns</span>)</span><br />
-      Compile MOF from a file.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFCompiler.compile_file">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
           <td><span class="summary-sig"><a href="pywbem.mof_compiler.MOFCompiler-class.html#find_mof" class="summary-sig-name">find_mof</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">classname</span>)</span><br />
-      Find a MOF file corresponding to a CIM class name.</td>
+      search_paths provided to __init__() are searched recursively.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFCompiler.find_mof">source&nbsp;code</a></span>
             
@@ -160,7 +163,9 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="rollback"></a><span class="summary-sig-name">rollback</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">verbose</span>=<span class="summary-sig-default">False</span>)</span></td>
+        <span class="summary-sig-arg">verbose</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Rollback/delete objects created within the context of this
+MOFCompiler instance</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFCompiler.rollback">source&nbsp;code</a></span>
             
@@ -225,7 +230,7 @@ object --+
         <span class="sig-arg">handle</span>,
         <span class="sig-arg">search_paths</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">verbose</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">log_func</span>=<span class="sig-default">&lt;function _print_logger at 0x7f3d25199758&gt;</span>)</span>
+        <span class="sig-arg">log_func</span>=<span class="sig-default">&lt;function _print_logger at 0x2b96cdd35848&gt;</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -266,6 +271,30 @@ log_func -- A callable that takes a single string argument.
   </dl>
 </td></tr></table>
 </div>
+<a name="compile_file"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">compile_file</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">filename</span>,
+        <span class="sig-arg">ns</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFCompiler.compile_file">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Compile MOF from a file.</p>
+<p>Arguments:
+filename -- The file to read MOF from
+ns -- The CIM namespace</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <a name="compile_string"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -299,30 +328,6 @@ filename -- The name of the file that the MOF was read from.  This
   </dl>
 </td></tr></table>
 </div>
-<a name="compile_file"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">compile_file</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">filename</span>,
-        <span class="sig-arg">ns</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="pywbem.mof_compiler-pysrc.html#MOFCompiler.compile_file">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Compile MOF from a file.</p>
-<p>Arguments:
-filename -- The file to read MOF from
-ns -- The CIM namespace</p>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
 <a name="find_mof"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -338,8 +343,10 @@ ns -- The CIM namespace</p>
     </td>
   </tr></table>
   
-  <p>Find a MOF file corresponding to a CIM class name.  The search_paths
-provided to __init__() are searched recursively.</p>
+  <dl class="rst-docutils">
+<dt>Find a MOF file corresponding to a CIM class name.  The</dt>
+<dd>search_paths provided to __init__() are searched recursively.</dd>
+</dl>
 <p>Arguments:
 classname -- The name of the class to look for</p>
   <dl class="fields">
@@ -378,7 +385,7 @@ classname -- The name of the class to look for</p>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 22:02:24 2016
+    Generated by Epydoc 3.0.1 on Tue Mar  1 19:29:00 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

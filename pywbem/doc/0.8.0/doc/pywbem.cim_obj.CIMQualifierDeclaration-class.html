@@ -61,9 +61,11 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class CIMQualifierDeclaration</h1><p class="nomargin-top"><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMQualifierDeclaration">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-object --+
-         |
-        <strong class="uidshort">CIMQualifierDeclaration</strong>
+                   object --+    
+                            |    
+cim_types._CIMComparisonMixin --+
+                                |
+                               <strong class="uidshort">CIMQualifierDeclaration</strong>
 </pre>
 
 <hr />
@@ -111,7 +113,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="copy"></a><span class="summary-sig-name">copy</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="copy"></a><span class="summary-sig-name">copy</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Copy the CIMQualifierDeclaration</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMQualifierDeclaration.copy">source&nbsp;code</a></span>
             
@@ -128,7 +131,7 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="pywbem.cim_obj.CIMQualifierDeclaration-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      repr(x)</td>
+      Return String of CIMQualifierDeclaration in form name=value</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMQualifierDeclaration.__repr__">source&nbsp;code</a></span>
             
@@ -144,24 +147,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="__cmp__"></a><span class="summary-sig-name">__cmp__</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">other</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMQualifierDeclaration.__cmp__">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="tocimxml"></a><span class="summary-sig-name">tocimxml</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="tocimxml"></a><span class="summary-sig-name">tocimxml</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return string with CIM/XML representation of CIMQualifierDeclaration
+based on DMTF DSP0200 representation</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMQualifierDeclaration.tocimxml">source&nbsp;code</a></span>
             
@@ -177,7 +165,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="tomof"></a><span class="summary-sig-name">tomof</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="tomof"></a><span class="summary-sig-name">tomof</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return MOF representation of CIMQualifierDeclaration</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#CIMQualifierDeclaration.tomof">source&nbsp;code</a></span>
             
@@ -189,6 +178,14 @@ object --+
   </tr>
   <tr>
     <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cim_types._CIMComparisonMixin</code></b>:
+      <code>__eq__</code>,
+      <code>__ge__</code>,
+      <code>__gt__</code>,
+      <code>__le__</code>,
+      <code>__lt__</code>,
+      <code>__ne__</code>
+      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -296,11 +293,10 @@ object --+
     </td>
   </tr></table>
   
-  repr(x)
+  Return String of CIMQualifierDeclaration in form name=value
   <dl class="fields">
     <dt>Overrides:
         object.__repr__
-        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
 </td></tr></table>
@@ -337,7 +333,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 22:02:21 2016
+    Generated by Epydoc 3.0.1 on Tue Mar  1 19:28:59 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -128,9 +128,9 @@ characters.</td>
         <tr>
           <td><span class="summary-sig"><a href="pywbem.cim_operations-module.html#is_subclass" class="summary-sig-name">is_subclass</a>(<span class="summary-sig-arg">ch</span>,
         <span class="summary-sig-arg">ns</span>,
-        <span class="summary-sig-arg">super</span>,
+        <span class="summary-sig-arg">super_class</span>,
         <span class="summary-sig-arg">sub</span>)</span><br />
-      Determine if one class is a subclass of another</td>
+      Determine if one class is a subclass of another class.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#is_subclass">source&nbsp;code</a></span>
             
@@ -146,8 +146,9 @@ characters.</td>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="PegasusUDSConnection"></a><span class="summary-sig-name">PegasusUDSConnection</span>(<span class="summary-sig-arg">creds</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td><span class="summary-sig"><a href="pywbem.cim_operations-module.html#PegasusUDSConnection" class="summary-sig-name">PegasusUDSConnection</a>(<span class="summary-sig-arg">creds</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Pegasus specific Unix Domain Socket call.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#PegasusUDSConnection">source&nbsp;code</a></span>
             
@@ -163,8 +164,9 @@ characters.</td>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="SFCBUDSConnection"></a><span class="summary-sig-name">SFCBUDSConnection</span>(<span class="summary-sig-arg">creds</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td><span class="summary-sig"><a href="pywbem.cim_operations-module.html#SFCBUDSConnection" class="summary-sig-name">SFCBUDSConnection</a>(<span class="summary-sig-arg">creds</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      SFCB specific Unix Domain Socket call.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#SFCBUDSConnection">source&nbsp;code</a></span>
             
@@ -180,8 +182,9 @@ characters.</td>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="OpenWBEMUDSConnection"></a><span class="summary-sig-name">OpenWBEMUDSConnection</span>(<span class="summary-sig-arg">creds</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td><span class="summary-sig"><a href="pywbem.cim_operations-module.html#OpenWBEMUDSConnection" class="summary-sig-name">OpenWBEMUDSConnection</a>(<span class="summary-sig-arg">creds</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Pegasus specific Unix Domain Socket call.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pywbem.cim_operations-pysrc.html#OpenWBEMUDSConnection">source&nbsp;code</a></span>
             
@@ -272,9 +275,9 @@ sequence is in a UTF-8 encoded XML string.</p>
 represent the surrogate code points (as well as all other code points,
 regardless of whether they are assigned to Unicode characters).</p>
 </li>
-<li><p class="rst-first">The Python <code class="link">str.encode()</code> and <code class="link">str.decode()</code> functions successfully
+<li><p class="rst-first">The Python <code class="link">encode()</code> and <code class="link">decode()</code> functions successfully
 translate the surrogate code points back and forth for encoding UTF-8.</p>
-<p>For example, <tt class="rst-docutils literal"><span class="pre">'\xed\xb0\x80'.decode(&quot;utf-8&quot;)</span> = <span class="pre">u'\udc00'</span></tt>.</p>
+<p>For example, <tt class="rst-docutils literal"><span class="pre">b'\xed\xb0\x80'.decode(&quot;utf-8&quot;)</span> = <span class="pre">u'\udc00'</span></tt>.</p>
 </li>
 <li><p class="rst-first">Because Python supports the encoding and decoding of UTF-8 sequences
 also for the surrogate code points, the &quot;narrow&quot; Unicode build of
@@ -283,11 +286,11 @@ encoded in (ill-formed) UTF-8.</p>
 <p>For example, code point U+10122 can be (illegally) created from a
 sequence of code points U+D800,U+DD22 represented in UTF-8:</p>
 <blockquote>
-<p><tt class="rst-docutils literal"><span class="pre">'\xED\xA0\x80\xED\xB4\xA2'.decode(&quot;utf-8&quot;)</span> = <span class="pre">u'\U00010122'</span></tt></p>
+<p><tt class="rst-docutils literal"><span class="pre">b'\xED\xA0\x80\xED\xB4\xA2'.decode(&quot;utf-8&quot;)</span> = <span class="pre">u'\U00010122'</span></tt></p>
 </blockquote>
 <p>while the correct UTF-8 sequence for this code point is:</p>
 <blockquote>
-<p><tt class="rst-docutils literal"><span class="pre">u'\U00010122'.encode(&quot;utf-8&quot;)</span> = '\xf0\x90\x84\xa2'</tt></p>
+<p><tt class="rst-docutils literal"><span class="pre">u'\U00010122'.encode(&quot;utf-8&quot;)</span> = <span class="pre">b'\xf0\x90\x84\xa2'</span></tt></p>
 </blockquote>
 </li>
 </ol>
@@ -305,7 +308,7 @@ representation.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>utf8_xml</code></strong> (string) - The UTF-8 encoded XML string to be examined.</li>
+        <li><strong class="pname"><code>utf8_xml</code></strong> (UTF-8 encoded byte string) - The XML string to be examined.</li>
         <li><strong class="pname"><code>meaning</code></strong> (string) - Short text with meaning of the XML string, for messages in exceptions.</li>
     </ul></dd>
   </dl>
@@ -325,7 +328,7 @@ sequences (incorrectly encoded or ill-formed) or invalid XML characters.</p>
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">is_subclass</span>(<span class="sig-arg">ch</span>,
         <span class="sig-arg">ns</span>,
-        <span class="sig-arg">super</span>,
+        <span class="sig-arg">super_class</span>,
         <span class="sig-arg">sub</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -334,16 +337,79 @@ sequences (incorrectly encoded or ill-formed) or invalid XML characters.</p>
   </tr></table>
   
   <pre class="literalblock">
-Determine if one class is a subclass of another
+Determine if one class is a subclass of another class.
 
 Keyword Arguments:
 ch -- A CIMOMHandle.  Either a pycimmb.CIMOMHandle or a
     pywbem.WBEMConnection.
 ns -- Namespace.
-super -- A string containing the super class name.
+super-class -- A string containing the super class name.
 sub -- The subclass.  This can either be a string or a pywbem.CIMClass.
 
 </pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="PegasusUDSConnection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">PegasusUDSConnection</span>(<span class="sig-arg">creds</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_operations-pysrc.html#PegasusUDSConnection">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  Pegasus specific Unix Domain Socket call. Specific because
+of the location of the file name
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="SFCBUDSConnection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">SFCBUDSConnection</span>(<span class="sig-arg">creds</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_operations-pysrc.html#SFCBUDSConnection">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  SFCB specific Unix Domain Socket call. Specific because
+of the location of the file name
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="OpenWBEMUDSConnection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">OpenWBEMUDSConnection</span>(<span class="sig-arg">creds</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.cim_operations-pysrc.html#OpenWBEMUDSConnection">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  Pegasus specific Unix Domain Socket call. Specific because
+of the location of the file name
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -380,7 +446,7 @@ sub -- The subclass.  This can either be a string or a pywbem.CIMClass.
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 22:02:21 2016
+    Generated by Epydoc 3.0.1 on Tue Mar  1 19:28:58 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -1,3 +1,5 @@
+
+
 pywbem-0.8.0rc4  2016-03-01
 
 
@@ -23,6 +25,28 @@ pywbem-0.8.0rc4  2016-03-01
       - The Python provider modules cim_provider.py and cim_provider2.py.
       - The CIM indication listener in the `irecv` directory. See issue
         #66 on GitHub. 
+
+
+  CHANGES:
+
+    * The MOF compiler is now available as the command 'mof_compiler' that gets
+      installed into the Python script directory. It is now separate from the
+      'mof_compiler' module within the 'pywbem' package. In 0.7.0, the module
+      was at the same time the script.  (Andreas Maier)
+
+    * The WBEM client CLI is now available as the command 'wbemcli' that gets
+      installed into the Python script directory. It is now separate from the
+      'wbemcli' module within the 'pywbem' package. In 0.7.0, the module
+      was at the same time the script.  (Andreas Maier)
+
+    * The symbols in the 'pywbem' package namespace have been reduced to a
+      well-defined set that is now declared the external API of the WBEM client
+      library, and is supposed to be sufficient.
+      In 0.7.0, most symbols defined in the sub-modules of the 'pywbem' package
+      were folded into the package namespace, cluttering it significantly.
+
+    * Since 0.7.0, some exceptions that can be raised at the external API of
+      the WBEM client library have been cleaned up.
 
 
   ENHANCEMENTS:
@@ -117,16 +141,6 @@ pywbem-0.8.0rc4  2016-03-01
 
     * Added support for Python 3.  Issue #3 on GitHub.
       (Ross Peoples, Andreas Maier)
-
-    * The MOF compiler is now available as the command 'mof_compiler'.
-      This is a Python script that is installed into the Python script
-      directory during installation of the PyWBEM package (i.e. it is in the
-      PATH).  (Andreas Maier)
-
-    * The PyWBEM CLI is now available as the command 'wbemcli'.
-      This is a Python script that is installed into the Python script
-      directory during installation of the PyWBEM package (i.e. it is in the
-      PATH).  (Andreas Maier)
 
  
   BUG FIXES:

@@ -79,14 +79,6 @@ method which returns a CIM-XML string.</p>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="pywbem.cim_obj.NocaseDict-class.html" class="summary-name">NocaseDict</a><br />
-      Yet another implementation of a case-insensitive dictionary.
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
         <a href="pywbem.cim_obj.CIMClassName-class.html" class="summary-name">CIMClassName</a><br />
       A CIM class path.
     </td>
@@ -172,42 +164,6 @@ properties, methods, qualifiers, and superclass name.
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="pywbem.cim_obj-module.html#cmpname" class="summary-sig-name">cmpname</a>(<span class="summary-sig-arg">name1</span>,
-        <span class="summary-sig-arg">name2</span>)</span><br />
-      Compare two CIM names, case-insensitively.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#cmpname">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="pywbem.cim_obj-module.html#cmpitem" class="summary-sig-name">cmpitem</a>(<span class="summary-sig-arg">item1</span>,
-        <span class="summary-sig-arg">item2</span>)</span><br />
-      Compare two items (CIM values, or other attributes of CIM objects).</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pywbem.cim_obj-pysrc.html#cmpitem">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
           <td><span class="summary-sig"><a href="pywbem.cim_obj-module.html#tocimxml" class="summary-sig-name">tocimxml</a>(<span class="summary-sig-arg">value</span>)</span><br />
       Convert an arbitrary object to CIM xml.</td>
           <td align="right" valign="top">
@@ -248,60 +204,6 @@ CIM builtin type.</td>
     <span class="table-header">Function Details</span></td>
 </tr>
 </table>
-<a name="cmpname"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">cmpname</span>(<span class="sig-arg">name1</span>,
-        <span class="sig-arg">name2</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#cmpname">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Compare two CIM names, case-insensitively.</p>
-<p>One or both of the items may be <code class="link">None</code>, and <code class="link">None</code> is considered the lowest
-possible value.</p>
-<p>The implementation delegates to the '==' and '&lt;' operators of the
-name datatypes.</p>
-<p>If name1 == name2, 0 is returned.
-If name1 &lt; name2, -1 is returned.
-Otherwise, +1 is returned.</p>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
-<a name="cmpitem"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">cmpitem</span>(<span class="sig-arg">item1</span>,
-        <span class="sig-arg">item2</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="pywbem.cim_obj-pysrc.html#cmpitem">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Compare two items (CIM values, or other attributes of CIM objects).</p>
-<p>One or both of the items may be <code class="link">None</code>, and <code class="link">None</code> is considered the lowest
-possible value.</p>
-<p>The implementation delegates to the '==' and '&lt;' operators of the
-item datatypes.</p>
-<p>If value1 == value2, 0 is returned.
-If value1 &lt; value2, -1 is returned.
-Otherwise, +1 is returned.</p>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
 <a name="tocimxml"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -378,7 +280,7 @@ argument.
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Mar  1 23:43:27 2016
+    Generated by Epydoc 3.0.1 on Fri Mar  4 17:22:27 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

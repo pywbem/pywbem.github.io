@@ -65,13 +65,13 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://pywbem.github.io/pywbem/doc/0.8.0/index.html</loc>
-    <lastmod>2015-11-12</lastmod>
+    <loc>http://pywbem.github.io/pywbem/doc/latest/index.html</loc>
+    <lastmod>2016-03-18</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://pywbem.github.io/pywbem/doc/0.8.0/doc/index.html</loc>
-    <lastmod>2015-11-12</lastmod>
+    <loc>http://pywbem.github.io/pywbem/doc/latest/doc/index.html</loc>
+    <lastmod>2015-03-18</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 

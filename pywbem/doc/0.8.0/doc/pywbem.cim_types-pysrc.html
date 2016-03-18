@@ -131,16 +131,16 @@
 <a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">re</tt> </tt>
 <a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">six</tt> </tt>
 <a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">six</tt><tt class="py-op">.</tt><tt class="py-name">PY2</tt><tt class="py-op">:</tt> </tt>
-<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">    <tt class="py-name">_longint</tt> <tt class="py-op">=</tt> <tt class="py-name">long</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">    <tt class="py-name">_Longint</tt> <tt class="py-op">=</tt> <tt class="py-name">long</tt> </tt>
 <a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
-<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">    <tt class="py-name">_longint</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">    <tt class="py-name">_Longint</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt> </tt>
 <a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
 <a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-name">__all__</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">'MinutesFromUTC'</tt><tt class="py-op">,</tt> <tt class="py-string">'CIMType'</tt><tt class="py-op">,</tt> <tt class="py-string">'CIMDateTime'</tt><tt class="py-op">,</tt> <tt class="py-string">'CIMInt'</tt><tt class="py-op">,</tt> <tt class="py-string">'Uint8'</tt><tt class="py-op">,</tt> </tt>
 <a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">           <tt class="py-string">'Sint8'</tt><tt class="py-op">,</tt> <tt class="py-string">'Uint16'</tt><tt class="py-op">,</tt> <tt class="py-string">'Sint16'</tt><tt class="py-op">,</tt> <tt class="py-string">'Uint32'</tt><tt class="py-op">,</tt> <tt class="py-string">'Sint32'</tt><tt class="py-op">,</tt> <tt class="py-string">'Uint64'</tt><tt class="py-op">,</tt> <tt class="py-string">'Sint64'</tt><tt class="py-op">,</tt> </tt>
 <a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">           <tt class="py-string">'CIMFloat'</tt><tt class="py-op">,</tt> <tt class="py-string">'Real32'</tt><tt class="py-op">,</tt> <tt class="py-string">'Real64'</tt><tt class="py-op">]</tt> </tt>
 <a name="_CIMComparisonMixin"></a><div id="_CIMComparisonMixin-def"><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
-<a name="L81"></a><tt class="py-lineno"> 81</tt> <a class="py-toggle" href="#" id="_CIMComparisonMixin-toggle" onclick="return toggle('_CIMComparisonMixin');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pywbem.cim_types._CIMComparisonMixin-class.html">_CIMComparisonMixin</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="_CIMComparisonMixin-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="_CIMComparisonMixin-expanded"><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">    <tt class="py-docstring">"""Mixin class providing default implementations for rich comparison</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt> <a class="py-toggle" href="#" id="_CIMComparisonMixin-toggle" onclick="return toggle('_CIMComparisonMixin');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pywbem.cim_types._CIMComparisonMixin-class.html">_CIMComparisonMixin</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-comment">#pylint: disable=too-few-public-methods</tt> </tt>
+</div><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">    <tt class="py-docstring">"""Mixin class providing default implementations for rich comparison</tt> </tt>
 <a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring">    operators.</tt> </tt>
 <a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
 <a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">    In Python 2, the rich comparison operators (e.g. `__eq__()`) have</tt> </tt>
@@ -521,7 +521,7 @@ pywbem.mof_compiler.MOFWBEMConnection.__init__" class="py-name" href="#" onclick
 </div></div><a name="L438"></a><tt class="py-lineno">438</tt>  <tt class="py-line"> </tt>
 <a name="CIMInt"></a><div id="CIMInt-def"><a name="L439"></a><tt class="py-lineno">439</tt>  <tt class="py-line"><tt class="py-comment"># CIM integer types</tt> </tt>
 <a name="L440"></a><tt class="py-lineno">440</tt>  <tt class="py-line"> </tt>
-<a name="L441"></a><tt class="py-lineno">441</tt> <a class="py-toggle" href="#" id="CIMInt-toggle" onclick="return toggle('CIMInt');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pywbem.cim_types.CIMInt-class.html">CIMInt</a><tt class="py-op">(</tt><tt class="py-base-class">CIMType</tt><tt class="py-op">,</tt> <tt class="py-base-class">_longint</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L441"></a><tt class="py-lineno">441</tt> <a class="py-toggle" href="#" id="CIMInt-toggle" onclick="return toggle('CIMInt');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pywbem.cim_types.CIMInt-class.html">CIMInt</a><tt class="py-op">(</tt><tt class="py-base-class">CIMType</tt><tt class="py-op">,</tt> <tt class="py-base-class">_Longint</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="CIMInt-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="CIMInt-expanded"><a name="L442"></a><tt class="py-lineno">442</tt>  <tt class="py-line">    <tt class="py-docstring">"""Base type for integer CIM types."""</tt> </tt>
 </div><a name="L443"></a><tt class="py-lineno">443</tt>  <tt class="py-line"> </tt>
 <a name="Uint8"></a><div id="Uint8-def"><a name="L444"></a><tt class="py-lineno">444</tt> <a class="py-toggle" href="#" id="Uint8-toggle" onclick="return toggle('Uint8');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pywbem.cim_types.Uint8-class.html">Uint8</a><tt class="py-op">(</tt><tt class="py-base-class">CIMInt</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
@@ -869,7 +869,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Mar 16 10:57:17 2016
+    Generated by Epydoc 3.0.1 on Fri Mar 18 16:36:21 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -37,6 +37,7 @@ pywbem.cim_constants.PROVIDERTYPE_CLASS	pywbem.cim_constants-module.html#PROVIDE
 pywbem.cim_constants.PROVIDERTYPE_ASSOCIATION	pywbem.cim_constants-module.html#PROVIDERTYPE_ASSOCIATION
 pywbem.cim_constants.CIM_ERR_INVALID_PARAMETER	pywbem.cim_constants-module.html#CIM_ERR_INVALID_PARAMETER
 pywbem.cim_constants.PROVIDERTYPE_METHOD	pywbem.cim_constants-module.html#PROVIDERTYPE_METHOD
+pywbem.cim_constants.DEFAULT_NAMESPACE	pywbem.cim_constants-module.html#DEFAULT_NAMESPACE
 pywbem.cim_constants.CIM_ERR_NOT_SUPPORTED	pywbem.cim_constants-module.html#CIM_ERR_NOT_SUPPORTED
 pywbem.cim_constants.CIM_ERR_TYPE_MISMATCH	pywbem.cim_constants-module.html#CIM_ERR_TYPE_MISMATCH
 pywbem.cim_constants.CIM_ERR_ACCESS_DENIED	pywbem.cim_constants-module.html#CIM_ERR_ACCESS_DENIED
@@ -61,6 +62,7 @@ pywbem.cim_obj.tocimxml	pywbem.cim_obj-module.html#tocimxml
 pywbem.cim_obj._intended_value	pywbem.cim_obj-module.html#_intended_value
 pywbem.cim_obj.cmpitem	pywbem.cim_obj-module.html#cmpitem
 pywbem.cim_obj._makequalifiers	pywbem.cim_obj-module.html#_makequalifiers
+pywbem.cim_obj.DEFAULT_INDENT	pywbem.cim_obj-module.html#DEFAULT_INDENT
 pywbem.cim_obj.moftype	pywbem.cim_obj-module.html#moftype
 pywbem.cim_obj.atomic_to_cim_xml	pywbem.cim_types-module.html#atomic_to_cim_xml
 pywbem.cim_obj._ensure_bytes	pywbem.cim_obj-module.html#_ensure_bytes
@@ -80,7 +82,6 @@ pywbem.cim_operations.OpenWBEMUDSConnection	pywbem.cim_operations-module.html#Op
 pywbem.cim_operations.tocimxml	pywbem.cim_obj-module.html#tocimxml
 pywbem.cim_operations._ensure_unicode	pywbem.cim_obj-module.html#_ensure_unicode
 pywbem.cim_operations.SFCBUDSConnection	pywbem.cim_operations-module.html#SFCBUDSConnection
-pywbem.cim_operations.DEFAULT_NAMESPACE	pywbem.cim_operations-module.html#DEFAULT_NAMESPACE
 pywbem.cim_operations.atomic_to_cim_xml	pywbem.cim_types-module.html#atomic_to_cim_xml
 pywbem.cim_operations.is_subclass	pywbem.cim_operations-module.html#is_subclass
 pywbem.cim_operations._ILL_FORMED_UTF8_RE	pywbem.cim_operations-module.html#_ILL_FORMED_UTF8_RE
@@ -220,6 +221,7 @@ pywbem.mof_compiler.sChar	pywbem.mof_compiler-module.html#sChar
 pywbem.mof_compiler.tokens	pywbem.mof_compiler-module.html#tokens
 pywbem.mof_compiler._errcode2string	pywbem.mof_compiler-module.html#_errcode2string
 pywbem.mof_compiler._get_error_context	pywbem.mof_compiler-module.html#_get_error_context
+pywbem.mof_compiler.DEFAULT_NAMESPACE	pywbem.mof_compiler-module.html#DEFAULT_NAMESPACE
 pywbem.mof_compiler.t_MCOMMENT	pywbem.mof_compiler-module.html#t_MCOMMENT
 pywbem.mof_compiler.cChar	pywbem.mof_compiler-module.html#cChar
 pywbem.mof_compiler.p_mp_createClass	pywbem.mof_compiler-module.html#p_mp_createClass

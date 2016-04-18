@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class Hierarchy</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pywbem-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">&nbsp;</td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="class-tree.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<center><b>
+ [ <a href="module-tree.html">Module Hierarchy</a>
+ | <a href="class-tree.html">Class Hierarchy</a> ]
+</b></center><br />
+<h1 class="epydoc">Class Hierarchy</h1>
+<ul class="nomargin-top">
+    <li> <strong class="uidlink">object</strong>:
+      <em class="summary">The most base type</em>
+    <ul>
+    <li> <strong class="uidlink">exceptions.BaseException</strong>:
+      <em class="summary">Common base class for all exceptions</em>
+    <ul>
+    <li> <strong class="uidlink">exceptions.Exception</strong>:
+      <em class="summary">Common base class for all non-exit exceptions.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_http.Error-class.html">pywbem.cim_http.Error</a></strong>:
+      <em class="summary">Exception base class for catching any HTTP transport related errors.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_http.AuthError-class.html">pywbem.cim_http.AuthError</a></strong>:
+      <em class="summary">This exception is raised when an authentication error (401) occurs.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_operations.CIMError-class.html">pywbem.cim_operations.CIMError</a></strong>:
+      <em class="summary">Exception indicating that the WBEM server has returned an error response
+with a CIM status code.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_http.ConnectionError-class.html">pywbem.cim_http.ConnectionError</a></strong>:
+      <em class="summary">This exception is raised when there is a problem with the connection
+to the server.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_http.TimeoutError-class.html">pywbem.cim_http.TimeoutError</a></strong>:
+      <em class="summary">This exception is raised when the client times out.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.tupleparse.ParseError-class.html">pywbem.tupleparse.ParseError</a></strong>:
+      <em class="summary">This exception is raised when there is a validation error detected
+by the parser.</em>
+    </li>
+    <li> <strong class="uidlink">exceptions.StandardError</strong>:
+      <em class="summary">Base class for all standard Python exceptions that do not represent
+interpreter exiting.</em>
+    <ul>
+    <li> <strong class="uidlink">exceptions.ValueError</strong>:
+      <em class="summary">Inappropriate argument value (of correct type).</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.mof_compiler.MOFParseError-class.html">pywbem.mof_compiler.MOFParseError</a></strong>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.CIMType-class.html">pywbem.cim_types.CIMType</a></strong>:
+      <em class="summary">Base type for numeric and datetime CIM types.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.CIMDateTime-class.html">pywbem.cim_types.CIMDateTime</a></strong>:
+      <em class="summary">A value of CIM type datetime.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.CIMFloat-class.html">pywbem.cim_types.CIMFloat</a></strong>:
+      <em class="summary">Base type for real (floating point) CIM types.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Real32-class.html">pywbem.cim_types.Real32</a></strong>:
+      <em class="summary">A value of CIM type real32.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Real64-class.html">pywbem.cim_types.Real64</a></strong>:
+      <em class="summary">A value of CIM type real64.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.CIMInt-class.html">pywbem.cim_types.CIMInt</a></strong>:
+      <em class="summary">Base type for integer CIM types.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Sint16-class.html">pywbem.cim_types.Sint16</a></strong>:
+      <em class="summary">A value of CIM type sint16.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Sint32-class.html">pywbem.cim_types.Sint32</a></strong>:
+      <em class="summary">A value of CIM type sint32.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Sint64-class.html">pywbem.cim_types.Sint64</a></strong>:
+      <em class="summary">A value of CIM type sint64.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Sint8-class.html">pywbem.cim_types.Sint8</a></strong>:
+      <em class="summary">A value of CIM type sint8.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Uint16-class.html">pywbem.cim_types.Uint16</a></strong>:
+      <em class="summary">A value of CIM type uint16.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Uint32-class.html">pywbem.cim_types.Uint32</a></strong>:
+      <em class="summary">A value of CIM type uint32.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Uint64-class.html">pywbem.cim_types.Uint64</a></strong>:
+      <em class="summary">A value of CIM type uint64.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Uint8-class.html">pywbem.cim_types.Uint8</a></strong>:
+      <em class="summary">A value of CIM type uint8.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">argparse.HelpFormatter</strong>:
+      <em class="summary">Formatter for generating usage messages and argument help strings.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem._cliutils.SmartFormatter-class.html">pywbem._cliutils.SmartFormatter</a></strong>:
+      <em class="summary">Formatter class for argparse, that respects newlines in help strings.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.mof_compiler.MOFCompiler-class.html">pywbem.mof_compiler.MOFCompiler</a></strong>:
+      <em class="summary">MOF compiler class.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.mof_compiler.MOFWBEMConnection-class.html">pywbem.mof_compiler.MOFWBEMConnection</a></strong>:
+      <em class="summary">Access to repository used by the compiler.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_operations.WBEMConnection-class.html">pywbem.cim_operations.WBEMConnection</a></strong>:
+      <em class="summary">A client's connection to a WBEM server.</em>
+    </li>
+    <li> <strong class="uidlink">pywbem.cim_types._CIMComparisonMixin</strong>:
+      <em class="summary">Mixin class providing default implementations for rich comparison
+operators.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMClass-class.html">pywbem.cim_obj.CIMClass</a></strong>:
+      <em class="summary">Create an instance of CIMClass, a CIM class with classname,
+properties, methods, qualifiers, and superclass name.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMClassName-class.html">pywbem.cim_obj.CIMClassName</a></strong>:
+      <em class="summary">A CIM class path.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.CIMDateTime-class.html">pywbem.cim_types.CIMDateTime</a></strong>:
+      <em class="summary">A value of CIM type datetime.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMInstance-class.html">pywbem.cim_obj.CIMInstance</a></strong>:
+      <em class="summary">A CIM instance, optionally including its instance path.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMInstanceName-class.html">pywbem.cim_obj.CIMInstanceName</a></strong>:
+      <em class="summary">A CIM instance path (aka <em>instance name</em>).</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMMethod-class.html">pywbem.cim_obj.CIMMethod</a></strong>:
+      <em class="summary">A CIM method.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMParameter-class.html">pywbem.cim_obj.CIMParameter</a></strong>:
+      <em class="summary">A CIM parameter.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMProperty-class.html">pywbem.cim_obj.CIMProperty</a></strong>:
+      <em class="summary">Defines a CIM property including cim type, value, and possibly
+qualifiers.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMQualifier-class.html">pywbem.cim_obj.CIMQualifier</a></strong>:
+      <em class="summary">A CIM qualifier value.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_obj.CIMQualifierDeclaration-class.html">pywbem.cim_obj.CIMQualifierDeclaration</a></strong>:
+      <em class="summary">A CIM qualifier type.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">float</strong>:
+      <em class="summary">float(x) -&gt; floating point number</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.CIMFloat-class.html">pywbem.cim_types.CIMFloat</a></strong>:
+      <em class="summary">Base type for real (floating point) CIM types.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Real32-class.html">pywbem.cim_types.Real32</a></strong>:
+      <em class="summary">A value of CIM type real32.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Real64-class.html">pywbem.cim_types.Real64</a></strong>:
+      <em class="summary">A value of CIM type real64.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">long</strong>:
+      <em class="summary">long(x=0) -&gt; long
+long(x, base=10) -&gt; long</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.CIMInt-class.html">pywbem.cim_types.CIMInt</a></strong>:
+      <em class="summary">Base type for integer CIM types.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Sint16-class.html">pywbem.cim_types.Sint16</a></strong>:
+      <em class="summary">A value of CIM type sint16.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Sint32-class.html">pywbem.cim_types.Sint32</a></strong>:
+      <em class="summary">A value of CIM type sint32.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Sint64-class.html">pywbem.cim_types.Sint64</a></strong>:
+      <em class="summary">A value of CIM type sint64.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Sint8-class.html">pywbem.cim_types.Sint8</a></strong>:
+      <em class="summary">A value of CIM type sint8.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Uint16-class.html">pywbem.cim_types.Uint16</a></strong>:
+      <em class="summary">A value of CIM type uint16.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Uint32-class.html">pywbem.cim_types.Uint32</a></strong>:
+      <em class="summary">A value of CIM type uint32.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Uint64-class.html">pywbem.cim_types.Uint64</a></strong>:
+      <em class="summary">A value of CIM type uint64.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.Uint8-class.html">pywbem.cim_types.Uint8</a></strong>:
+      <em class="summary">A value of CIM type uint8.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">datetime.tzinfo</strong>:
+      <em class="summary">Abstract base class for time zone info objects.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pywbem.cim_types.MinutesFromUTC-class.html">pywbem.cim_types.MinutesFromUTC</a></strong>:
+      <em class="summary">A <code class="link">datetime.tzinfo</code> implementation defined using a fixed offset in +/-
+minutes from UTC.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+</ul>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pywbem-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Apr 18 19:42:31 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

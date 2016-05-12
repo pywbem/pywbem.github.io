@@ -56,7 +56,7 @@ instead, and get something out of it.</p>
 <p>Once PyWBEM has been <a href="pywbem/installation.html">installed</a>,
 the next stage is to learn how to make connections to WBEM servers. A client's
 connection to a WBEM server is represented by an instance of the
-<script>doc_link('class', 'pywbem.cim_operations.WBEMConnection',
+<script>doc_link('client', 'pywbem.WBEMConnection',
                  'WBEMConnection')</script>
 Python class.</p>
 
@@ -104,9 +104,9 @@ supported by PyWBEM.</p>
 <h4>CIM Instances and Instance Names</h4>
 
 <p>The two fundamental Python classes in PyWBEM are
-<script>doc_link('class', 'pywbem.cim_obj.CIMInstance',
+<script>doc_link('client', 'pywbem.CIMInstance',
                  'CIMInstance');</script> and
-<script>doc_link('class', 'pywbem.cim_obj.CIMInstanceName',
+<script>doc_link('client', 'pywbem.CIMInstanceName',
                  'CIMInstanceName');</script>.
 A <tt>CIMInstance</tt> object is a representation of
 a CIM instance in a WBEM server, which in turn represents a physical or logical
@@ -139,9 +139,8 @@ a Python dictionary.</p>
 classes, and in some cases to built-in Python types such as <tt>bool</tt>,
 <tt>str</tt>/<tt>unicode</tt> or <tt>list</tt>.</p>
 
-<p>See the
-<script>doc_link('module', 'pywbem.cim_types', 'cim_types');</script>
-module for details about the mapping.</p>
+<p>See <script>doc_link('client', 'cim-data-types, 'CIM data types');</script>
+for details about the mapping.</p>
 
 <h3>CIM Instance Operations</h3>
 
@@ -153,12 +152,12 @@ as results.</p>
 <h4>EnumerateInstances</h4>
 
 <p>The
-<script>doc_link('method',
-                 'pywbem.cim_operations.WBEMConnection.EnumerateInstances',
+<script>doc_link('client',
+                 'pywbem.WBEMConnection.EnumerateInstances',
                  'EnumerateInstances()');</script>
 method returns a list of
-<script>doc_link('class',
-                 'pywbem.cim_obj.CIMInstance',
+<script>doc_link('client',
+                 'pywbem.CIMInstance',
                  'CIMInstance');</script>
 objects for each CIM instance of a particular CIM class (and its subclasses).
 The CIM instance name is part of the returned objects and can be accessed via
@@ -197,12 +196,12 @@ returned:</p>
 <h4>EnumerateInstanceNames</h4>
 
 <p>The
-<script>doc_link('method',
-                 'pywbem.cim_operations.WBEMConnection.EnumerateInstanceNames',
+<script>doc_link('client',
+                 'pywbem.WBEMConnection.EnumerateInstanceNames',
                  'EnumerateInstanceNames()');</script>
 method returns a list of
-<script>doc_link('class',
-                 'pywbem.cim_obj.CIMInstanceName',
+<script>doc_link('client',
+                 'pywbem.CIMInstanceName',
                  'CIMInstanceName');</script>
 objects which reference each instance of a particular CIM class
 (and its subclasses):
@@ -233,16 +232,16 @@ calls as they uniquely identify a CIM instance on the managed node.</p>
 <h4>GetInstance</h4>
 
 <p>Calling
-<script>doc_link('method',
-                 'pywbem.cim_operations.WBEMConnection.GetInstance',
+<script>doc_link('client',
+                 'pywbem.WBEMConnection.GetInstance',
                  'GetInstance()');</script>
 returns a
-<script>doc_link('class',
-                 'pywbem.cim_obj.CIMInstance',
+<script>doc_link('client',
+                 'pywbem.CIMInstance',
                  'CIMInstance');</script>
 object, given a
-<script>doc_link('class',
-                 'pywbem.cim_obj.CIMInstanceName',
+<script>doc_link('client',
+                 'pywbem.CIMInstanceName',
                  'CIMInstanceName');</script>
 object that references the desired CIM instance:</p>
 
@@ -270,12 +269,12 @@ thus may or may not support deletion of its instances and the represented
 managed resources.</p>
 
 <p>The
-<script>doc_link('method',
-                 'pywbem.cim_operations.WBEMConnection.DeleteInstance',
+<script>doc_link('client',
+                 'pywbem.WBEMConnection.DeleteInstance',
                  'DeleteInstance()');</script>
 method takes a
-<script>doc_link('class',
-                 'pywbem.cim_obj.CIMInstanceName',
+<script>doc_link('client',
+                 'pywbem.CIMInstanceName',
                  'CIMInstanceName');</script>
 object and deletes the referenced CIM instance and the represented managed
 resource, or rejects the operation if deletion is not supported.</p>
@@ -298,32 +297,29 @@ does not support the deletion of processes, so the WBEM server returns a failure
 with CIM status <tt>CIM_ERR_NOT_SUPPORTED</tt>.</p>
 
 <p>PyWBEM maps CIM operation failures to the Python exception
-<script>doc_link('class',
-                 'pywbem.cim_operations.CIMError',
+<script>doc_link('client',
+                 'pywbem.CIMError',
                  'CIMError');</script>,
 and raises that in this case. The CIM status code is available as a numeric
 value in the <tt>error_code</tt> attribute of the exception object.
-See the
-<script>doc_link('module',
-                 'pywbem.cim_constants',
-                 'cim_constants');</script>
-module for a definition of the CIM status code values.</p>
+See <script>doc_link('client', 'cim-status-codes', 'CIM status codes');</script>
+for a definition of the CIM status code values.</p>
 
 <h4>CreateInstance</h4>
 
 <p>The creation of a CIM instance and in turn the creation of the underlying
 managed resource is achieved by calling the
-<script>doc_link('method',
-                 'pywbem.cim_operations.WBEMConnection.CreateInstance',
+<script>doc_link('client',
+                 'pywbem.WBEMConnection.CreateInstance',
                  'CreateInstance()');</script>
 method. It takes a
-<script>doc_link('class',
-                 'pywbem.cim_obj.CIMInstance',
+<script>doc_link('client',
+                 'pywbem.CIMInstance',
                  'CIMInstance');</script>
 object as input, which specifies the class and the initial properties for the
 CIM instance to be created, and returns a
-<script>doc_link('class',
-                 'pywbem.cim_obj.CIMInstanceName',
+<script>doc_link('client',
+                 'pywbem.CIMInstanceName',
                  'CIMInstanceName');</script>
 object that references the new CIM instance.</p>
 
@@ -341,12 +337,12 @@ input instance.</p>
 
 <p>Existing CIM instances can be modified by having the values of properties
 changed. This is achieved using the
-<script>doc_link('method',
-                 'pywbem.cim_operations.WBEMConnection.ModifyInstance',
+<script>doc_link('client',
+                 'pywbem.WBEMConnection.ModifyInstance',
                  'ModifyInstance()');</script>
 method. It takes a
-<script>doc_link('class',
-                 'pywbem.cim_obj.CIMInstance',
+<script>doc_link('client',
+                 'pywbem.CIMInstance',
                  'CIMInstance');</script>
 object as input, which references the CIM instance to be modified
 with its <tt>path</tt> attribute, and specifies new values for the
@@ -371,8 +367,8 @@ no new values specified in the input instance get their default values.</p>
 <h4>ExecQuery</h3>
 
 <p>The
-<script>doc_link('method',
-                 'pywbem.cim_operations.WBEMConnection.ExecQuery',
+<script>doc_link('client',
+                 'pywbem.WBEMConnection.ExecQuery',
                  'ExecQuery()');</script>
 method is used to execute a query in a particular query language in a namespace
 of the WBEM server.</p>
@@ -388,23 +384,23 @@ is frequently implemented.</p>
 <tt>Query</tt> parameter of <tt>ExecQuery()</tt>.</p>
 
 <p><tt>ExecQuery()</tt> returns a list of
-<script>doc_link('class',
-                 'pywbem.cim_obj.CIMInstance',
+<script>doc_link('client',
+                 'pywbem.CIMInstance',
                  'CIMInstance');</script>
 objects that form the query result.</p>
 
 <h3>CIM Method Invocation</h3>
 
 <p>CIM method invocations are quite easily done. The
-<script>doc_link('method',
-                 'pywbem.cim_operations.WBEMConnection.InvokeMethod',
+<script>doc_link('client',
+                 'pywbem.WBEMConnection.InvokeMethod',
                  'InvokeMethod()');</script>
 method is used to invoke a CIM method on a CIM instance, or on a CIM class (only
 for static CIM methods).</p>
 
 <p>For invoking a CIM method on a CIM instance, <tt>InvokeMethod()</tt> takes a
-<script>doc_link('class',
-                 'pywbem.cim_obj.CIMInstanceName',
+<script>doc_link('client',
+                 'pywbem.CIMInstanceName',
                  'CIMInstanceName');</script>
 object referencing the CIM instance, as input.
 The input parameters for the CIM method are specified as keyword
@@ -418,18 +414,18 @@ CIM method, and a dictionary with the output parameters of the CIM method.</p>
 <p>PyWBEM supports all CIM operations related to association classes:</p>
 
 <ul>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.Associators',
-                       'Associators()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.AssociatorNames',
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.AssociatorNames',
                        'AssociatorNames()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.References',
-                       'References()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.ReferenceNames',
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.Associators',
+                       'Associators()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.ReferenceNames',
                        'ReferenceNames()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.References',
+                       'References()');</script></li>
 </ul>
 
 <h3>CIM Class and Qualifier Operations</h3>
@@ -438,35 +434,35 @@ CIM method, and a dictionary with the output parameters of the CIM method.</p>
 classes and qualifiers:</p>
 
 <ul>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.EnumerateClassNames',
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.EnumerateClassNames',
                        'EnumerateClassNames()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.EnumerateClasses',
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.EnumerateClasses',
                        'EnumerateClasses()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.GetClass',
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.GetClass',
                        'GetClass()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.DeleteClass',
-                       'DeleteClass()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.ModifyClass',
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.ModifyClass',
                        'ModifyClass()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.CreateClass',
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.CreateClass',
                        'CreateClass()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.EnumerateQualifiers',
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.DeleteClass',
+                       'DeleteClass()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.EnumerateQualifiers',
                        'EnumerateQualifiers()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.GetQualifier',
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.GetQualifier',
                        'GetQualifier()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.SetQualifier',
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.SetQualifier',
                        'SetQualifier()');</script></li>
-  <li><script>doc_link('method',
-                       'pywbem.cim_operations.WBEMConnection.DeleteQualifier',
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.DeleteQualifier',
                        'DeleteQualifier()');</script></li>
 </ul>
 

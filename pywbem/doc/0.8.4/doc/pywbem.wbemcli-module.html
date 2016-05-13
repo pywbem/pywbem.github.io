@@ -1,0 +1,2638 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pywbem.wbemcli</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pywbem-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pywbem-module.html">Package&nbsp;pywbem</a> ::
+        Module&nbsp;wbemcli
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pywbem.wbemcli-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module wbemcli</h1><p class="nomargin-top"><span class="codelink"><a href="pywbem.wbemcli-pysrc.html">source&nbsp;code</a></span></p>
+<p>wbemcli - Provide an interactive shell for issuing operations against a WBEM
+server.</p>
+<p>Invoke with <code class="link">-h</code> or <code class="link">--help</code> for a help message.</p>
+
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Functions</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#EnumerateInstanceNames" class="summary-sig-name">EnumerateInstanceNames</a>(<span class="summary-sig-arg">cn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Enumerate the instance paths of instances of a class (including instances
+of its subclasses) in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateInstanceNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#EnumerateInstances" class="summary-sig-name">EnumerateInstances</a>(<span class="summary-sig-arg">cn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">lo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">di</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Enumerate the instances of a class (including instances of its subclasses)
+in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateInstances">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#GetInstance" class="summary-sig-name">GetInstance</a>(<span class="summary-sig-arg">ip</span>,
+        <span class="summary-sig-arg">lo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Retrieve an instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#ModifyInstance" class="summary-sig-name">ModifyInstance</a>(<span class="summary-sig-arg">mi</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Modify the property values of an instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ModifyInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#CreateInstance" class="summary-sig-name">CreateInstance</a>(<span class="summary-sig-arg">ni</span>)</span><br />
+      Create an instance in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#CreateInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#DeleteInstance" class="summary-sig-name">DeleteInstance</a>(<span class="summary-sig-arg">ip</span>)</span><br />
+      Delete an instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#AssociatorNames" class="summary-sig-name">AssociatorNames</a>(<span class="summary-sig-arg">op</span>,
+        <span class="summary-sig-arg">ac</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">rc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">r</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">rr</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Instance level use: Retrieve the instance paths of the instances
+associated to a source instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#AssociatorNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#Associators" class="summary-sig-name">Associators</a>(<span class="summary-sig-arg">op</span>,
+        <span class="summary-sig-arg">ac</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">rc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">r</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">rr</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Instance level use: Retrieve the instances associated to a source instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#Associators">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#ReferenceNames" class="summary-sig-name">ReferenceNames</a>(<span class="summary-sig-arg">op</span>,
+        <span class="summary-sig-arg">rc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">r</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Instance level use: Retrieve the instance paths of the association
+instances referencing a source instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ReferenceNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#References" class="summary-sig-name">References</a>(<span class="summary-sig-arg">op</span>,
+        <span class="summary-sig-arg">rc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">r</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Instance level use: Retrieve the association instances referencing a source
+instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#References">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#InvokeMethod" class="summary-sig-name">InvokeMethod</a>(<span class="summary-sig-arg">mn</span>,
+        <span class="summary-sig-arg">op</span>,
+        <span class="summary-sig-arg">*params</span>,
+        <span class="summary-sig-arg">**kwparams</span>)</span><br />
+      Invoke a method on a target instance or a static method on a target class.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#InvokeMethod">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#EnumerateClassNames" class="summary-sig-name">EnumerateClassNames</a>(<span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cn</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">di</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Enumerate the names of subclasses of a class, or of the top-level classes
+in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateClassNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#EnumerateClasses" class="summary-sig-name">EnumerateClasses</a>(<span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cn</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">di</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">lo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Enumerate the subclasses of a class, or the top-level classes in a
+namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateClasses">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#GetClass" class="summary-sig-name">GetClass</a>(<span class="summary-sig-arg">cn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">lo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Retrieve a class.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetClass">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#ModifyClass" class="summary-sig-name">ModifyClass</a>(<span class="summary-sig-arg">mc</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Modify a class.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ModifyClass">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#CreateClass" class="summary-sig-name">CreateClass</a>(<span class="summary-sig-arg">nc</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Create a class in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#CreateClass">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#DeleteClass" class="summary-sig-name">DeleteClass</a>(<span class="summary-sig-arg">cn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Delete a class.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteClass">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#EnumerateQualifiers" class="summary-sig-name">EnumerateQualifiers</a>(<span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Enumerate qualifier types (= declarations) in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateQualifiers">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#GetQualifier" class="summary-sig-name">GetQualifier</a>(<span class="summary-sig-arg">qn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Retrieve a qualifier type (= declaration).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetQualifier">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#SetQualifier" class="summary-sig-name">SetQualifier</a>(<span class="summary-sig-arg">qd</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Create or modify a qualifier type (= declaration) in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#SetQualifier">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#DeleteQualifier" class="summary-sig-name">DeleteQualifier</a>(<span class="summary-sig-arg">qn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Delete a qualifier type (= declaration).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteQualifier">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="h"></a><span class="summary-sig-name">h</span>()</span><br />
+      Print help text for interactive environment.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#h">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="pdb"></a><span class="summary-sig-name">pdb</span>(<span class="summary-sig-arg">stmt</span>)</span><br />
+      Run the statement under the PDB debugger.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#pdb">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#ein" class="summary-sig-name">ein</a>(<span class="summary-sig-arg">cn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Enumerate the instance paths of instances of a class (including instances
+of its subclasses) in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateInstanceNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#ei" class="summary-sig-name">ei</a>(<span class="summary-sig-arg">cn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">lo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">di</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Enumerate the instances of a class (including instances of its subclasses)
+in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateInstances">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#gi" class="summary-sig-name">gi</a>(<span class="summary-sig-arg">ip</span>,
+        <span class="summary-sig-arg">lo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Retrieve an instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#mi" class="summary-sig-name">mi</a>(<span class="summary-sig-arg">mi</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Modify the property values of an instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ModifyInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#ci" class="summary-sig-name">ci</a>(<span class="summary-sig-arg">ni</span>)</span><br />
+      Create an instance in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#CreateInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#di" class="summary-sig-name">di</a>(<span class="summary-sig-arg">ip</span>)</span><br />
+      Delete an instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#an" class="summary-sig-name">an</a>(<span class="summary-sig-arg">op</span>,
+        <span class="summary-sig-arg">ac</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">rc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">r</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">rr</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Instance level use: Retrieve the instance paths of the instances
+associated to a source instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#AssociatorNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#a" class="summary-sig-name">a</a>(<span class="summary-sig-arg">op</span>,
+        <span class="summary-sig-arg">ac</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">rc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">r</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">rr</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Instance level use: Retrieve the instances associated to a source instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#Associators">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#rn" class="summary-sig-name">rn</a>(<span class="summary-sig-arg">op</span>,
+        <span class="summary-sig-arg">rc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">r</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Instance level use: Retrieve the instance paths of the association
+instances referencing a source instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ReferenceNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#r" class="summary-sig-name">r</a>(<span class="summary-sig-arg">op</span>,
+        <span class="summary-sig-arg">rc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">r</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Instance level use: Retrieve the association instances referencing a source
+instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#References">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#im" class="summary-sig-name">im</a>(<span class="summary-sig-arg">mn</span>,
+        <span class="summary-sig-arg">op</span>,
+        <span class="summary-sig-arg">*params</span>,
+        <span class="summary-sig-arg">**kwparams</span>)</span><br />
+      Invoke a method on a target instance or a static method on a target class.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#InvokeMethod">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#ecn" class="summary-sig-name">ecn</a>(<span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cn</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">di</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Enumerate the names of subclasses of a class, or of the top-level classes
+in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateClassNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#ec" class="summary-sig-name">ec</a>(<span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cn</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">di</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">lo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Enumerate the subclasses of a class, or the top-level classes in a
+namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateClasses">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#gc" class="summary-sig-name">gc</a>(<span class="summary-sig-arg">cn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">lo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iq</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">ico</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pl</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Retrieve a class.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetClass">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#mc" class="summary-sig-name">mc</a>(<span class="summary-sig-arg">mc</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Modify a class.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ModifyClass">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#cc" class="summary-sig-name">cc</a>(<span class="summary-sig-arg">nc</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Create a class in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#CreateClass">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#dc" class="summary-sig-name">dc</a>(<span class="summary-sig-arg">cn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Delete a class.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteClass">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#eq" class="summary-sig-name">eq</a>(<span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Enumerate qualifier types (= declarations) in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateQualifiers">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#gq" class="summary-sig-name">gq</a>(<span class="summary-sig-arg">qn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Retrieve a qualifier type (= declaration).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetQualifier">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#sq" class="summary-sig-name">sq</a>(<span class="summary-sig-arg">qd</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Create or modify a qualifier type (= declaration) in a namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#SetQualifier">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pywbem.wbemcli-module.html#dq" class="summary-sig-name">dq</a>(<span class="summary-sig-arg">qn</span>,
+        <span class="summary-sig-arg">ns</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Delete a qualifier type (= declaration).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteQualifier">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="main"></a><span class="summary-sig-name">main</span>()</span><br />
+      Parse command line arguments, connect to the WBEM server and open the
+interactive shell.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pywbem.wbemcli-pysrc.html#main">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CONN"></a><span class="summary-name">CONN</span> = <code title="None">None</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Function Details</span></td>
+</tr>
+</table>
+<a name="EnumerateInstanceNames"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">EnumerateInstanceNames</span>(<span class="sig-arg">cn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateInstanceNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Enumerate the instance paths of instances of a class (including instances
+of its subclasses) in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>cn (string): Class name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMInstanceName): The enumerated instance paths.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="EnumerateInstances"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">EnumerateInstances</span>(<span class="sig-arg">cn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">lo</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">di</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateInstances">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Enumerate the instances of a class (including instances of its subclasses)
+in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>cn (string): Class name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+<dl class="rst-docutils">
+<dt>lo (bool):   LocalOnly flag: Exclude inherited properties.</dt>
+<dd>Deprecated: Server impls for True vary; Set to False.
+None causes it not to be included in request to server.
+Server default: True</dd>
+<dt>di (bool):   DeepInheritance flag: Include properties added by subclasses.</dt>
+<dd>None causes it not to be included in request to server.
+Server default: True</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd>Deprecated: Instance qualifiers have been deprecated in CIM.
+None causes it not to be included in request to server.
+Server default: False</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd>Deprecated: Server may treat as False.
+None causes it not to be included in request to server.
+Server default: False</dd>
+<dt>pl (iterable):</dt>
+<dd>Iterable of property names to be included. None means all.
+None causes it not to be included in the request to server.
+Server default: None</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMInstance): The enumerated instances.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="GetInstance"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetInstance</span>(<span class="sig-arg">ip</span>,
+        <span class="sig-arg">lo</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Retrieve an instance.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>ip (CIMInstanceName): Instance path.</p>
+<dl class="rst-docutils">
+<dt>lo (bool):   LocalOnly flag: Exclude inherited properties.</dt>
+<dd>Deprecated: Server impls for True vary; Set to False.
+None causes it not to be included in request to server.
+Server default: True</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd>Deprecated: Instance qualifiers have been deprecated in CIM.
+None causes it not to be included in request to server.
+Server default: False</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd>Deprecated:  Server impls. vary; Server may treat as False.
+None causes it not to be included in request to server.
+Server default: False</dd>
+<dt>pl (iterable):</dt>
+<dd>Iterable of property names to be included. None means all.
+None causes it not to be included in request to server.
+Server default: None</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+CIMInstance: The retrieved instance.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ModifyInstance"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ModifyInstance</span>(<span class="sig-arg">mi</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ModifyInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Modify the property values of an instance.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>mi (CIMInstance): Modified instance.</p>
+<dl class="rst-docutils">
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd>Deprecated: Instance qualifiers have been deprecated in CIM.
+None causes it not to be included in request to server.
+Server default: False</dd>
+<dt>pl (iterable):</dt>
+<dd>Iterable of property names to be included. None means all.
+None causes it not to be included in request to server.
+Server default: None</dd>
+</dl>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="CreateInstance"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">CreateInstance</span>(<span class="sig-arg">ni</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#CreateInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create an instance in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<dl class="rst-docutils">
+<dt>ni (CIMInstance): New instance (with namespace, classname, and properties</dt>
+<dd>attributes set).</dd>
+</dl>
+</blockquote>
+<dl class="rst-docutils">
+<dt>Returns:</dt>
+<dd>CIMInstanceName: Instance path of the new instance.</dd>
+</dl>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="DeleteInstance"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DeleteInstance</span>(<span class="sig-arg">ip</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Delete an instance.</p>
+<p>Parameters:</p>
+<blockquote>
+ip (CIMInstanceName): Instance path.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AssociatorNames"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AssociatorNames</span>(<span class="sig-arg">op</span>,
+        <span class="sig-arg">ac</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">rc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">r</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">rr</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#AssociatorNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Instance level use: Retrieve the instance paths of the instances
+associated to a source instance.</p>
+<p>Class level use: Retrieve the class paths of the classes associated to a
+source class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>op (CIMInstanceName): Source instance path; select instance level use.
+op (CIMClassName): Source class path; select class level use.</p>
+<dl class="rst-docutils">
+<dt>ac (string): AssociationClass filter: Include only traversals across</dt>
+<dd>this association class.
+None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>rc (string): ResultClass filter: Include only traversals to this</dt>
+<dd>associated (result) class.
+None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>r (string):  Role filter: Include only traversals from this role</dt>
+<dd>(= reference name) in source object.
+None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>rr (string): ResultRole filter: Include only traversals to this role</dt>
+<dd>(= reference name) in associated (=result) objects.
+None causes it not to be included in request to server.
+Server default: None</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMInstanceName): The instance paths of the associated instances.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Associators"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Associators</span>(<span class="sig-arg">op</span>,
+        <span class="sig-arg">ac</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">rc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">r</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">rr</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#Associators">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Instance level use: Retrieve the instances associated to a source instance.</p>
+<p>Class level use: Retrieve the classes associated to a source class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>op (CIMInstanceName): Source instance path; select instance level use.
+op (CIMClassName): Source class path; select class level use.</p>
+<dl class="rst-docutils">
+<dt>ac (string): AssociationClass filter: Include only traversals across</dt>
+<dd>this association class.
+None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>rc (string): ResultClass filter: Include only traversals to this</dt>
+<dd>associated (result) class.
+None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>r (string):  Role filter: Include only traversals from this role</dt>
+<dd>(= reference name) in source object.
+None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>rr (string): ResultRole filter: Include only traversals to this role</dt>
+<dd>(= reference name) in associated (=result) objects.
+None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd>Deprecated: Instance qualifiers have been deprecated in CIM.
+None causes it not to be included in request to server.
+Server default: False</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd>Deprecated:  Server impls. vary; Server may treat as False.
+None causes it not to be included in request to server.
+Server default: False</dd>
+<dt>pl (iterable):</dt>
+<dd>Iterable of property names to be included. None means all.
+None causes it not to be included in request to server.
+Server default: None</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMInstance): The associated instances.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ReferenceNames"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ReferenceNames</span>(<span class="sig-arg">op</span>,
+        <span class="sig-arg">rc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">r</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ReferenceNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Instance level use: Retrieve the instance paths of the association
+instances referencing a source instance.</p>
+<p>Class level use: Retrieve the class paths of the association classes
+referencing a source class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>op (CIMInstanceName): Source instance path; select instance level use.
+op (CIMClassName): Source class path; select class level use.</p>
+<dl class="rst-docutils">
+<dt>rc (string): ResultClass filter: Include only traversals across this</dt>
+<dd>association (result) class.
+None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>r (string):  Role filter: Include only traversals from this role</dt>
+<dd>(= reference name) in source object.
+None causes it not to be included in request to server.
+Server default: None</dd>
+</dl>
+</blockquote>
+<dl class="rst-docutils">
+<dt>Returns:</dt>
+<dd>list(CIMInstanceName): The instance paths of the association instances.</dd>
+</dl>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="References"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">References</span>(<span class="sig-arg">op</span>,
+        <span class="sig-arg">rc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">r</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#References">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Instance level use: Retrieve the association instances referencing a source
+instance.</p>
+<p>Class level use: Retrieve the association classes referencing a source
+class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>op (CIMInstanceName): Source instance path; select instance level use.
+op (CIMClassName): Source class path; select class level use.</p>
+<dl class="rst-docutils">
+<dt>rc (string): ResultClass filter: Include only traversals across this</dt>
+<dd>association (result) class.
+None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>r (string):  Role filter: Include only traversals from this role</dt>
+<dd>(= reference name) in source object.
+None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd>Deprecated: Instance qualifiers have been deprecated in CIM.
+None causes it not to be included in request to server.
+Server default: False</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd>Deprecated:  Server impls. vary; Server may treat as False.
+None causes it not to be included in request to server.
+Server default: False</dd>
+<dt>pl (iterable):</dt>
+<dd>Iterable of property names to be included. None means all.
+None causes it not to be included in request to server.
+Server default: None</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMInstance): The association instances.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="InvokeMethod"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">InvokeMethod</span>(<span class="sig-arg">mn</span>,
+        <span class="sig-arg">op</span>,
+        <span class="sig-arg">*params</span>,
+        <span class="sig-arg">**kwparams</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#InvokeMethod">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Invoke a method on a target instance or a static method on a target class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>mn (string): Method name.</p>
+<p>op (CIMInstanceName): Target instance path.
+op (CIMClassName): Target class path.</p>
+<p><a href="#id1"><span class="rst-problematic" id="rst-id2">*</span></a>params (named args): Input parameters for the method.</p>
+<p><a href="#id3"><span class="rst-problematic" id="rst-id4">**</span></a>kwparams (keyword args): Input parameters for the method.</p>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+tuple(rv, out): Method return value, dict with output parameters.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="EnumerateClassNames"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">EnumerateClassNames</span>(<span class="sig-arg">ns</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cn</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">di</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateClassNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Enumerate the names of subclasses of a class, or of the top-level classes
+in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+<dl class="rst-docutils">
+<dt>cn (string): Class name. None will return the top-level classes.</dt>
+<dd>None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>di (bool):   DeepInheritance flag: Include also indirect subclasses.</dt>
+<dd>None causes it not to be included in request to server.
+Server default: False</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(string): The enumerated class names.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="EnumerateClasses"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">EnumerateClasses</span>(<span class="sig-arg">ns</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cn</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">di</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">lo</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateClasses">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Enumerate the subclasses of a class, or the top-level classes in a
+namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+<dl class="rst-docutils">
+<dt>cn (string): Class name. None will return the top-level classes.</dt>
+<dd>None causes it not to be included in request to server.
+Server default: None</dd>
+<dt>di (bool):   DeepInheritance flag: Include also indirect subclasses.</dt>
+<dd>None causes it not to be included in request to server.
+Server default: False</dd>
+<dt>lo (bool):   LocalOnly flag: Exclude inherited properties.</dt>
+<dd>None causes it not to be included in request to server.
+Server default: True</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd>None causes it not to be included in request to server.
+Server default: True</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd>None causes it not to be included in request to server.
+Server default: False</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(string): The enumerated class names.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="GetClass"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetClass</span>(<span class="sig-arg">cn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">lo</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetClass">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Retrieve a class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>cn (string): Class name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+<dl class="rst-docutils">
+<dt>lo (bool):   LocalOnly flag: Exclude inherited properties.</dt>
+<dd>None causes it not to be included in request to server.
+Server default: True</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd>None causes it not to be included in request to server.
+Server default: True</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd>None causes it not to be included in request to server.
+Server default: False</dd>
+<dt>pl (iterable):</dt>
+<dd>Iterable of property names to be included. None means all.
+None causes it not to be included in request to server.
+Server default: None</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMClass): The retrieved class.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ModifyClass"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ModifyClass</span>(<span class="sig-arg">mc</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ModifyClass">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Modify a class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>mc (CIMClass): Modified class.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="CreateClass"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">CreateClass</span>(<span class="sig-arg">nc</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#CreateClass">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create a class in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>nc (CIMClass): New class.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="DeleteClass"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DeleteClass</span>(<span class="sig-arg">cn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteClass">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Delete a class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>cn (string): Class name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="EnumerateQualifiers"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">EnumerateQualifiers</span>(<span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateQualifiers">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Enumerate qualifier types (= declarations) in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+ns (string): Namespace name. None will use the default namespace.</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMQualifierDeclaration): Enumerated qualifier types.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="GetQualifier"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetQualifier</span>(<span class="sig-arg">qn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetQualifier">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Retrieve a qualifier type (= declaration).</p>
+<p>Parameters:</p>
+<blockquote>
+<p>qn (string): Qualifier name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+CIMQualifierDeclaration: Retrieved qualifier type.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="SetQualifier"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">SetQualifier</span>(<span class="sig-arg">qd</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#SetQualifier">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create or modify a qualifier type (= declaration) in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>qd (CIMQualifierDeclaration): Qualifier type.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="DeleteQualifier"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DeleteQualifier</span>(<span class="sig-arg">qn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteQualifier">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Delete a qualifier type (= declaration).</p>
+<p>Parameters:</p>
+<blockquote>
+<p>qn (string): Qualifier name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ein"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ein</span>(<span class="sig-arg">cn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateInstanceNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Enumerate the instance paths of instances of a class (including instances
+of its subclasses) in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>cn (string): Class name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMInstanceName): The enumerated instance paths.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ei"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ei</span>(<span class="sig-arg">cn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">lo</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">di</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateInstances">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Enumerate the instances of a class (including instances of its subclasses)
+in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>cn (string): Class name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+<dl class="rst-docutils">
+<dt>lo (bool):   LocalOnly flag: Exclude inherited properties.</dt>
+<dd><p class="rst-first rst-last">Deprecated: Server impls for True vary; Set to False.
+None causes it not to be included in request to server.
+Server default: True</p>
+</dd>
+<dt>di (bool):   DeepInheritance flag: Include properties added by subclasses.</dt>
+<dd><p class="rst-first rst-last">None causes it not to be included in request to server.
+Server default: True</p>
+</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd><p class="rst-first rst-last">Deprecated: Instance qualifiers have been deprecated in CIM.
+None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd><p class="rst-first rst-last">Deprecated: Server may treat as False.
+None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+<dt>pl (iterable):</dt>
+<dd><p class="rst-first rst-last">Iterable of property names to be included. None means all.
+None causes it not to be included in the request to server.
+Server default: None</p>
+</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMInstance): The enumerated instances.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="gi"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">gi</span>(<span class="sig-arg">ip</span>,
+        <span class="sig-arg">lo</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Retrieve an instance.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>ip (CIMInstanceName): Instance path.</p>
+<dl class="rst-docutils">
+<dt>lo (bool):   LocalOnly flag: Exclude inherited properties.</dt>
+<dd><p class="rst-first rst-last">Deprecated: Server impls for True vary; Set to False.
+None causes it not to be included in request to server.
+Server default: True</p>
+</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd><p class="rst-first rst-last">Deprecated: Instance qualifiers have been deprecated in CIM.
+None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd><p class="rst-first rst-last">Deprecated:  Server impls. vary; Server may treat as False.
+None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+<dt>pl (iterable):</dt>
+<dd><p class="rst-first rst-last">Iterable of property names to be included. None means all.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+CIMInstance: The retrieved instance.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="mi"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">mi</span>(<span class="sig-arg">mi</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ModifyInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Modify the property values of an instance.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>mi (CIMInstance): Modified instance.</p>
+<dl class="rst-docutils">
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd><p class="rst-first rst-last">Deprecated: Instance qualifiers have been deprecated in CIM.
+None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+<dt>pl (iterable):</dt>
+<dd><p class="rst-first rst-last">Iterable of property names to be included. None means all.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+</dl>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ci"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ci</span>(<span class="sig-arg">ni</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#CreateInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create an instance in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<dl class="rst-docutils">
+<dt>ni (CIMInstance): New instance (with namespace, classname, and properties</dt>
+<dd><p class="rst-first rst-last">attributes set).</p>
+</dd>
+</dl>
+</blockquote>
+<dl class="rst-docutils">
+<dt>Returns:</dt>
+<dd><p class="rst-first rst-last">CIMInstanceName: Instance path of the new instance.</p>
+</dd>
+</dl>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="di"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">di</span>(<span class="sig-arg">ip</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Delete an instance.</p>
+<p>Parameters:</p>
+<blockquote>
+ip (CIMInstanceName): Instance path.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="an"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">an</span>(<span class="sig-arg">op</span>,
+        <span class="sig-arg">ac</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">rc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">r</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">rr</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#AssociatorNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Instance level use: Retrieve the instance paths of the instances
+associated to a source instance.</p>
+<p>Class level use: Retrieve the class paths of the classes associated to a
+source class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>op (CIMInstanceName): Source instance path; select instance level use.
+op (CIMClassName): Source class path; select class level use.</p>
+<dl class="rst-docutils">
+<dt>ac (string): AssociationClass filter: Include only traversals across</dt>
+<dd><p class="rst-first rst-last">this association class.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>rc (string): ResultClass filter: Include only traversals to this</dt>
+<dd><p class="rst-first rst-last">associated (result) class.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>r (string):  Role filter: Include only traversals from this role</dt>
+<dd><p class="rst-first rst-last">(= reference name) in source object.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>rr (string): ResultRole filter: Include only traversals to this role</dt>
+<dd><p class="rst-first rst-last">(= reference name) in associated (=result) objects.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMInstanceName): The instance paths of the associated instances.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="a"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">a</span>(<span class="sig-arg">op</span>,
+        <span class="sig-arg">ac</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">rc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">r</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">rr</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#Associators">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Instance level use: Retrieve the instances associated to a source instance.</p>
+<p>Class level use: Retrieve the classes associated to a source class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>op (CIMInstanceName): Source instance path; select instance level use.
+op (CIMClassName): Source class path; select class level use.</p>
+<dl class="rst-docutils">
+<dt>ac (string): AssociationClass filter: Include only traversals across</dt>
+<dd><p class="rst-first rst-last">this association class.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>rc (string): ResultClass filter: Include only traversals to this</dt>
+<dd><p class="rst-first rst-last">associated (result) class.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>r (string):  Role filter: Include only traversals from this role</dt>
+<dd><p class="rst-first rst-last">(= reference name) in source object.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>rr (string): ResultRole filter: Include only traversals to this role</dt>
+<dd><p class="rst-first rst-last">(= reference name) in associated (=result) objects.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd><p class="rst-first rst-last">Deprecated: Instance qualifiers have been deprecated in CIM.
+None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd><p class="rst-first rst-last">Deprecated:  Server impls. vary; Server may treat as False.
+None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+<dt>pl (iterable):</dt>
+<dd><p class="rst-first rst-last">Iterable of property names to be included. None means all.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMInstance): The associated instances.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="rn"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rn</span>(<span class="sig-arg">op</span>,
+        <span class="sig-arg">rc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">r</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ReferenceNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Instance level use: Retrieve the instance paths of the association
+instances referencing a source instance.</p>
+<p>Class level use: Retrieve the class paths of the association classes
+referencing a source class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>op (CIMInstanceName): Source instance path; select instance level use.
+op (CIMClassName): Source class path; select class level use.</p>
+<dl class="rst-docutils">
+<dt>rc (string): ResultClass filter: Include only traversals across this</dt>
+<dd><p class="rst-first rst-last">association (result) class.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>r (string):  Role filter: Include only traversals from this role</dt>
+<dd><p class="rst-first rst-last">(= reference name) in source object.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+</dl>
+</blockquote>
+<dl class="rst-docutils">
+<dt>Returns:</dt>
+<dd><p class="rst-first rst-last">list(CIMInstanceName): The instance paths of the association instances.</p>
+</dd>
+</dl>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="r"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">r</span>(<span class="sig-arg">op</span>,
+        <span class="sig-arg">rc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">r</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#References">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Instance level use: Retrieve the association instances referencing a source
+instance.</p>
+<p>Class level use: Retrieve the association classes referencing a source
+class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>op (CIMInstanceName): Source instance path; select instance level use.
+op (CIMClassName): Source class path; select class level use.</p>
+<dl class="rst-docutils">
+<dt>rc (string): ResultClass filter: Include only traversals across this</dt>
+<dd><p class="rst-first rst-last">association (result) class.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>r (string):  Role filter: Include only traversals from this role</dt>
+<dd><p class="rst-first rst-last">(= reference name) in source object.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd><p class="rst-first rst-last">Deprecated: Instance qualifiers have been deprecated in CIM.
+None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd><p class="rst-first rst-last">Deprecated:  Server impls. vary; Server may treat as False.
+None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+<dt>pl (iterable):</dt>
+<dd><p class="rst-first rst-last">Iterable of property names to be included. None means all.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMInstance): The association instances.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="im"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">im</span>(<span class="sig-arg">mn</span>,
+        <span class="sig-arg">op</span>,
+        <span class="sig-arg">*params</span>,
+        <span class="sig-arg">**kwparams</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#InvokeMethod">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Invoke a method on a target instance or a static method on a target class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>mn (string): Method name.</p>
+<p>op (CIMInstanceName): Target instance path.
+op (CIMClassName): Target class path.</p>
+<p><a href="#id1"><span class="rst-problematic" id="rst-rst-id2">*</span></a>params (named args): Input parameters for the method.</p>
+<p><a href="#id3"><span class="rst-problematic" id="rst-rst-id4">**</span></a>kwparams (keyword args): Input parameters for the method.</p>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+tuple(rv, out): Method return value, dict with output parameters.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ecn"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ecn</span>(<span class="sig-arg">ns</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cn</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">di</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateClassNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Enumerate the names of subclasses of a class, or of the top-level classes
+in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+<dl class="rst-docutils">
+<dt>cn (string): Class name. None will return the top-level classes.</dt>
+<dd><p class="rst-first rst-last">None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>di (bool):   DeepInheritance flag: Include also indirect subclasses.</dt>
+<dd><p class="rst-first rst-last">None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(string): The enumerated class names.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ec"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ec</span>(<span class="sig-arg">ns</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cn</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">di</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">lo</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateClasses">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Enumerate the subclasses of a class, or the top-level classes in a
+namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+<dl class="rst-docutils">
+<dt>cn (string): Class name. None will return the top-level classes.</dt>
+<dd><p class="rst-first rst-last">None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+<dt>di (bool):   DeepInheritance flag: Include also indirect subclasses.</dt>
+<dd><p class="rst-first rst-last">None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+<dt>lo (bool):   LocalOnly flag: Exclude inherited properties.</dt>
+<dd><p class="rst-first rst-last">None causes it not to be included in request to server.
+Server default: True</p>
+</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd><p class="rst-first rst-last">None causes it not to be included in request to server.
+Server default: True</p>
+</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd><p class="rst-first rst-last">None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(string): The enumerated class names.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="gc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">gc</span>(<span class="sig-arg">cn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">lo</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iq</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">ico</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pl</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetClass">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Retrieve a class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>cn (string): Class name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+<dl class="rst-docutils">
+<dt>lo (bool):   LocalOnly flag: Exclude inherited properties.</dt>
+<dd><p class="rst-first rst-last">None causes it not to be included in request to server.
+Server default: True</p>
+</dd>
+<dt>iq (bool):   IncludeQualifiers flag: Include qualifiers.</dt>
+<dd><p class="rst-first rst-last">None causes it not to be included in request to server.
+Server default: True</p>
+</dd>
+<dt>ico (bool):  IncludeClassOrigin flag: Include class origin info for props.</dt>
+<dd><p class="rst-first rst-last">None causes it not to be included in request to server.
+Server default: False</p>
+</dd>
+<dt>pl (iterable):</dt>
+<dd><p class="rst-first rst-last">Iterable of property names to be included. None means all.
+None causes it not to be included in request to server.
+Server default: None</p>
+</dd>
+</dl>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMClass): The retrieved class.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="mc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">mc</span>(<span class="sig-arg">mc</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#ModifyClass">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Modify a class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>mc (CIMClass): Modified class.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="cc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">cc</span>(<span class="sig-arg">nc</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#CreateClass">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create a class in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>nc (CIMClass): New class.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="dc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dc</span>(<span class="sig-arg">cn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteClass">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Delete a class.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>cn (string): Class name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="eq"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">eq</span>(<span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#EnumerateQualifiers">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Enumerate qualifier types (= declarations) in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+ns (string): Namespace name. None will use the default namespace.</blockquote>
+<p>Returns:</p>
+<blockquote>
+list(CIMQualifierDeclaration): Enumerated qualifier types.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="gq"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">gq</span>(<span class="sig-arg">qn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#GetQualifier">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Retrieve a qualifier type (= declaration).</p>
+<p>Parameters:</p>
+<blockquote>
+<p>qn (string): Qualifier name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+<p>Returns:</p>
+<blockquote>
+CIMQualifierDeclaration: Retrieved qualifier type.</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="sq"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sq</span>(<span class="sig-arg">qd</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#SetQualifier">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create or modify a qualifier type (= declaration) in a namespace.</p>
+<p>Parameters:</p>
+<blockquote>
+<p>qd (CIMQualifierDeclaration): Qualifier type.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="dq"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dq</span>(<span class="sig-arg">qn</span>,
+        <span class="sig-arg">ns</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pywbem.wbemcli-pysrc.html#DeleteQualifier">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Delete a qualifier type (= declaration).</p>
+<p>Parameters:</p>
+<blockquote>
+<p>qn (string): Qualifier name.</p>
+<p>ns (string): Namespace name. None will use the default namespace.</p>
+</blockquote>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pywbem-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri May 13 17:29:20 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

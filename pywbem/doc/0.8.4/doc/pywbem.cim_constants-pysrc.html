@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pywbem.cim_constants</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pywbem-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pywbem-module.html">Package&nbsp;pywbem</a> ::
+        Module&nbsp;cim_constants
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pywbem.cim_constants-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pywbem.cim_constants-module.html">Module pywbem.cim_constants</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment"># (C) Copyright 2003,2004 Hewlett-Packard Development Company, L.P.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-comment"># This library is free software; you can redistribute it and/or</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment"># modify it under the terms of the GNU Lesser General Public</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment"># License as published by the Free Software Foundation; either</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-comment"># version 2.1 of the License, or (at your option) any later version.</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment"># This program is distributed in the hope that it will be useful, but</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment"># WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment"># Lesser General Public License for more details.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-comment"># You should have received a copy of the GNU Lesser General Public</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-comment"># License along with this program; if not, write to the Free Software</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-comment"># Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-comment"># Author: Tim Potter &lt;tpot@hp.com&gt;</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-docstring">"""Useful CIM constants."""</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-comment"># This module is meant to be safe for 'import *'.</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"><tt class="py-name">__all__</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_FAILED'</tt><tt class="py-op">,</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_ACCESS_DENIED'</tt><tt class="py-op">,</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_INVALID_NAMESPACE'</tt><tt class="py-op">,</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_INVALID_PARAMETER'</tt><tt class="py-op">,</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_INVALID_CLASS'</tt><tt class="py-op">,</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_NOT_FOUND'</tt><tt class="py-op">,</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_NOT_SUPPORTED'</tt><tt class="py-op">,</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_CLASS_HAS_CHILDREN'</tt><tt class="py-op">,</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_CLASS_HAS_INSTANCES'</tt><tt class="py-op">,</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_INVALID_SUPERCLASS'</tt><tt class="py-op">,</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_ALREADY_EXISTS'</tt><tt class="py-op">,</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_NO_SUCH_PROPERTY'</tt><tt class="py-op">,</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_TYPE_MISMATCH'</tt><tt class="py-op">,</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED'</tt><tt class="py-op">,</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_INVALID_QUERY'</tt><tt class="py-op">,</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_METHOD_NOT_AVAILABLE'</tt><tt class="py-op">,</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">    <tt class="py-string">'CIM_ERR_METHOD_NOT_FOUND'</tt><tt class="py-op">,</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">    <tt class="py-string">'DEFAULT_NAMESPACE'</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"><tt class="py-op">]</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"><tt class="py-comment"># CIMError error code constants</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line"><tt class="py-comment"># pylint: disable=bad-whitespace</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable pywbem.CIM_ERR_FAILED=pywbem-module.html#CIM_ERR_FAILED,Variable pywbem.cim_constants.CIM_ERR_FAILED=pywbem.cim_constants-module.html#CIM_ERR_FAILED,Variable pywbem.mof_compiler.CIM_ERR_FAILED=pywbem.mof_compiler-module.html#CIM_ERR_FAILED"><a title="pywbem.CIM_ERR_FAILED
+pywbem.cim_constants.CIM_ERR_FAILED
+pywbem.mof_compiler.CIM_ERR_FAILED" class="py-name" href="#" onclick="return doclink('link-0', 'CIM_ERR_FAILED', 'link-0');">CIM_ERR_FAILED</a></tt>                       <tt class="py-op">=</tt> <tt class="py-number">1</tt>  <tt class="py-comment"># A general error occurred</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable pywbem.CIM_ERR_ACCESS_DENIED=pywbem-module.html#CIM_ERR_ACCESS_DENIED,Variable pywbem.cim_constants.CIM_ERR_ACCESS_DENIED=pywbem.cim_constants-module.html#CIM_ERR_ACCESS_DENIED,Variable pywbem.mof_compiler.CIM_ERR_ACCESS_DENIED=pywbem.mof_compiler-module.html#CIM_ERR_ACCESS_DENIED"><a title="pywbem.CIM_ERR_ACCESS_DENIED
+pywbem.cim_constants.CIM_ERR_ACCESS_DENIED
+pywbem.mof_compiler.CIM_ERR_ACCESS_DENIED" class="py-name" href="#" onclick="return doclink('link-1', 'CIM_ERR_ACCESS_DENIED', 'link-1');">CIM_ERR_ACCESS_DENIED</a></tt>                <tt class="py-op">=</tt> <tt class="py-number">2</tt>  <tt class="py-comment"># Resource not available</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable pywbem.CIM_ERR_INVALID_NAMESPACE=pywbem-module.html#CIM_ERR_INVALID_NAMESPACE,Variable pywbem.cim_constants.CIM_ERR_INVALID_NAMESPACE=pywbem.cim_constants-module.html#CIM_ERR_INVALID_NAMESPACE,Variable pywbem.mof_compiler.CIM_ERR_INVALID_NAMESPACE=pywbem.mof_compiler-module.html#CIM_ERR_INVALID_NAMESPACE"><a title="pywbem.CIM_ERR_INVALID_NAMESPACE
+pywbem.cim_constants.CIM_ERR_INVALID_NAMESPACE
+pywbem.mof_compiler.CIM_ERR_INVALID_NAMESPACE" class="py-name" href="#" onclick="return doclink('link-2', 'CIM_ERR_INVALID_NAMESPACE', 'link-2');">CIM_ERR_INVALID_NAMESPACE</a></tt>            <tt class="py-op">=</tt> <tt class="py-number">3</tt>  <tt class="py-comment"># The target namespace does not exist</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable pywbem.CIM_ERR_INVALID_PARAMETER=pywbem-module.html#CIM_ERR_INVALID_PARAMETER,Variable pywbem.cim_constants.CIM_ERR_INVALID_PARAMETER=pywbem.cim_constants-module.html#CIM_ERR_INVALID_PARAMETER,Variable pywbem.mof_compiler.CIM_ERR_INVALID_PARAMETER=pywbem.mof_compiler-module.html#CIM_ERR_INVALID_PARAMETER"><a title="pywbem.CIM_ERR_INVALID_PARAMETER
+pywbem.cim_constants.CIM_ERR_INVALID_PARAMETER
+pywbem.mof_compiler.CIM_ERR_INVALID_PARAMETER" class="py-name" href="#" onclick="return doclink('link-3', 'CIM_ERR_INVALID_PARAMETER', 'link-3');">CIM_ERR_INVALID_PARAMETER</a></tt>            <tt class="py-op">=</tt> <tt class="py-number">4</tt>  <tt class="py-comment"># Parameter value(s) invalid</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable pywbem.CIM_ERR_INVALID_CLASS=pywbem-module.html#CIM_ERR_INVALID_CLASS,Variable pywbem.cim_constants.CIM_ERR_INVALID_CLASS=pywbem.cim_constants-module.html#CIM_ERR_INVALID_CLASS,Variable pywbem.mof_compiler.CIM_ERR_INVALID_CLASS=pywbem.mof_compiler-module.html#CIM_ERR_INVALID_CLASS"><a title="pywbem.CIM_ERR_INVALID_CLASS
+pywbem.cim_constants.CIM_ERR_INVALID_CLASS
+pywbem.mof_compiler.CIM_ERR_INVALID_CLASS" class="py-name" href="#" onclick="return doclink('link-4', 'CIM_ERR_INVALID_CLASS', 'link-4');">CIM_ERR_INVALID_CLASS</a></tt>                <tt class="py-op">=</tt> <tt class="py-number">5</tt>  <tt class="py-comment"># The specified Class does not exist</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"><tt id="link-5" class="py-name" targets="Variable pywbem.CIM_ERR_NOT_FOUND=pywbem-module.html#CIM_ERR_NOT_FOUND,Variable pywbem.cim_constants.CIM_ERR_NOT_FOUND=pywbem.cim_constants-module.html#CIM_ERR_NOT_FOUND,Variable pywbem.mof_compiler.CIM_ERR_NOT_FOUND=pywbem.mof_compiler-module.html#CIM_ERR_NOT_FOUND"><a title="pywbem.CIM_ERR_NOT_FOUND
+pywbem.cim_constants.CIM_ERR_NOT_FOUND
+pywbem.mof_compiler.CIM_ERR_NOT_FOUND" class="py-name" href="#" onclick="return doclink('link-5', 'CIM_ERR_NOT_FOUND', 'link-5');">CIM_ERR_NOT_FOUND</a></tt>                    <tt class="py-op">=</tt> <tt class="py-number">6</tt>  <tt class="py-comment"># Requested object could not be found</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line"><tt id="link-6" class="py-name" targets="Variable pywbem.CIM_ERR_NOT_SUPPORTED=pywbem-module.html#CIM_ERR_NOT_SUPPORTED,Variable pywbem.cim_constants.CIM_ERR_NOT_SUPPORTED=pywbem.cim_constants-module.html#CIM_ERR_NOT_SUPPORTED,Variable pywbem.mof_compiler.CIM_ERR_NOT_SUPPORTED=pywbem.mof_compiler-module.html#CIM_ERR_NOT_SUPPORTED"><a title="pywbem.CIM_ERR_NOT_SUPPORTED
+pywbem.cim_constants.CIM_ERR_NOT_SUPPORTED
+pywbem.mof_compiler.CIM_ERR_NOT_SUPPORTED" class="py-name" href="#" onclick="return doclink('link-6', 'CIM_ERR_NOT_SUPPORTED', 'link-6');">CIM_ERR_NOT_SUPPORTED</a></tt>                <tt class="py-op">=</tt> <tt class="py-number">7</tt>  <tt class="py-comment"># Operation not supported</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable pywbem.CIM_ERR_CLASS_HAS_CHILDREN=pywbem-module.html#CIM_ERR_CLASS_HAS_CHILDREN,Variable pywbem.cim_constants.CIM_ERR_CLASS_HAS_CHILDREN=pywbem.cim_constants-module.html#CIM_ERR_CLASS_HAS_CHILDREN,Variable pywbem.mof_compiler.CIM_ERR_CLASS_HAS_CHILDREN=pywbem.mof_compiler-module.html#CIM_ERR_CLASS_HAS_CHILDREN"><a title="pywbem.CIM_ERR_CLASS_HAS_CHILDREN
+pywbem.cim_constants.CIM_ERR_CLASS_HAS_CHILDREN
+pywbem.mof_compiler.CIM_ERR_CLASS_HAS_CHILDREN" class="py-name" href="#" onclick="return doclink('link-7', 'CIM_ERR_CLASS_HAS_CHILDREN', 'link-7');">CIM_ERR_CLASS_HAS_CHILDREN</a></tt>           <tt class="py-op">=</tt> <tt class="py-number">8</tt>  <tt class="py-comment"># Class has subclasses</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"><tt id="link-8" class="py-name" targets="Variable pywbem.CIM_ERR_CLASS_HAS_INSTANCES=pywbem-module.html#CIM_ERR_CLASS_HAS_INSTANCES,Variable pywbem.cim_constants.CIM_ERR_CLASS_HAS_INSTANCES=pywbem.cim_constants-module.html#CIM_ERR_CLASS_HAS_INSTANCES,Variable pywbem.mof_compiler.CIM_ERR_CLASS_HAS_INSTANCES=pywbem.mof_compiler-module.html#CIM_ERR_CLASS_HAS_INSTANCES"><a title="pywbem.CIM_ERR_CLASS_HAS_INSTANCES
+pywbem.cim_constants.CIM_ERR_CLASS_HAS_INSTANCES
+pywbem.mof_compiler.CIM_ERR_CLASS_HAS_INSTANCES" class="py-name" href="#" onclick="return doclink('link-8', 'CIM_ERR_CLASS_HAS_INSTANCES', 'link-8');">CIM_ERR_CLASS_HAS_INSTANCES</a></tt>          <tt class="py-op">=</tt> <tt class="py-number">9</tt>  <tt class="py-comment"># Class has instances</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"><tt id="link-9" class="py-name" targets="Variable pywbem.CIM_ERR_INVALID_SUPERCLASS=pywbem-module.html#CIM_ERR_INVALID_SUPERCLASS,Variable pywbem.cim_constants.CIM_ERR_INVALID_SUPERCLASS=pywbem.cim_constants-module.html#CIM_ERR_INVALID_SUPERCLASS,Variable pywbem.mof_compiler.CIM_ERR_INVALID_SUPERCLASS=pywbem.mof_compiler-module.html#CIM_ERR_INVALID_SUPERCLASS"><a title="pywbem.CIM_ERR_INVALID_SUPERCLASS
+pywbem.cim_constants.CIM_ERR_INVALID_SUPERCLASS
+pywbem.mof_compiler.CIM_ERR_INVALID_SUPERCLASS" class="py-name" href="#" onclick="return doclink('link-9', 'CIM_ERR_INVALID_SUPERCLASS', 'link-9');">CIM_ERR_INVALID_SUPERCLASS</a></tt>           <tt class="py-op">=</tt> <tt class="py-number">10</tt> <tt class="py-comment"># Superclass does not exist</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable pywbem.CIM_ERR_ALREADY_EXISTS=pywbem-module.html#CIM_ERR_ALREADY_EXISTS,Variable pywbem.cim_constants.CIM_ERR_ALREADY_EXISTS=pywbem.cim_constants-module.html#CIM_ERR_ALREADY_EXISTS,Variable pywbem.mof_compiler.CIM_ERR_ALREADY_EXISTS=pywbem.mof_compiler-module.html#CIM_ERR_ALREADY_EXISTS"><a title="pywbem.CIM_ERR_ALREADY_EXISTS
+pywbem.cim_constants.CIM_ERR_ALREADY_EXISTS
+pywbem.mof_compiler.CIM_ERR_ALREADY_EXISTS" class="py-name" href="#" onclick="return doclink('link-10', 'CIM_ERR_ALREADY_EXISTS', 'link-10');">CIM_ERR_ALREADY_EXISTS</a></tt>               <tt class="py-op">=</tt> <tt class="py-number">11</tt> <tt class="py-comment"># Object already exists</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"><tt id="link-11" class="py-name" targets="Variable pywbem.CIM_ERR_NO_SUCH_PROPERTY=pywbem-module.html#CIM_ERR_NO_SUCH_PROPERTY,Variable pywbem.cim_constants.CIM_ERR_NO_SUCH_PROPERTY=pywbem.cim_constants-module.html#CIM_ERR_NO_SUCH_PROPERTY,Variable pywbem.mof_compiler.CIM_ERR_NO_SUCH_PROPERTY=pywbem.mof_compiler-module.html#CIM_ERR_NO_SUCH_PROPERTY"><a title="pywbem.CIM_ERR_NO_SUCH_PROPERTY
+pywbem.cim_constants.CIM_ERR_NO_SUCH_PROPERTY
+pywbem.mof_compiler.CIM_ERR_NO_SUCH_PROPERTY" class="py-name" href="#" onclick="return doclink('link-11', 'CIM_ERR_NO_SUCH_PROPERTY', 'link-11');">CIM_ERR_NO_SUCH_PROPERTY</a></tt>             <tt class="py-op">=</tt> <tt class="py-number">12</tt> <tt class="py-comment"># Property does not exist</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"><tt id="link-12" class="py-name" targets="Variable pywbem.CIM_ERR_TYPE_MISMATCH=pywbem-module.html#CIM_ERR_TYPE_MISMATCH,Variable pywbem.cim_constants.CIM_ERR_TYPE_MISMATCH=pywbem.cim_constants-module.html#CIM_ERR_TYPE_MISMATCH,Variable pywbem.mof_compiler.CIM_ERR_TYPE_MISMATCH=pywbem.mof_compiler-module.html#CIM_ERR_TYPE_MISMATCH"><a title="pywbem.CIM_ERR_TYPE_MISMATCH
+pywbem.cim_constants.CIM_ERR_TYPE_MISMATCH
+pywbem.mof_compiler.CIM_ERR_TYPE_MISMATCH" class="py-name" href="#" onclick="return doclink('link-12', 'CIM_ERR_TYPE_MISMATCH', 'link-12');">CIM_ERR_TYPE_MISMATCH</a></tt>                <tt class="py-op">=</tt> <tt class="py-number">13</tt> <tt class="py-comment"># Value incompatible with type</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line"><tt id="link-13" class="py-name" targets="Variable pywbem.CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED=pywbem-module.html#CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED,Variable pywbem.cim_constants.CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED=pywbem.cim_constants-module.html#CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED,Variable pywbem.mof_compiler.CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED=pywbem.mof_compiler-module.html#CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED"><a title="pywbem.CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED
+pywbem.cim_constants.CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED
+pywbem.mof_compiler.CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED" class="py-name" href="#" onclick="return doclink('link-13', 'CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED', 'link-13');">CIM_ERR_QUERY_LANGUAGE_NOT_SUPPORTED</a></tt> <tt class="py-op">=</tt> <tt class="py-number">14</tt> <tt class="py-comment"># Query language not supported</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line"><tt id="link-14" class="py-name" targets="Variable pywbem.CIM_ERR_INVALID_QUERY=pywbem-module.html#CIM_ERR_INVALID_QUERY,Variable pywbem.cim_constants.CIM_ERR_INVALID_QUERY=pywbem.cim_constants-module.html#CIM_ERR_INVALID_QUERY,Variable pywbem.mof_compiler.CIM_ERR_INVALID_QUERY=pywbem.mof_compiler-module.html#CIM_ERR_INVALID_QUERY"><a title="pywbem.CIM_ERR_INVALID_QUERY
+pywbem.cim_constants.CIM_ERR_INVALID_QUERY
+pywbem.mof_compiler.CIM_ERR_INVALID_QUERY" class="py-name" href="#" onclick="return doclink('link-14', 'CIM_ERR_INVALID_QUERY', 'link-14');">CIM_ERR_INVALID_QUERY</a></tt>                <tt class="py-op">=</tt> <tt class="py-number">15</tt> <tt class="py-comment"># Query not valid</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line"><tt id="link-15" class="py-name" targets="Variable pywbem.CIM_ERR_METHOD_NOT_AVAILABLE=pywbem-module.html#CIM_ERR_METHOD_NOT_AVAILABLE,Variable pywbem.cim_constants.CIM_ERR_METHOD_NOT_AVAILABLE=pywbem.cim_constants-module.html#CIM_ERR_METHOD_NOT_AVAILABLE,Variable pywbem.mof_compiler.CIM_ERR_METHOD_NOT_AVAILABLE=pywbem.mof_compiler-module.html#CIM_ERR_METHOD_NOT_AVAILABLE"><a title="pywbem.CIM_ERR_METHOD_NOT_AVAILABLE
+pywbem.cim_constants.CIM_ERR_METHOD_NOT_AVAILABLE
+pywbem.mof_compiler.CIM_ERR_METHOD_NOT_AVAILABLE" class="py-name" href="#" onclick="return doclink('link-15', 'CIM_ERR_METHOD_NOT_AVAILABLE', 'link-15');">CIM_ERR_METHOD_NOT_AVAILABLE</a></tt>         <tt class="py-op">=</tt> <tt class="py-number">16</tt> <tt class="py-comment"># Extrinsic method not executed</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line"><tt id="link-16" class="py-name" targets="Variable pywbem.CIM_ERR_METHOD_NOT_FOUND=pywbem-module.html#CIM_ERR_METHOD_NOT_FOUND,Variable pywbem.cim_constants.CIM_ERR_METHOD_NOT_FOUND=pywbem.cim_constants-module.html#CIM_ERR_METHOD_NOT_FOUND,Variable pywbem.mof_compiler.CIM_ERR_METHOD_NOT_FOUND=pywbem.mof_compiler-module.html#CIM_ERR_METHOD_NOT_FOUND"><a title="pywbem.CIM_ERR_METHOD_NOT_FOUND
+pywbem.cim_constants.CIM_ERR_METHOD_NOT_FOUND
+pywbem.mof_compiler.CIM_ERR_METHOD_NOT_FOUND" class="py-name" href="#" onclick="return doclink('link-16', 'CIM_ERR_METHOD_NOT_FOUND', 'link-16');">CIM_ERR_METHOD_NOT_FOUND</a></tt>             <tt class="py-op">=</tt> <tt class="py-number">17</tt> <tt class="py-comment"># Extrinsic method does not exist</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line"> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line"><tt class="py-comment"># Provider types</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line"> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line"><tt id="link-17" class="py-name" targets="Variable pywbem.cim_constants.PROVIDERTYPE_CLASS=pywbem.cim_constants-module.html#PROVIDERTYPE_CLASS"><a title="pywbem.cim_constants.PROVIDERTYPE_CLASS" class="py-name" href="#" onclick="return doclink('link-17', 'PROVIDERTYPE_CLASS', 'link-17');">PROVIDERTYPE_CLASS</a></tt>       <tt class="py-op">=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line"><tt id="link-18" class="py-name" targets="Variable pywbem.cim_constants.PROVIDERTYPE_INSTANCE=pywbem.cim_constants-module.html#PROVIDERTYPE_INSTANCE"><a title="pywbem.cim_constants.PROVIDERTYPE_INSTANCE" class="py-name" href="#" onclick="return doclink('link-18', 'PROVIDERTYPE_INSTANCE', 'link-18');">PROVIDERTYPE_INSTANCE</a></tt>    <tt class="py-op">=</tt> <tt class="py-number">2</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line"><tt id="link-19" class="py-name" targets="Variable pywbem.cim_constants.PROVIDERTYPE_ASSOCIATION=pywbem.cim_constants-module.html#PROVIDERTYPE_ASSOCIATION"><a title="pywbem.cim_constants.PROVIDERTYPE_ASSOCIATION" class="py-name" href="#" onclick="return doclink('link-19', 'PROVIDERTYPE_ASSOCIATION', 'link-19');">PROVIDERTYPE_ASSOCIATION</a></tt> <tt class="py-op">=</tt> <tt class="py-number">3</tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line"><tt id="link-20" class="py-name" targets="Variable pywbem.cim_constants.PROVIDERTYPE_INDICATION=pywbem.cim_constants-module.html#PROVIDERTYPE_INDICATION"><a title="pywbem.cim_constants.PROVIDERTYPE_INDICATION" class="py-name" href="#" onclick="return doclink('link-20', 'PROVIDERTYPE_INDICATION', 'link-20');">PROVIDERTYPE_INDICATION</a></tt>  <tt class="py-op">=</tt> <tt class="py-number">4</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line"><tt id="link-21" class="py-name" targets="Variable pywbem.cim_constants.PROVIDERTYPE_METHOD=pywbem.cim_constants-module.html#PROVIDERTYPE_METHOD"><a title="pywbem.cim_constants.PROVIDERTYPE_METHOD" class="py-name" href="#" onclick="return doclink('link-21', 'PROVIDERTYPE_METHOD', 'link-21');">PROVIDERTYPE_METHOD</a></tt>      <tt class="py-op">=</tt> <tt class="py-number">5</tt> </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line"><tt id="link-22" class="py-name" targets="Variable pywbem.cim_constants.PROVIDERTYPE_CONSUMER=pywbem.cim_constants-module.html#PROVIDERTYPE_CONSUMER"><a title="pywbem.cim_constants.PROVIDERTYPE_CONSUMER" class="py-name" href="#" onclick="return doclink('link-22', 'PROVIDERTYPE_CONSUMER', 'link-22');">PROVIDERTYPE_CONSUMER</a></tt>    <tt class="py-op">=</tt> <tt class="py-number">6</tt>            <tt class="py-comment"># Indication consumer</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line"><tt id="link-23" class="py-name" targets="Variable pywbem.cim_constants.PROVIDERTYPE_QUERY=pywbem.cim_constants-module.html#PROVIDERTYPE_QUERY"><a title="pywbem.cim_constants.PROVIDERTYPE_QUERY" class="py-name" href="#" onclick="return doclink('link-23', 'PROVIDERTYPE_QUERY', 'link-23');">PROVIDERTYPE_QUERY</a></tt>       <tt class="py-op">=</tt> <tt class="py-number">7</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line"> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line"><tt id="link-24" class="py-name" targets="Variable pywbem.DEFAULT_NAMESPACE=pywbem-module.html#DEFAULT_NAMESPACE,Variable pywbem.cim_constants.DEFAULT_NAMESPACE=pywbem.cim_constants-module.html#DEFAULT_NAMESPACE,Variable pywbem.mof_compiler.DEFAULT_NAMESPACE=pywbem.mof_compiler-module.html#DEFAULT_NAMESPACE"><a title="pywbem.DEFAULT_NAMESPACE
+pywbem.cim_constants.DEFAULT_NAMESPACE
+pywbem.mof_compiler.DEFAULT_NAMESPACE" class="py-name" href="#" onclick="return doclink('link-24', 'DEFAULT_NAMESPACE', 'link-24');">DEFAULT_NAMESPACE</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'root/cimv2'</tt>        <tt class="py-comment"># Default namespace for PyWBEM</tt> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pywbem-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >PyWBEM</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri May 13 17:29:21 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

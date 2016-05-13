@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="..">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="robots" content="index, follow">
+<meta name="description" content="This site provides documentation for the PyWBEM projects on GitHub.">
+<title>PyWBEM Client - API Quick Links</title>
+<link rel="stylesheet" href="resources/style.css" type="text/css">
+</head>
+<body>
+<script src="resources/jquery.js"></script>
+<script src="resources/script.js"></script>
+<div id="navgrid">
+<div id="navbar_html"></div>
+<script type="text/javascript">
+  load_url_into_id('navbar.html', 'navbar_html');
+</script>
+<section id="navcontent">
+<div id="content">
+<h1 align="center">PyWBEM Client - API Quick Links</h1>
+<div id="header_html"></div>
+<script type="text/javascript">
+  load_url_into_id('header.html', 'header_html');
+</script>
+<!-- end of page header -->
+
+<p>This page provides links to the most important elements of the API, for the
+latest development version.</p>
+
+<h2>WBEM client library API</h2>
+
+<p>This API provides the main interface of a client to a WBEM server:</p>
+
+<h3>WBEM operations</h3>
+
+<p>A WBEM client uses WBEM operations to communicate with a WBEM server. These
+operations are available as methods on the
+<script>doc_link('client', 'pywbem.WBEMConnection', 'WBEMConnection')</script>
+class:</p>
+
+<ul>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.EnumerateInstanceNames',
+                       'EnumerateInstanceNames()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.EnumerateInstances',
+                       'EnumerateInstances()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.GetInstance',
+                       'GetInstance()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.ModifyInstance',
+                       'ModifyInstance()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.CreateInstance',
+                       'CreateInstance()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.DeleteInstance',
+                       'DeleteInstance()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.AssociatorNames',
+                       'AssociatorNames()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.Associators',
+                       'Associators()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.ReferenceNames',
+                       'ReferenceNames()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.References',
+                       'References()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.InvokeMethod',
+                       'InvokeMethod()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.ExecQuery',
+                       'ExecQuery()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.EnumerateClassNames',
+                       'EnumerateClassNames()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.EnumerateClasses',
+                       'EnumerateClasses()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.GetClass',
+                       'GetClass()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.ModifyClass',
+                       'ModifyClass()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.CreateClass',
+                       'CreateClass()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.DeleteClass',
+                       'DeleteClass()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.EnumerateQualifiers',
+                       'EnumerateQualifiers()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.GetQualifier',
+                       'GetQualifier()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.SetQualifier',
+                       'SetQualifier()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.DeleteQualifier',
+                       'DeleteQualifier()');</script></li>
+</ul>
+
+<h3>CIM objects and data types</h3>
+
+<p>These are used for the WBEM operations:</p>
+
+<ul>
+  <li><script>doc_link('client',
+                       'pywbem.CIMInstanceName',
+                       'CIMInstanceName');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.CIMInstance',
+                       'CIMInstance');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.CIMClassName',
+                       'CIMClassName');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.CIMClass',
+                       'CIMClass');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.CIMProperty',
+                       'CIMProperty');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.CIMMethod',
+                       'CIMMethod');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.CIMParameter',
+                       'CIMParameter');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.CIMQualifier',
+                       'CIMQualifier');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.CIMQualifierDeclaration',
+                       'CIMQualifierDeclaration');</script></li>
+  <li><script>doc_link('client',
+                       'cim-data-types',
+                       'CIM data types');</script></li>
+</ul>
+
+<h3>Error handling</h3>
+
+<p>Error handling for WBEM operations:</p>
+
+<ul>
+  <li><script>doc_link('client',
+                       'pywbem.CIMError',
+                       'CIMError');</script></li>
+  <li><script>doc_link('client',
+                       'cim-status-codes',
+                       'CIM status codes');</script></li>
+</ul>
+
+<h2>WBEM server API</h2>
+
+<p>This API provides what the WBEM client needs to know about a WBEM
+server:</p>
+
+<ul>
+  <li><script>doc_link('server',
+                       'pywbem.WBEMServer',
+                       'WBEMServer');</script></li>
+</ul>
+
+<h2>WBEM listener API</h2>
+
+<p>This API provides a WBEM listener, that can receive CIM indications,
+and that can manage subscriptions of the client on WBEM servers:</p>
+
+<ul>
+  <li><script>doc_link('server',
+                       'pywbem.WBEMListener',
+                       'WBEMListener');</script></li>
+</ul>
+
+<!-- common page remainder across all pages -->
+<div id="footer_html"></div>
+<script type="text/javascript">
+  load_url_into_id('footer.html', 'footer_html');
+</script>
+</div>
+</section>
+</div>
+</body>
+</html>

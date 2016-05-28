@@ -40,36 +40,45 @@ and DSP0201. See
 for information about WBEM. This is used for all kinds of systems management
 tasks that are supported by the system running the WBEM server.</p>
 
-<p>The PyWBEM Client project consists of the following components:</p>
+<p>The PyWBEM Client project provides the following functionality:</p>
 <dl>
-  <dt><b>WBEM client library</b></dt>
+  <dt><b>WBEM client library API</b></dt>
   <dd>
-    <p>A WBEM client that supports talking the CIM-XML protocol with a WBEM
-    server.</p>
+    <p>The
+<a href="https://pywbem.readthedocs.io/en/latest/client.html#wbem-client-library-api">WBEM client library API</a>
+supports issuing WBEM operations to a WBEM server, using the CIM-XML
+protocol.</p>
   </dd>
-  <dt><b>WBEM CLI</b></dt>
+  <dt><b>WBEM listener API</b></dt>
   <dd>
-    <p>A Python script named "wbemcli.py" that can be used as a command line
-    tool and as an interactive shell.</p>
+    <p>The
+<a href="https://pywbem.readthedocs.io/en/latest/listener.html#wbem-listener-api">WBEM listener API</a>
+supports starting and stopping a WBEM listener thread that waits for
+indications (i.e. events) emitted by a WBEM server using the CIM-XML protocol.
+The API also supports managing subscriptions for such indications.</p>
   </dd>
-  <dt><b>MOF compiler</b></dt>
+  <dt><b>WBEM server API</b></dt>
   <dd>
-    <p>A Python script named "mof_compiler.py" for compiling MOF files. It can
-       also be used as a module.</p>
+    <p>The
+<a href="https://pywbem.readthedocs.io/en/latest/server.html#wbem-server-api">WBEM server API</a>
+represents a general access point for basic server functionality to a client,
+such as determining the Interop namespace of the server, or the advertised
+management profiles.</p>
   </dd>
-  <dt><b>Some experimental stuff</b></dt>
+  <dt><b>WBEM utlity commands</b></dt>
   <dd>
-    <p><dl>
-      <dt>WBEM listener (irecv)</dt>
-      <dd>A WBEM listener (indication receiver).</dd>
-      <dt>cim_provider</dt>
-      <dd>A module for writing CIM providers in Python.</dd>
-      <dt>cim_provider2</dt>
-      <dd>Another module for writing CIM providers in Python.</dd>
-      <dt>twisted_client</dt>
-      <dd>An experimental alternative WBEM client library that uses the Python
-      <tt>twisted</tt> package.</dd>
-    </dl></p>
+    <dl>
+      <dt><b><a href="https://pywbem.readthedocs.io/en/latest/utilities.html#mof_compiler">mof_compiler</a></b></dt>
+      <dd>
+        <p>A MOF compiler that takes MOF files as input and creates, updates or
+removes CIM instances, classes or qualifier types in a CIM repository.</p>
+      </dd>
+      <dt><b><a href="https://pywbem.readthedocs.io/en/latest/utilities.html#wbemcli">wbemcli</a></b></dt>
+      <dd>
+        <p>A WBEM command line interface that provides an interactive Python
+environment for issuing WBEM operations to a WBEM server.</p>
+      </dd>
+    </dl>
   </dd>
 </dl>
 

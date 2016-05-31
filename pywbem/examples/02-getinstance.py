@@ -1,26 +1,36 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 #
-# 02-getinstance.py    Demonstrate calling GetInstance
+# Demonstrate calling GetInstance.
 #
-# See other examples at http://pywbem.sourceforge.net/examples
+# Enumerate the instance paths of CIM_OperatingSystem instances, then loop
+# through them to retrieve each instance and print its instance path and
+# properties.
 #
 
 import pywbem
 
-# Make connection
+server_url = 'https://server'
+user = 'root'
+password = 'penguin'
 
-conn = pywbem.WBEMConnection('https://server',     # url
-                             ('root', 'penguin'))  # credentials
+conn = pywbem.WBEMConnection(server_url, (user, password))
 
-# Get all CIM_OperatingSystem instances
+try:
+    os_paths = conn.EnumerateInstanceNames('CIM_OperatingSystem')
+except pywbem.Error as exc:
+    print('Error: EnumerateInstanceNames failed: %s' % exc)
+    sys.exit(1)
 
-names = conn.EnumerateInstanceNames('CIM_OperatingSystem')
+for os_path in os_paths:
 
-# Call GetInstance on returned instances
+    print('Instance at: %s' % os_path)
 
-for n in names:
+    try:
+        os_inst = conn.GetInstance(os_path)
+    except pywbem.Error as exc:
+        print('Error: GetInstance failed: %s' % exc)
+        sys.exit(1)
 
-    os = conn.GetInstance(n)
+    for prop_name, prop_value in os_inst.items():
+        print('  %s: %r' % (prop_name, prop_value))
 
-    for key, value in os.items():
-        print '%s = %s' % (key, value)

@@ -1,21 +1,29 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 #
-# 01-enumerate-instances.py    Demonstrate enumeration of instances
-#
-# See other examples at http://pywbem.sourceforge.net/examples
+# Demonstrate enumeration of instances.
 #
 
 import pywbem
 
-# Make connection
+server_url = 'https://server'
+user = 'root'
+password = 'penguin'
 
-conn = pywbem.WBEMConnection('https://server',     # url
-                             ('root', 'penguin'))  # credentials
+conn = pywbem.WBEMConnection(server_url, (user, password))
 
-# Enumerate CIM_Process instance names and instances
+try:
+    proc_paths = conn.EnumerateInstanceNames('CIM_Process')
+except pywbem.Error as exc:
+    print('Error: EnumerateInstanceNames failed: %s' % exc)
+    sys.exit(1)
 
-instance_names = conn.EnumerateInstanceNames('CIM_Process')
-instances = conn.EnumerateInstance('CIM_Process')
+print('%d CIM_Process instance paths returned' % len(proc_paths))
 
-print '%d CIM_Process names returned' % len(instance_names)
-print '%d CIM_Process instances returned' % len(instance_names)
+try:
+    proc_insts = conn.EnumerateInstances('CIM_Process')
+except pywbem.Error as exc:
+    print('Error: EnumerateInstances failed: %s' % exc)
+    sys.exit(1)
+
+print('%d CIM_Process instances returned' % len(proc_insts))
+

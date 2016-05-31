@@ -1,13 +1,13 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 #
-# 00-connect.py    Demonstrate making WBEM connections.
-#
-# See other examples at http://pywbem.sourceforge.net/examples
+# Demonstrate making WBEM connections.
 #
 
 import pywbem
 
-# Make connection
+server_url = 'https://server'
+user = 'root'
+password = 'penguin'
 
-conn = pywbem.WBEMConnection('https://server',     # url
-                             ('root', 'penguin'))  # credentials
+conn = pywbem.WBEMConnection(server_url, (user, password))
+

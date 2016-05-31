@@ -129,7 +129,7 @@ Install from a downloaded distribution archive
 into new Python 2.7 virtual environment, installing OS-level prerequisites
 (such as Swig) as needed (requires sudo rights):</p>
 <pre><code># Have pywbem-{version}.zip downloaded from the table, or run "pip download pywbem"
-unzip pywbem-{version}.zip
+tar -xf pywbem-{version}.zip
 cd pywbem-{version}
 mkvirtualenv -p python2.7 pywbem27
 python setup.py install_os install
@@ -165,7 +165,7 @@ python setup.py develop_os develop
 into new Python 2.7 virtual environment (assuming OS-level prerequisites are
 already satisfied):</p>
 <pre><code># Have pywbem-{version}.zip downloaded
-unzip pywbem-{version}.zip
+tar -xf pywbem-{version}.zip
 cd pywbem-{version}
 mkvirtualenv -p python2.7 pywbem27
 python setup.py develop

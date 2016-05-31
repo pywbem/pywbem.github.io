@@ -3,6 +3,7 @@
 # Demonstrate enumeration of instances.
 #
 
+import sys
 import pywbem
 
 server_url = 'https://server'

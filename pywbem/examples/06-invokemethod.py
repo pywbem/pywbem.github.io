@@ -12,7 +12,7 @@ password = 'penguin'
 
 conn = pywbem.WBEMConnection(server_url, (user, password))
 
-os_class_path = pywbem.CIMClassName('CIM_OperatingSystem', namespace='root/cimv2'))
+os_class_path = pywbem.CIMClassName('CIM_OperatingSystem', namespace='root/cimv2')
 
 try:
     result = conn.InvokeMethod('MyStaticMethod', os_class_path)

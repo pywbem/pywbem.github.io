@@ -31,7 +31,7 @@ except pywbem.Error as exc:
     if isinstance(exc, pywbem.CIMError) and exc[0] == pywbem.CIM_ERR_NOT_SUPPORTED:
         # If the WBEM server doesn't support modification of CIM_IndicationFilter
         # we ignore this error for the purposes of the example.
-        print('Modifying CIM_IndicationFilter is not supported'=
+        print('Modifying CIM_IndicationFilter is not supported')
     else:
         print('Error: ModifyInstance failed: %s' % exc)
         sys.exit(1)

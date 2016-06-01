@@ -1,41 +1,49 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 #
-# 06-invokemethod.py    Demonstrate invoking a WBEM extrinsic method
-#
-# See other examples at http://pywbem.sourceforge.net/examples
+# Demonstrate invoking methods on CIM classes and on CIM instances.
 #
 
-import sys, pywbem
+import sys
+import pywbem
 
-# Make connection
+server_url = 'https://server'
+user = 'root'
+password = 'penguin'
 
-conn = pywbem.WBEMConnection('https://server',     # url
-                             ('root', 'penguin'))  # credentials
+conn = pywbem.WBEMConnection(server_url, (user, password))
 
-# Call a method on a class
+os_class_path = pywbem.CIMClassName('CIM_OperatingSystem', namespace='root/cimv2')
 
 try:
-
-    conn.InvokeMethod('Foo',
-                      pywbem.CIMLocalClassPath('root/cimv2',
-                                               'CIM_OperatingSystem'))
-except pywbem.CIMError, arg:
-
-    if arg[0] != pywbem.CIM_ERR_NOT_SUPPORTED:
-        print 'InvokeMethod(class): %s' % arg[1]
+    result = conn.InvokeMethod('MyStaticMethod', os_class_path)
+except pywbem.Error as exc:
+    if isinstance(exc, pywbem.CIMError) and exc.status_code == pywbem.CIM_ERR_NOT_SUPPORTED:
+        # If the WBEM server doesn't support method invocation,
+        # we ignore this error for the purposes of the example.
+        print('WBEM server does not support method invocation')
+    elif isinstance(exc, pywbem.CIMError) and exc.status_code == CIM_ERR_METHOD_NOT_FOUND:
+        # Because the method we used does not exist, we ignore this error.
+        pass
+    else:
+        print('Error: InvokeMethod(MyStaticMethod) failed: %s' % exc)
         sys.exit(1)
-
-# Call a method on an instance name
-
-names = conn.EnumerateInstanceNames('CIM_OperatingSystem')
 
 try:
+    os_inst_paths = conn.EnumerateInstanceNames('CIM_OperatingSystem')
+except pywbem.Error as exc:
+    print('Error: EnumerateInstanceNames failed: %s' % exc)
+    sys.exit(1)
 
-    conn.InvokeMethod('Foo', 
-                      pywbem.CIMLocalInstancePath('root/cimv2', names[0]))
+os_inst_path = os_inst_paths[0]
 
-except pywbem.CIMError, arg:
-
-    if arg[0] != pywbem.CIM_ERR_NOT_SUPPORTED:
-        print 'InvokeMethod(instancename): %s' % arg[1]
+try:
+    result = conn.InvokeMethod('MyMethod', os_inst_path)
+except pywbem.Error as exc:
+    if isinstance(exc, pywbem.CIMError) and exc.status_code == pywbem.CIM_ERR_NOT_SUPPORTED:
+        # If the WBEM server doesn't support method invocation,
+        # we ignore this error for the purposes of the example.
+        print('WBEM server does not support method invocation')
+    else:
+        print('Error: InvokeMethod(MyMethod) failed: %s' % exc)
         sys.exit(1)
+

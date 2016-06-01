@@ -1,30 +1,31 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 #
-# 03-deleteinstance.py    Demonstrate deleting WBEM objects
-#
-# See other examples at http://pywbem.sourceforge.net/examples
+# Demonstrate deleting CIM instances.
 #
 
-import sys, pywbem
+import sys
+import pywbem
 
-# Make connection
+server_url = 'https://server'
+user = 'root'
+password = 'penguin'
 
-conn = pywbem.WBEMConnection('https://server',     # url
-                             ('root', 'penguin'))  # credentials
-
-# Try to delete the CIM_OperatingSystem instance
-
-names = conn.EnumerateInstanceNames('CIM_OperatingSystem')
+conn = pywbem.WBEMConnection(server_url, (user, password))
 
 try:
+    os_paths = conn.EnumerateInstanceNames('CIM_OperatingSystem')
+except pywbem.Error as exc:
+    print('Error: EnumerateInstanceNames failed: %s' % exc)
+    sys.exit(1)
 
-    conn.DeleteInstance(names[0])
-
-except pywbem.CIMError, arg:
-
-    # A not supported error is OK as the operating system provider should
-    # not support deletion
-
-    if arg[0] != pywbem.CIM_ERR_NOT_SUPPORTED:
-        print 'DeleteInstance: %s' % arg[1]
+try:
+    conn.DeleteInstance(os_paths[0])
+except pywbem.Error as exc:
+    if isinstance(exc, pywbem.CIMError) and exc[0] == pywbem.CIM_ERR_NOT_SUPPORTED:
+        # A CIM error "not supported" is OK as the operating system provider
+        # should not support deletion
+        pass
+    else:
+        print('Error: DeleteInstance failed: %s' % exc)
         sys.exit(1)
+

@@ -1,50 +1,44 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 #
-# 04-modifyinstance.py    Demonstrate modification of WBEM objects
+# Demonstrate modification of CIM instances.
 #
-# See other examples at http://pywbem.sourceforge.net/examples
-#
+import sys
+import pywbem
 
-import sys, pywbem
+server_url = 'https://server'
+user = 'root'
+password = 'penguin'
 
-# Make connection
+conn = pywbem.WBEMConnection(server_url, (user, password))
 
-conn = pywbem.WBEMConnection('https://server',     # url
-                             ('root', 'penguin'))  # credentials
-
-# Create a CIM_IndicationFilter instance
-
-filter = pywbem.CIMInstance(
+filter_inst = pywbem.CIMInstance(
     'CIM_IndicationFilter',
     {'Name': 'pywbem_test',
      'Query': 'SELECT * FROM CIM_Indication',
      'QueryLanguage': 'WQL'})
 
 try:
-
-    filter_name = conn.CreateInstance(filter)
-
-except pywbem.CIMError, arg:
-    print 'CreateInstance: %s' % arg[1]
+    filter_path = conn.CreateInstance(filter_inst)
+except pywbem.Error as exc:
+    print('Error: CreateInstance failed: %s' % exc)
     sys.exit(1)
 
-# Modify the CIM_IndicationFilter instance
-
-filter['Query'] = 'SELECT * FROM CIM_ProcessIndication'
+filter_inst['Query'] = 'SELECT * FROM CIM_ProcessIndication'
 
 try:
+    conn.ModifyInstance(filter_path, filter_inst)
+except pywbem.Error as exc:
+    if isinstance(exc, pywbem.CIMError) and exc[0] == pywbem.CIM_ERR_NOT_SUPPORTED:
+        # If the WBEM server doesn't support modification of CIM_IndicationFilter
+        # we ignore this error for the purposes of the example.
+        print('Modifying CIM_IndicationFilter is not supported')
+    else:
+        print('Error: ModifyInstance failed: %s' % exc)
+        sys.exit(1)
 
-    new_filter_name = conn.ModifyInstance(filter_name, filter)
+try:
+    conn.DeleteInstance(filter_path)
+except pywbem.Error as exc:
+    print('Error: DeleteInstance failed: %s' % exc)
+    sys.exit(1)
 
-except pywbem.CIMError, arg:
-
-    # OpenPegasus doesn't support modification of CIM_IndicationFilter
-    # so just ignore this error for the purposes of the example.
-
-    if arg[0] != pywbem.CIM_ERR_NOT_SUPPORTED:
-        print 'ModifyInstance: %s' % msg[1]
-
-    conn.DeleteInstance(filter_name)
-
-else:
-    conn.DeleteInstance(new_filter_name)

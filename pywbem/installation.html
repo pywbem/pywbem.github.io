@@ -123,12 +123,13 @@ python setup.py install
 </code></pre>
 </li>
 <li>
-<p>Install from a downloaded distribution archive
+<p><a name="inst_arch">
+Install from a downloaded distribution archive
 (links are in the <a href="pywbem/installation.html#table1">table above</a>),
-into new Python 2.7 virtual environment, installing OS-level prerequisites as
-needed (requires sudo rights):</p>
-<pre><code># Have pywbem-{version}.zip downloaded
-unzip pywbem-{version}.zip
+into new Python 2.7 virtual environment, installing OS-level prerequisites
+(such as Swig) as needed (requires sudo rights):</p>
+<pre><code># Have pywbem-{version}.zip downloaded from the table, or run "pip download pywbem"
+tar -xf pywbem-{version}.zip
 cd pywbem-{version}
 mkvirtualenv -p python2.7 pywbem27
 python setup.py install_os install
@@ -164,7 +165,7 @@ python setup.py develop_os develop
 into new Python 2.7 virtual environment (assuming OS-level prerequisites are
 already satisfied):</p>
 <pre><code># Have pywbem-{version}.zip downloaded
-unzip pywbem-{version}.zip
+tar -xf pywbem-{version}.zip
 cd pywbem-{version}
 mkvirtualenv -p python2.7 pywbem27
 python setup.py develop
@@ -176,12 +177,73 @@ python setup.py develop
 
 <p>To test that PyWBEM is sucessfully installed, start up a Python interpreter
 and try to import the pywbem module:</p>
-
 <pre><code>python -c "import pywbem"
 </code></pre>
 
 <p>If you do not see any error messages after the import command, PyWBEM has
 been sucessfully installed and its dependencies are available.</p>
+
+<h2>Troubleshooting</h2>
+
+<p>Here are some hints in case of trouble during the installation of
+PyWBEM:</p>
+
+<h3>AttributeError for 'NullHandler' during mkvirtualenv on Python 2.6</h3>
+
+<p>If the mkvirtualenv command fails on Python 2.6 with this error:</p>
+<pre>
+  . . .
+  File "/usr/lib/python2.6/site-packages/stevedore/__init__.py", line 23, in <module>
+    LOG.addHandler(logging.NullHandler())
+AttributeError: 'module' object has no attribute 'NullHandler'
+</pre>
+<p>then the 'stevedore' PyPI package is too recent(!) The owners of that
+package spent effort to remove the previously existing Python 2.6 support in
+some steps, starting with v1.10.</p>
+
+<p>The solution is to use v1.9. Note that for virtualenvwrapper to use it, it
+must be installed into the system Python:</p>
+
+<pre><code>sudo pip install stevedore==1.9</code></pre>
+
+<h3>TypeError about StreamHandler argument 'stream' during mkvirtualenv on Python 2.6</h3>
+
+<p>If the mkvirtualenv command fails on Python 2.6 with this error:</p>
+<pre>
+  . . .
+  File "/usr/lib/python2.6/site-packages/virtualenvwrapper/hook_loader.py", line 101, in main
+    console = logging.StreamHandler(stream=sys.stderr)
+TypeError: __init__() got an unexpected keyword argument 'stream'
+</pre>
+<p>then the 'virtualenvwrapper' PyPI package is too old. A fix for that is currently
+only in the master branch of its source repository, and has not been released to PyPI
+yet (currently, v4.7.1 is the latest version on PyPI.</p>
+
+<p>The solution is to clone its repository and to install from its working
+directory. Note that it must be installed into the system Python:</p>
+
+<pre><code>git clone https://bitbucket.org/dhellmann/virtualenvwrapper.git virtualenvwrapper
+cd virtualenvwrapper
+sudo python setup.py install</code></pre>
+
+<h3>Swig error 'Unrecognized option -builtin' during M2Crypto install</h3>
+
+<p>On Python 2.x, PyWBEM uses the M2Crypto package from PyPI and installs it
+during its own installation. The M2Crypto package invokes the Swig tool during
+its installation. If the version of Swig is too old, the invocation of Swig
+fails with:</p>
+
+<pre>swig error : Unrecognized option -builtin</pre>
+
+<p>The solution is to use Swig v2.0 or higher.</p>
+
+<p>If your operating system does not provide this version of Swig as a
+package, you need to build it from its sources.</p>
+
+<p>The PyWBEM setup script is able to install Swig if available as a package,
+or otherwise to build it from its sources, as described in
+<a href="pywbem/installation.html#inst_arch">Install from a downloaded
+distribution archive</a>.</p>
 
 <h2>Next steps</h2>
 

@@ -41,6 +41,12 @@ operations are available as methods on the
 class:</p>
 
 <ul>
+<li>
+    Instance Operations
+<ul>
+<li>
+    Original Instance Operations
+<ul>
   <li><script>doc_link('client',
                        'pywbem.WBEMConnection.EnumerateInstanceNames',
                        'EnumerateInstanceNames()');</script></li>
@@ -77,6 +83,49 @@ class:</p>
   <li><script>doc_link('client',
                        'pywbem.WBEMConnection.ExecQuery',
                        'ExecQuery()');</script></li>
+</ul>
+</li>
+<li>Pull Instances Operations. Added with DMTF DSP0200 V 1.4
+<ul>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.OpenEnumerateInstances',
+                       'OpenEnumerateInstances()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.OpenAssociatorInstances',
+                       'OpenAssociatorInstances()');</script> </li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.OpenReferenceInstances',
+                       'OpenReferenceInstances()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.PullInstancesWithPath',
+                       'PullInstancesWithPath()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.OpenEnumerateInstancePaths',
+                       'OpenEnumerateInstancePaths()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.OpenAssociatorInstancePaths',
+                       'OpenAssociatorInstancePaths()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.OpenReferenceInstancePaths',
+                       'OpenReferenceInstancePaths()');</script> </li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.PullInstancePaths',
+                       'PullInstancePaths()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.OpenQueryInstances',
+                       'OpenQueryInstances()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.PullInstances',
+                       'PullInstances()');</script></li>
+  <li><script>doc_link('client',
+                       'pywbem.WBEMConnection.CloseEnumeration',
+                       'CloseEnumeration()');</script></li>
+</li>
+</ul>
+</ul>
+<li>
+Class Operations
+<ul>
   <li><script>doc_link('client',
                        'pywbem.WBEMConnection.EnumerateClassNames',
                        'EnumerateClassNames()');</script></li>
@@ -95,6 +144,10 @@ class:</p>
   <li><script>doc_link('client',
                        'pywbem.WBEMConnection.DeleteClass',
                        'DeleteClass()');</script></li>
+</ul>
+<li>
+QualifierDeclaration Operations
+<ul>
   <li><script>doc_link('client',
                        'pywbem.WBEMConnection.EnumerateQualifiers',
                        'EnumerateQualifiers()');</script></li>
@@ -107,6 +160,7 @@ class:</p>
   <li><script>doc_link('client',
                        'pywbem.WBEMConnection.DeleteQualifier',
                        'DeleteQualifier()');</script></li>
+</ul>
 </ul>
 
 <h3>CIM objects and data types</h3>
